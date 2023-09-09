@@ -9,6 +9,7 @@ use App\Models\Facilities;
 use App\Models\gallary;
 use App\Models\Property;
 use App\Models\Reviews;
+use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserData;
@@ -17,6 +18,14 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+
+    public $siteSetting;
+
+    public function __construct() {
+        $this->siteSetting = SiteSettings::pluck('value', 'key');
+    }
+
+
     public function not_found()
     {
         $title = "Page Not Found";
@@ -544,26 +553,37 @@ class UserController extends Controller
 
     public function home(Request $request)
     {
-        $title = "You are hero";
-        $menu = "Menu";
-        $data = compact('title','menu');
+        $title = "Home";
+        $siteSetting=$this->siteSetting;
 
+        $data = compact( 'title', 'siteSetting');
         return view('accounting-master.home',$data);
     }
 
     public function aboutus(Request $request)
     {
-        return view('accounting-master.aboutus');
+        $title = "About Us";
+        $siteSetting=$this->siteSetting;
+
+        $data = compact( 'title', 'siteSetting');
+        return view('accounting-master.aboutus',$data);
     }
 
     public function services(Request $request)
     {
-        return view('accounting-master.services');
+        $title = "Services";
+        $siteSetting=$this->siteSetting;
+        $data = compact( 'title', 'siteSetting');
+        return view('accounting-master.services',$data);
     }
 
     public function contactus(Request $request)
     {
-        return view('accounting-master.contactus');
+        $title = "Contact Us";
+        $siteSetting = SiteSettings::pluck('value', 'key');
+
+        $data = compact( 'title', 'siteSetting');
+        return view('accounting-master.contactus',$data);
     }
 
 

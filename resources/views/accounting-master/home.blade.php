@@ -1,12 +1,6 @@
 @extends('weblayouts.app')
 
 @section('content_box')
-
-<H1>{{$title}}</H1>
-
-<H1>{{$menu}}</H1>
-
-
     <div class="hero-wrap">
         <div class="home-slider owl-carousel">
             <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
@@ -60,7 +54,9 @@
         <div class="container">
             <div class="row d-flex no-gutters">
                 <div class="col-md-6 d-flex">
-                    <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url(images/about.jpg);">
+                    <div
+                        class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
+                        style="background-image:url(images/about.jpg);">
                     </div>
                 </div>
                 <div class="col-md-6 pl-md-5 py-md-5">
@@ -69,31 +65,39 @@
                         <h2 class="mb-4">We Are the Best Accounting Agency</h2>
                     </div>
                     <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                class="flaticon-wealth"></span></div>
                         <div class="text pl-4">
                             <h4>Market Analysis</h4>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia</p>
                         </div>
                     </div>
                     <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accountant"></span></div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                class="flaticon-accountant"></span></div>
                         <div class="text pl-4">
                             <h4>Accounting Advisor</h4>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia</p>
                         </div>
                     </div>
                     <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-teamwork"></span></div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                class="flaticon-teamwork"></span></div>
                         <div class="text pl-4">
                             <h4>General Consultancy</h4>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia</p>
                         </div>
                     </div>
                     <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting"></span></div>
+                        <div class="icon d-flex align-items-center justify-content-center"><span
+                                class="flaticon-accounting"></span></div>
                         <div class="text pl-4">
                             <h4>Structured Assestment</h4>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia</p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +115,8 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Accounting</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                unorthographic.</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +127,8 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                unorthographic.</p>
                         </div>
                     </div>
                 </div>
@@ -133,7 +139,8 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Financial Services</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                unorthographic.</p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +151,8 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Growth &amp; Funding Access</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                unorthographic.</p>
                         </div>
                     </div>
                 </div>
@@ -213,9 +221,11 @@
                     <div class="carousel-testimony owl-carousel ftco-owl">
                         <div class="item">
                             <div class="testimony-wrap py-4">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="fa fa-quote-left"></span></div>
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
                                         <div class="pl-3">
@@ -228,9 +238,11 @@
                         </div>
                         <div class="item">
                             <div class="testimony-wrap py-4">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="fa fa-quote-left"></span></div>
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
                                         <div class="pl-3">
@@ -243,9 +255,11 @@
                         </div>
                         <div class="item">
                             <div class="testimony-wrap py-4">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="fa fa-quote-left"></span></div>
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
                                         <div class="pl-3">
@@ -258,9 +272,11 @@
                         </div>
                         <div class="item">
                             <div class="testimony-wrap py-4">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="fa fa-quote-left"></span></div>
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
                                         <div class="pl-3">
@@ -273,9 +289,11 @@
                         </div>
                         <div class="item">
                             <div class="testimony-wrap py-4">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="fa fa-quote-left"></span></div>
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
                                         <div class="pl-3">
@@ -307,13 +325,17 @@
                     <div class="heading-section mb-5 mt-5 mt-lg-0">
                         <span class="subheading">FAQs</span>
                         <h2 class="mb-3">Frequently Asks Questions</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts.</p>
                     </div>
                     <div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
                         <div class="card">
                             <div class="card-header p-0" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                                    <button href="#collapseOne"
+                                            class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                                            data-parent="#accordion" data-toggle="collapse" aria-expanded="true"
+                                            aria-controls="collapseOne">
                                         <p class="mb-0">How to fixed a problem?</p>
                                         <i class="fa" aria-hidden="true"></i>
                                     </button>
@@ -335,7 +357,10 @@
                         <div class="card">
                             <div class="card-header p-0" id="headingTwo" role="tab">
                                 <h2 class="mb-0">
-                                    <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+                                    <button href="#collapseTwo"
+                                            class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                                            data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                         <p class="mb-0">How to manage your business loans?</p>
                                         <i class="fa" aria-hidden="true"></i>
                                     </button>
@@ -357,7 +382,10 @@
                         <div class="card">
                             <div class="card-header p-0" id="headingThree" role="tab">
                                 <h2 class="mb-0">
-                                    <button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+                                    <button href="#collapseThree"
+                                            class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                                            data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseThree">
                                         <p class="mb-0">How to grow your investments funds?</p>
                                         <i class="fa" aria-hidden="true"></i>
                                     </button>
@@ -379,7 +407,10 @@
                         <div class="card">
                             <div class="card-header p-0" id="headingFour" role="tab">
                                 <h2 class="mb-0">
-                                    <button href="#collapseFour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
+                                    <button href="#collapseFour"
+                                            class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                                            data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseFour">
                                         <p class="mb-0">What are those requirements for businesses?</p>
                                         <i class="fa" aria-hidden="true"></i>
                                     </button>
@@ -387,7 +418,9 @@
                             </div>
                             <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="card-body py-3 px-0">
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+                                        right at the coast of the Semantics, a large language ocean.</p>
                                 </div>
                             </div>
                         </div>
@@ -408,7 +441,8 @@
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_1.jpg');">
+                        <a href="blog-single.html" class="block-20 rounded"
+                           style="background-image: url('images/image_1.jpg');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
@@ -416,13 +450,15 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
                             </div>
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
+                                    blind texts</a></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_2.jpg');">
+                        <a href="blog-single.html" class="block-20 rounded"
+                           style="background-image: url('images/image_2.jpg');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
@@ -430,13 +466,15 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
                             </div>
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
+                                    blind texts</a></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_3.jpg');">
+                        <a href="blog-single.html" class="block-20 rounded"
+                           style="background-image: url('images/image_3.jpg');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
@@ -444,7 +482,8 @@
                                 <div><a href="#">Admin</a></div>
                                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
                             </div>
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
+                                    blind texts</a></h3>
                         </div>
                     </div>
                 </div>
@@ -452,24 +491,6 @@
         </div>
     </section>
 
-
-    <section class="ftco-section ftco-no-pb ftco-no-pt bg-secondary">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-md-7 d-flex align-items-center">
-                    <h2 class="mb-3 mb-sm-0" style="color:black; font-size: 22px;">Sign Up for Your Free 1st Accounting Consultation</h2>
-                </div>
-                <div class="col-md-5 d-flex align-items-center">
-                    <form action="#" class="subscribe-form">
-                        <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="Enter email address">
-                            <input type="submit" value="Subscribe" class="submit px-3">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="ftco-section bg-light">
         <div class="container">
