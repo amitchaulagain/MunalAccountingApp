@@ -1,10 +1,5 @@
-@extends('layouts.app')
-@push('title')
-    {{ $CMS['home_title'] ?? '' }}
-@endpush
-@push('meta')
-    {{ $CMS['home_meta'] ?? '' }}
-@endpush
+@extends('weblayouts.app')
+
 @section('content_box')
     <main>
         @include('layouts.carousel')
@@ -257,12 +252,4 @@
             <!-- /END THE FEATURETTES -->
         </div>
     </main>
-@endsection
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-            const myCarousel = new Carousel(document.querySelector("#cat_cara"), {});
-            // $(document).('.carousal__button').addClass(' text-white shadow-lg');
-        });
-    </script>
 @endsection

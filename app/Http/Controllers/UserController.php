@@ -541,4 +541,34 @@ class UserController extends Controller
         $data = compact('title', 'menu');
         return view('frontend.terms', $data);
     }
+
+    public function home(Request $request)
+    {
+        $title = "You are hero";
+        $menu = "Menu";
+        $data = compact('title','menu');
+
+        return view('accounting-master.home',$data);
+    }
+
+    public function aboutus(Request $request)
+    {
+        return view('accounting-master.aboutus');
+    }
+
+    public function services(Request $request)
+    {
+        return view('accounting-master.services');
+    }
+
+    public function contactus(Request $request)
+    {
+        return view('accounting-master.contactus');
+    }
+
+
+
+
+
+
 }

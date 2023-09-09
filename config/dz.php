@@ -11,6 +11,7 @@ return [
                 '/css/headers.css',
                 '/css/footers.css',
                 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css',
+
             ],
             'js' => [
                 'https://kit.fontawesome.com/10cf85d80f.js',

@@ -39,7 +39,19 @@ Route::post('/login', [UserController::class, 'login'])->name('UserLogin');
 Route::get('/logout', [UserController::class, 'logout'])->name('UserLogout');
 
 //User home
-Route::get('/', [UserController::class, 'userHome'])->name('userHome');
+Route::get('/', [UserController::class, 'home'])->name('home');
+
+Route::get('/hero', [UserController::class, 'userHome'])->name('userHome');
+
+
+Route::get('/aboutus', [UserController::class, 'aboutus'])->name('aboutus');
+
+Route::get('/services', [UserController::class, 'services'])->name('services');
+
+Route::get('/contactus', [UserController::class, 'contactus'])->name('contactus');
+
+
+
 
 //showing properties in various ways
 Route::get('/property/category/{cate}', [UserController::class, 'show_category'])->name('show_category');
