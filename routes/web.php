@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -50,6 +51,7 @@ Route::get('/services', [UserController::class, 'services'])->name('services');
 
 Route::get('/contactus', [UserController::class, 'contactus'])->name('contactus');
 
+Route::get('/basicemail', [EmailController::class, 'basic_email'])->name('basic_email');
 
 
 
@@ -190,3 +192,11 @@ Route::middleware(AuthCheck::class)->group(function () {
 
 //if none of above route is used then sended to 404
 Route::get('/{any}', [UserController::class, 'not_found'])->where('any', '.*');
+
+
+
+
+//Send email
+
+
+
