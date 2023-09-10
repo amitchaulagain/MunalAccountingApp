@@ -152,6 +152,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="py-0 nav-link @if ($menu == 'image_slider') fw-bolder fs-6 active @endif "
+                       aria-current="page" href="{{ route('list_image_sliders') }}">
+                        <div class="d-flex">
+                            <div style="width: 25px" class="fs-5 text-center">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <span class="ms-2 my-auto">
+                                Image Slider
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
                     <a class="py-0 nav-link @if ($menu == 'chng_password') fw-bolder fs-6 active @endif "
                         aria-current="page" href="{{ route('chng_password') }}">
                         <div class="d-flex">

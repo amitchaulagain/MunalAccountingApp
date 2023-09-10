@@ -3,7 +3,7 @@
 @section('content_box')
     <div class="hero-wrap">
         <div class="home-slider owl-carousel">
-            <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+            <div class="slider-item" style="background-image:url({{ asset('/storage/images/bg_1.jpg')}});">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+            <div class="slider-item" style="background-image:url({{ asset('/storage/images/bg_2.jpg')}});">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="slider-item" style="background-image:url(images/bg_3.jpg);">
+            <div class="slider-item" style="background-image:url({{ asset('/storage/images/bg_3.jpg')}});">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-center">

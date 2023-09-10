@@ -222,6 +222,8 @@
                         data: data,
                         dataType: "JSON",
                         success: function (response) {
+                            alert("hero")
+
                             if (response.status) {
                                 $('.alert').fadeIn();
                                 // alert(response.message);

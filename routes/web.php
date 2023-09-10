@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AuthCheck;
@@ -176,6 +177,12 @@ Route::middleware(AuthCheck::class)->group(function () {
     Route::get('/admin/sitesettings', [SiteController::class, 'list_settings'])->name('list_settings');
     Route::post('/admin/sitesettings', [SiteController::class, 'save_settings'])->name('save_settings');
     Route::post('/admin/sitesettings/ajaxDelete', [SiteController::class, 'ajaxDelete'])->name('ajaxDelete');
+    //Site Settings Ends
+
+    //Site Settings Starts
+    Route::get('/admin/image_sliders', [SliderController::class, 'list_image_sliders'])->name('list_image_sliders');
+    Route::post('/admin/image_sliders', [SliderController::class, 'save_image_sliders'])->name('save_image_sliders');
+    Route::post('/admin/image_sliders/ajaxSliderDelete', [SliderController::class, 'ajaxSliderDelete'])->name('ajaxSliderDelete');
     //Site Settings Ends
 
     //CMS starts
