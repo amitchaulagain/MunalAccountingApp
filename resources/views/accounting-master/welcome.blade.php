@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome</title>
-</head>
-<body>
-<h1>Welcome to My Website</h1>
-<p>Thank you for joining us!</p>
-</body>
-</html>
+<p>Name : {{ $data['name'] }}</p>
+<p>Subject : {{ $data['subject'] }}</p>
+<p>Email : {{ $data['email'] }}</p>
+<p>Contact : {{ $data['contact'] }}</p>
+<p>Message : {{ $data['message'] }}</p>

@@ -4,16 +4,34 @@ namespace App\Http\Controllers;
 
 use App\Mail\MyEmail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+
 
 class EmailController extends Controller
 {
 
-    public function basic_email()
+    public function basic_email(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'contact' => 'required',
+            'subject' => 'nullable',
+            'message' => 'required'
+        ]);
+
+
         $recipientEmail = 'achaulagain123@gmail.com';
 
-        Mail::to($recipientEmail)->send(new MyEmail());
+        $data = array(
+            'name' => $request->name,
+            'email' => $request->email,
+            'contact' => $request->contact,
+            'subject' => $request->subject,
+            'message' => $request->message
+        );
 
-        return 'Email sent successfully';
+        Mail::to($recipientEmail)->send(new MyEmail($data));
+        return back()->with('success', 'Thanks for contacting us!');
     }
 }

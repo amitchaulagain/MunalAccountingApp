@@ -583,7 +583,7 @@ class UserController extends Controller
         $siteSetting = SiteSettings::pluck('value', 'key');
 
         $data = compact( 'title', 'siteSetting');
-        return view('accounting-master.contactus',$data);
+            return view('accounting-master.contactus',$data);
     }
 
 

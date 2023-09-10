@@ -51,7 +51,7 @@ Route::get('/services', [UserController::class, 'services'])->name('services');
 
 Route::get('/contactus', [UserController::class, 'contactus'])->name('contactus');
 
-Route::get('/basicemail', [EmailController::class, 'basic_email'])->name('basic_email');
+Route::post('/sendemail/send', [EmailController::class, 'basic_email'])->name('basic_email');
 
 
 
