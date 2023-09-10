@@ -34,8 +34,9 @@
                     <div class="row">
                         <div class="col-md-6 d-flex align-items-center">
                             <p class="mb-0 phone pl-md-2">
-                                <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a>
-                                <a href="#"><span class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['email'] ?? '' }}</a>
+                                <a href="#" class="mr-2"><span class="fa fa-map-marker"></span> {{ $siteSetting['office_address'] ?? '' }}</a>
+                                <a href="tel://{{ $siteSetting['phone'] ?? '' }}" class="mr-2"> <span class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a>
+                                <a href="mailto:{{ $siteSetting['email'] ?? '' }}"><span class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['email'] ?? '' }}</a>
                             </p>
                         </div>
                         <div class="col-md-6 d-flex justify-content-md-end">
