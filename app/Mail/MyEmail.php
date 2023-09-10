@@ -22,7 +22,7 @@ class MyEmail extends Mailable
     }
     public function build()
     {
-        return $this->from($this->data['email'])->subject($this->data['subject'])->view('accounting-master.welcome')->with('data', $this->data);
+        return $this->from($this->data['email'])->subject($this->data['subject'])->view('accounting-master.mail_template')->with('data', $this->data);
 
     }
 }

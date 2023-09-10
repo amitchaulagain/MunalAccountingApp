@@ -32,6 +32,10 @@ class EmailController extends Controller
         );
 
         Mail::to($recipientEmail)->send(new MyEmail($data));
-        return back()->with('success', 'Thanks for contacting us!');
+
+
+        $request->session()->flash('success', 'Message has been sent successfully !');
+
+        return redirect()->back();
     }
 }

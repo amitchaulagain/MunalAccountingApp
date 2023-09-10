@@ -52,18 +52,22 @@
             </div>
             <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
                 <h2 class="footer-heading">Free consultation</h2>
-                <form action="#" class="form-consultation">
+                <form  method="post" class="form-consultation"  action="{{route('basic_email')}}">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" class="form-control" placeholder="Your Name" name="name">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email">
+                        <input type="text" class="form-control" placeholder="Your Email" name="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" class="form-control" placeholder="Your Contact Number" name="contact">
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+                        <input type="text" class="form-control" placeholder="Subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea  cols="30" rows="3" class="form-control" placeholder="Message" name="message"></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="form-control submit px-3">Send A Message</button>
@@ -74,7 +78,17 @@
     </div>
 </footer>
 
+@if(session('success'))
+    <script>
+        $(document).ready(function() {
+            // Show the dialog when the page loads
+            alert("{{ session('success') }}"); // You can use any dialog library here
 
+            // Clear the session data for 'success'
+            @php session()->forget('success'); @endphp
+        });
+    </script>
+@endif
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
