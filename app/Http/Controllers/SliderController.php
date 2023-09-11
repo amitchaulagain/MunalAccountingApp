@@ -27,17 +27,19 @@ class SliderController extends Controller
 
     public function save_image_sliders(Request $request)
     {
+        $hero = "one";
         $request->validate([
             'sliderimage' => 'mimes:png,jpg'
         ]);
 
-        if ($request->hasFile('sliderimage')) {
-            $imageSlider = ImageSlider::where('key', 'sliderimage')->first();
+
+        if ($request->hasFile($hero)) {
+            $imageSlider = ImageSlider::where('key', $hero)->first();
             if ($imageSlider) {
                 if (!empty($imageSlider->value)) {
                     Storage::delete('public/sliders/' . $imageSlider->value);
                 }
-                $image = $request->file('sliderimage');
+                $image = $request->file($hero);
                 //$iname = date('Ym') . '-' . rand() . '.' . $image->extension();
                 $iname = "sliderimage" . '.' . $image->extension();
 
@@ -46,22 +48,22 @@ class SliderController extends Controller
                     $imageSlider->update(['value' => $iname]);
                 }
             } else {
-                $image = $request->file('sliderimage');
+                $image = $request->file($hero);
                 //$iname = date('Ym') . '-' . rand() . '.' . $image->extension();
                 $iname = "sliderimage" . '.' . $image->extension();
 
                 $store = $image->storeAs('public/sliders', $iname);
                 if ($store) {
-                    $imageSlider = ImageSlider::create(['key' => 'sliderimage', 'value' => $iname]);
+                    $imageSlider = ImageSlider::create(['key' => "one", 'value' => "one.png"]);
                 }
             }
         }
-        foreach ($request->except(['_token', 'sliderimage']) as $key => $value) {
+        foreach ($request->except(['_token', $hero]) as $key => $value) {
             $imageSlider = ImageSlider::where('key', $key)->first();
             if ($imageSlider) {
                 $imageSlider->update(compact('value'));
             } else {
-                $imageSlider = ImageSlider::create(compact('key', 'value'));
+                $imageSlider = ImageSlider::create(['key' => "one", 'value' => "one.png"]);
             }
         }
 

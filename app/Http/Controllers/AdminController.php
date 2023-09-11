@@ -33,6 +33,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'newUsers', 'newReviews', 'newProperty');
         return view('AdminPanel.dashboard.dashboard')->with($data);
     }
+
     //sending to adminlogin page
     public function loginPage()
     {
@@ -42,6 +43,7 @@ class AdminController extends Controller
         $data = compact('status', 'title');
         return view('AdminPanel.AdminUser.AdminLogin')->with($data);
     }
+
     //logging In
     public function login(Request $request)
     {
@@ -67,6 +69,7 @@ class AdminController extends Controller
             ]);
         }
     }
+
     public function logout(Request $request)
     {
         $request->session()->forget('AdminUser');
@@ -206,6 +209,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'city');
         return view('AdminPanel.cities.list', $data);
     }
+
     public function add_cities(Request $request)
     {
         $title = "Add Cities";
@@ -214,6 +218,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu');
         return view('AdminPanel.cities.form', $data);
     }
+
     public function cities_added(Request $request)
     {
         $valid = $request->validate([
@@ -235,6 +240,7 @@ class AdminController extends Controller
 
         return redirect(route('list_cities'));
     }
+
     public function del_cities(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -257,6 +263,7 @@ class AdminController extends Controller
 
         return redirect(route('list_cities'));
     }
+
     public function edit_cities(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -274,6 +281,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'city');
         return view('AdminPanel.cities.form', $data);
     }
+
     public function cities_edited(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -311,6 +319,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'faci');
         return view('AdminPanel.facilities.list', $data);
     }
+
     public function add_facilities(Request $request)
     {
         $title = "Add Facility";
@@ -319,6 +328,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu');
         return view('AdminPanel.facilities.form', $data);
     }
+
     public function facilities_added(Request $request)
     {
         $valid = $request->validate([
@@ -338,6 +348,7 @@ class AdminController extends Controller
 
         return redirect(route('list_facilities'));
     }
+
     public function del_facilities(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -355,6 +366,7 @@ class AdminController extends Controller
 
         return redirect(route('list_facilities'));
     }
+
     public function edit_facilities(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -372,6 +384,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'faci');
         return view('AdminPanel.facilities.form', $data);
     }
+
     public function facilities_edited(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -406,6 +419,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'pro');
         return view('AdminPanel.properties.list', $data);
     }
+
     public function add_properties(Request $request)
     {
         $title = "Add Property";
@@ -417,6 +431,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'city', 'cate', 'faci');
         return view('AdminPanel.properties.form', $data);
     }
+
     public function properties_added(Request $request)
     {
         $valid = $request->validate([
@@ -487,6 +502,7 @@ class AdminController extends Controller
 
         return redirect(route('list_properties'));
     }
+
     public function del_properties(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -523,6 +539,7 @@ class AdminController extends Controller
 
         return redirect(route('list_properties'));
     }
+
     public function edit_properties(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -545,6 +562,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'pro', 'pro_faci', 'city', 'cate', 'faci');
         return view('AdminPanel.properties.form', $data);
     }
+
     public function properties_edited(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -629,11 +647,12 @@ class AdminController extends Controller
         $title = "Images Gallary";
         $menu = "gallary";
 
-        $gal = gallary::with('Property')->latest()->get();
+        $gal = gallary::all();
 
         $data = compact('title', 'menu', 'gal');
         return view('AdminPanel.gallary.list', $data);
     }
+
     public function get_gallary(Request $request)
     {
         $title = "Images Gallary";
@@ -649,6 +668,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'pro', 'gal', 'id');
         return view('AdminPanel.gallary.list', $data);
     }
+
     public function set_gallary(Request $request)
     {
         $request->validate([
@@ -675,28 +695,19 @@ class AdminController extends Controller
 
         return redirect(route('get_gallary', $id));
     }
+
     public function del_gallary(Request $request)
     {
-        $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:properties,id',
-            'gid' => 'exists:gallaries,id'
-        ])->validate();
         $id = $request->route()->parameter('id');
-        $gid = $request->route()->parameter('gid');
 
-        if ($valid) {
-            $gal = gallary::findorfail($gid);
-            if ($gal->gal_image) {
-                Storage::delete('public/gallary/' . $id . '/' . $gal->gal_image);
-            }
-            $gal->delete();
-        }
-
+        $cate = gallary::findorfail($id);
+        $image = $cate->gal_image;
+        Storage::delete('/public/gallary/' . $image);
+        $cate->delete();
         $request->session()->flash('msg', 'Deleted...');
-        $request->session()->flash('msgst', 'danger');
+        $request->session()->flash('msgst', 'success');
 
-        // return redirect(route('get_gallary', $id));
-        return redirect()->back();
+        return redirect(route('list_gallary'));
     }
     //Gallary ends
 
@@ -715,6 +726,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'reviews');
         return view('AdminPanel.reviews.list', $data);
     }
+
     public function get_reviews(Request $request)
     {
         $title = "Reviews List";
@@ -734,6 +746,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'pro', 'reviews', 'id');
         return view('AdminPanel.reviews.list', $data);
     }
+
     public function del_reviews(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -767,6 +780,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'usersData');
         return view('AdminPanel.users.list', $data);
     }
+
     public function del_users(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -789,6 +803,7 @@ class AdminController extends Controller
 
         return redirect(route('list_users'));
     }
+
     public function type_users(Request $request)
     {
         if ($request->ajax()) {
@@ -823,6 +838,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu');
         return view('AdminPanel.chng_password.form', $data);
     }
+
     public function save_password(Request $request)
     {
         $request->validate([
@@ -838,5 +854,38 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+
     //Chng Password Ends
+
+    public function add_gallary(Request $request)
+    {
+        $title = "Add Gallary";
+        $menu = "gallary";
+
+        $data = compact('title', 'menu');
+        return view('AdminPanel.gallary.form', $data);
+    }
+
+    public function gallary_added(Request $request)
+    {
+
+        $gal = new Gallary;
+        $gal->description = $request->description;
+        $image = $request->file('gal_image');
+        $iname = date('Ym') . '-' . rand() . '.' . $image->extension();
+        $store = $image->storeAs('public/gallary', $iname);
+        if ($store) {
+            $gal->gal_image = $iname;
+        }
+        $gal->save();
+
+        $request->session()->flash('msg', 'Added...');
+        $request->session()->flash('msgst', 'success');
+
+        return redirect(route('list_gallary'));
+    }
+
+
+
+
 }

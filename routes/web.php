@@ -155,10 +155,15 @@ Route::middleware(AuthCheck::class)->group(function () {
     //Property ends
 
     //Gallary starts
+    //Category
     Route::get('/admin/gallary', [AdminController::class, 'list_gallary'])->name('list_gallary');
-    Route::get('/admin/properties/{id}/gallary', [AdminController::class, 'get_gallary'])->name('get_gallary');
-    Route::post('/admin/properties/{id}/gallary', [AdminController::class, 'set_gallary'])->name('set_gallary');
-    Route::get('/admin/properties/{id}/gallary/{gid}', [AdminController::class, 'del_gallary'])->name('del_gallary');
+    Route::get('/admin/gallary/add', [AdminController::class, 'add_gallary'])->name('add_gallary');
+    Route::post('/admin/gallary/add', [AdminController::class, 'gallary_added'])->name('gallary_added');
+
+    Route::get('/admin/gallary/{id}/del', [AdminController::class, 'del_gallary'])->name('del_gallary');
+    Route::get('/admin/gallary/{id}/edit', [AdminController::class, 'edit_gallary'])->name('edit_gallary');
+    Route::post('/admin/gallary/{id}/edit', [AdminController::class, 'gallary_edited'])->name('gallary_edited');
+    //End Category
     //Gallary ends
 
     //reviews starts
@@ -180,10 +185,6 @@ Route::middleware(AuthCheck::class)->group(function () {
     //Site Settings Ends
 
     //Site Settings Starts
-    Route::get('/admin/image_sliders', [SliderController::class, 'list_image_sliders'])->name('list_image_sliders');
-    Route::post('/admin/image_sliders', [SliderController::class, 'save_image_sliders'])->name('save_image_sliders');
-    Route::post('/admin/image_sliders/ajaxSliderDelete', [SliderController::class, 'ajaxSliderDelete'])->name('ajaxSliderDelete');
-    //Site Settings Ends
 
     //CMS starts
     Route::get('/admin/cms', [SiteController::class, 'list_cms'])->name('list_cms');
