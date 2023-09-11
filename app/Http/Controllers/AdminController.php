@@ -872,19 +872,59 @@ class AdminController extends Controller
         $gal = new Gallary;
         $gal->description = $request->description;
         $image = $request->file('gal_image');
-        $iname = date('Ym') . '-' . rand() . '.' . $image->extension();
+        $gal->save();
+        $iname ="bg".$gal->id;
         $store = $image->storeAs('public/gallary', $iname);
         if ($store) {
             $gal->gal_image = $iname;
         }
-        $gal->save();
+        $gal->update();
 
         $request->session()->flash('msg', 'Added...');
         $request->session()->flash('msgst', 'success');
 
         return redirect(route('list_gallary'));
     }
+    public function gallary_edited(Request $request)
+    {
 
+        $id = $request->route()->parameter('id');
+
+        $gal = gallary::findorfail($id);
+        $gal->description = $request->description;
+        if ($request->hasFile('gal_image')) {
+            $image = $request->file('gal_image');
+            Storage::delete('public/images/' . $gal->image);
+            $store = $image->storeAs('public/gallary', $image);
+            if ($store) {
+                $gal->image = $image.$id;
+            }
+        }
+        $gal->save();
+
+        $request->session()->flash('msg', 'Edited...');
+        $request->session()->flash('msgst', 'success');
+
+        return redirect(route('list_gallary'));
+    }
+
+    public function edit_gallary(Request $request)
+    {
+        $valid = validator($request->route()->parameters(), [
+            'id' => 'exists:categories,id'
+        ])->validate();
+        $id = $request->route()->parameter('id');
+
+        if ($valid) {
+            $gal = gallary::findorfail($id);
+        }
+
+        $title = "Edit Gallary";
+        $menu = "gallary";
+
+        $data = compact('title', 'menu', 'gal');
+        return view('AdminPanel.gallary.form', $data);
+    }
 
 
 
