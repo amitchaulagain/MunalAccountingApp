@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\City;
 use App\Models\Facilities;
-use App\Models\gallary;
+use App\Models\Gallary;
 use App\Models\Property;
 use App\Models\Reviews;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserData;
@@ -521,12 +522,12 @@ class AdminController extends Controller
             if ($pro->floorplan) {
                 Storage::delete('public/property/' . $pro->floorplan);
             }
-            $gal = gallary::where('pro_id', $id)->get();
+            $gal = Gallary::where('pro_id', $id)->get();
             if ($gal) {
                 foreach ($gal as $img) {
                     Storage::delete('public/gallary/' . $id . '/' . $img->gal_image);
                 }
-                $gal = gallary::where('pro_id', $id);
+                $gal = Gallary::where('pro_id', $id);
                 $gal->delete();
             }
             $reviews = Reviews::where('pro_id', $id);
@@ -641,75 +642,6 @@ class AdminController extends Controller
     }
     //Properties ends
 
-    //Gallary starts
-    public function list_gallary(Request $request)
-    {
-        $title = "Images Gallary";
-        $menu = "gallary";
-
-        $gal = gallary::all();
-
-        $data = compact('title', 'menu', 'gal');
-        return view('AdminPanel.gallary.list', $data);
-    }
-
-    public function get_gallary(Request $request)
-    {
-        $title = "Images Gallary";
-        $menu = "gallary";
-
-        $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:properties,id'
-        ])->validate();
-        $id = $request->route()->parameter('id');
-        $pro = Property::where('id', $id)->first();
-        $gal = gallary::with('Property')->where('pro_id', '=', $id)->get();
-
-        $data = compact('title', 'menu', 'pro', 'gal', 'id');
-        return view('AdminPanel.gallary.list', $data);
-    }
-
-    public function set_gallary(Request $request)
-    {
-        $request->validate([
-            'gallary[]' => 'image|mimes:png,jpg'
-        ]);
-
-        $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:properties,id'
-        ])->validate();
-        $id = $request->route()->parameter('id');
-        $images = $request->file('gallary');
-
-        foreach ($images as $img) {
-            $image = $img;
-            $gal = new gallary;
-            $gal->pro_id = $id;
-            $iname = date('Ym') . '-' . rand() . '.' . $image->extension();
-            $store = $image->storeAs('public/gallary/' . $id . '/', $iname);
-            if ($store) {
-                $gal->gal_image = $iname;
-            }
-            $gal->save();
-        }
-
-        return redirect(route('get_gallary', $id));
-    }
-
-    public function del_gallary(Request $request)
-    {
-        $id = $request->route()->parameter('id');
-
-        $cate = gallary::findorfail($id);
-        $image = $cate->gal_image;
-        Storage::delete('/public/gallary/' . $image);
-        $cate->delete();
-        $request->session()->flash('msg', 'Deleted...');
-        $request->session()->flash('msgst', 'success');
-
-        return redirect(route('list_gallary'));
-    }
-    //Gallary ends
 
     //Reviews starts
     public function list_reviews(Request $request)
@@ -890,7 +822,7 @@ class AdminController extends Controller
 
         $id = $request->route()->parameter('id');
 
-        $gal = gallary::findorfail($id);
+        $gal = Gallary::findorfail($id);
         $gal->description = $request->description;
         if ($request->hasFile('gal_image')) {
             $image = $request->file('gal_image');
@@ -916,7 +848,7 @@ class AdminController extends Controller
         $id = $request->route()->parameter('id');
 
         if ($valid) {
-            $gal = gallary::findorfail($id);
+            $gal = Gallary::findorfail($id);
         }
 
         $title = "Edit Gallary";
@@ -926,6 +858,97 @@ class AdminController extends Controller
         return view('AdminPanel.gallary.form', $data);
     }
 
+    public function list_gallary(Request $request)
+    {
+        $title = "Images Gallary";
+        $menu = "gallary";
 
+        $gal = Gallary::all();
+
+        $data = compact('title', 'menu', 'gal');
+        return view('AdminPanel.gallary.list', $data);
+    }
+
+
+
+    public function add_service(Request $request)
+    {
+        $title = "Add Service";
+        $menu = "service";
+
+        $data = compact('title', 'menu');
+        return view('AdminPanel.service.form', $data);
+    }
+
+    public function service_added(Request $request)
+    {
+
+        $service = new Gallary;
+        $service->description = $request->description;
+        $image = $request->file('service_image');
+        $service->save();
+        $iname ="bg".$service->id;
+        $store = $image->storeAs('public/service', $iname);
+        if ($store) {
+            $service->service_image = $iname;
+        }
+        $service->update();
+
+        $request->session()->flash('msg', 'Added...');
+        $request->session()->flash('msgst', 'success');
+
+        return redirect(route('list_service'));
+    }
+    public function service_edited(Request $request)
+    {
+
+        $id = $request->route()->parameter('id');
+
+        $service = Gallary::findorfail($id);
+        $service->description = $request->description;
+        if ($request->hasFile('service_image')) {
+            $image = $request->file('service_image');
+            Storage::delete('public/images/' . $service->image);
+            $store = $image->storeAs('public/service', $image);
+            if ($store) {
+                $service->image = $image.$id;
+            }
+        }
+        $service->save();
+
+        $request->session()->flash('msg', 'Edited...');
+        $request->session()->flash('msgst', 'success');
+
+        return redirect(route('list_service'));
+    }
+
+    public function edit_service(Request $request)
+    {
+        $valid = validator($request->route()->parameters(), [
+            'id' => 'exists:categories,id'
+        ])->validate();
+        $id = $request->route()->parameter('id');
+
+        if ($valid) {
+            $service = service::findorfail($id);
+        }
+
+        $title = "Edit Gallary";
+        $menu = "service";
+
+        $data = compact('title', 'menu', 'service');
+        return view('AdminPanel.service.form', $data);
+    }
+
+    public function list_service(Request $request)
+    {
+        $title = "Service";
+        $menu = "service";
+
+        $service = Service::all();
+
+        $data = compact('title', 'menu', 'service');
+        return view('AdminPanel.service.list', $data);
+    }
 
 }

@@ -53,7 +53,10 @@ class AppServiceProvider extends ServiceProvider
                 'footer_content', 'social_links', 'contacts'
             ]));
         });
-        view()->composer(['frontend.home', 'frontend.about', 'frontend.faq', 'frontend.terms'], function ($view) {
+        view()->composer(['frontend.home', 'frontend.about', 'frontend.faq', 'frontend.terms',
+            'accounting-master.home','accounting-master.aboutus',
+            'accounting-master.contactus','accounting-master.services'
+        ], function ($view) {
             $CMS = cms::pluck('value', 'key');
 
             $view->with(compact(['CMS']));

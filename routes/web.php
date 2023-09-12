@@ -155,7 +155,6 @@ Route::middleware(AuthCheck::class)->group(function () {
     //Property ends
 
     //Gallary starts
-    //Category
     Route::get('/admin/gallary', [AdminController::class, 'list_gallary'])->name('list_gallary');
     Route::get('/admin/gallary/add', [AdminController::class, 'add_gallary'])->name('add_gallary');
     Route::post('/admin/gallary/add', [AdminController::class, 'gallary_added'])->name('gallary_added');
@@ -163,8 +162,18 @@ Route::middleware(AuthCheck::class)->group(function () {
     Route::get('/admin/gallary/{id}/del', [AdminController::class, 'del_gallary'])->name('del_gallary');
     Route::get('/admin/gallary/{id}/edit', [AdminController::class, 'edit_gallary'])->name('edit_gallary');
     Route::post('/admin/gallary/{id}/edit', [AdminController::class, 'gallary_edited'])->name('gallary_edited');
-    //End Category
     //Gallary ends
+
+
+    //Services starts
+    Route::get('/admin/service', [AdminController::class, 'list_service'])->name('list_service');
+    Route::get('/admin/service/add', [AdminController::class, 'add_service'])->name('add_service');
+    Route::post('/admin/service/add', [AdminController::class, 'service_added'])->name('service_added');
+
+    Route::get('/admin/service/{id}/del', [AdminController::class, 'del_service'])->name('del_service');
+    Route::get('/admin/service/{id}/edit', [AdminController::class, 'edit_service'])->name('edit_service');
+    Route::post('/admin/service/{id}/edit', [AdminController::class, 'service_edited'])->name('service_edited');
+    //Services ends
 
     //reviews starts
     Route::get('/admin/reviews', [AdminController::class, 'list_reviews'])->name('list_reviews');

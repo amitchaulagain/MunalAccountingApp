@@ -1,5 +1,12 @@
 @extends('weblayouts.app')
 
+@push('title')
+    {{ $CMS['about_title'] }}
+@endpush
+@push('meta')
+    {{ $CMS['about_meta'] }}
+@endpush
+
 @section('content_box')
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
@@ -18,15 +25,14 @@
     <div class="container">
         <div class="row d-flex no-gutters">
             <div class="col-md-6 d-flex">
-                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url(images/about.jpg);">
+                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url({{ asset('/storage/cms/' . $CMS['about_image']) }});">
                 </div>
             </div>
             <div class="col-md-6 pl-md-5 py-md-5">
                 <div class="heading-section pl-md-4 pt-md-5">
                     <span class="subheading">Welcome to Accounting</span>
                     <h2 class="mb-4">We Are the Best Accounting Agency</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    {!! $CMS['about_content'] !!}
                 </div>
             </div>
         </div>
@@ -279,5 +285,28 @@
         </div>
     </div>
 </section>
-
 @endsection
+
+{{--
+
+<div class="container">
+    <div class="py-5">
+        <div class="row">
+            @if (!empty($CMS['about_image']))
+                <div class="col-md-5">
+                    <img width="500px" class="h-auto mb-2" src="{{ asset('/storage/cms/' . $CMS['about_image']) }}"
+                         alt="Error">
+                </div>
+            @endif
+            @if (empty($CMS['about_image']))
+                <div class="col-md-12" style="text-align: justify">
+                    {!! $CMS['about_content'] !!}
+                </div>
+            @else
+                <div class="col-md-7" style="text-align: justify">
+                    {!! $CMS['about_content'] !!}
+                </div>
+            @endif
+        </div>
+    </div>
+</div>--}}

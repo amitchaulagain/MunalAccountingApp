@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\cms;
 use App\Models\Facilities;
-use App\Models\gallary;
+use App\Models\Gallary;
 use App\Models\Property;
 use App\Models\Reviews;
 use App\Models\SiteSettings;
@@ -325,7 +325,7 @@ class UserController extends Controller
                 $faci[$key] = Facilities::where('slug_faci', '=', $value)->first() ?? null;
             }
         }
-        $gals = gallary::with('Pro')->where('pro_id', '=', $item->id)->get();
+        $gals = Gallary::with('Pro')->where('pro_id', '=', $item->id)->get();
         $userId = $request->session()->get('user')['id'] ?? null;
         $user_reviews = Reviews::where('u_id', $userId)->where('pro_id', $item->id)->latest()->get();
         $reviews = Reviews::with('Users')
