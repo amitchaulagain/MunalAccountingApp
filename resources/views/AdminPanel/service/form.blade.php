@@ -33,7 +33,7 @@
                                     <p class="text-muted form-label">for best output upload [400 x 225] Image</p>
                                     <div class="input-group">
                                         <input type="file" class="form-control" name="gal_image" id=""
-                                            @if (empty($service))required @endif>
+                                            @if (empty($service)) @endif>
                                     </div>
                                     <div class="text-danger mt-0">* @error('image') {{ $message }} @enderror</div>
                                 </div>

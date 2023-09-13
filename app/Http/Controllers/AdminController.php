@@ -883,7 +883,7 @@ class AdminController extends Controller
     public function service_added(Request $request)
     {
 
-        $service = new Gallary;
+        $service = new Service();
         $service->description = $request->description;
         $image = $request->file('service_image');
         $service->save();
