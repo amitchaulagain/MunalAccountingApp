@@ -30,6 +30,9 @@
                                     <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-faq" type="button" role="tab" aria-controls="nav-faq"
                                         aria-selected="false">FAQ</button>
+                                    <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-services" type="button" role="tab" aria-controls="nav-faq"
+                                            aria-selected="false">Services</button>
                                     <button class="nav-link" id="nav-terms-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-terms" type="button" role="tab" aria-controls="nav-terms"
                                         aria-selected="false">Terms</button>
@@ -207,6 +210,44 @@
                                         @endif
                                     </div>
                                 </div>
+                                <div class="tab-pane fade" id="nav-services" role="tabpanel" aria-labelledby="nav-services-tab">
+                                    <div class="row">
+                                        <h5 class="card-title">Services Head</h5>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Title</label>
+                                            <input type="text" class="form-control" name="services_title"
+                                                   value="{{ $cms['services_title'] ?? '' }}">
+                                            <div class="text-danger">
+                                                @error('services_title')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Meta discription</label>
+                                            <input type="text" class="form-control" name="services_meta"
+                                                   value="{{ $cms['services_meta'] ?? '' }}">
+                                            <div class="text-danger">
+                                                @error('services_meta')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <h5 class="card-title">Services Content</h5>
+                                        <div class="col-md-12 mb-2">
+                                            <label for="" class="form-label">Content</label>
+                                            <textarea name="services_content" class="ckeditor"
+                                                      id="services_content">{{ $cms['services_content'] ?? '' }}</textarea>
+                                        </div>
+                                        @if (session()->get('AdminUser')['type'] == 'R')
+                                            <div class="col-md-12">
+                                                <button class="btn btn-success" type="submit">Update</button>
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+
+
                                 <div class="tab-pane fade" id="nav-terms" role="tabpanel" aria-labelledby="nav-terms-tab">
                                     <div class="row">
                                         <h5 class="card-title">Terms Head</h5>

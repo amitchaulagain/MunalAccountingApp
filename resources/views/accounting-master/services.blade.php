@@ -16,7 +16,7 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row">
-                {!! $CMS['faq_content'] !!}
+                {!! $CMS['services_content'] !!}
             </div>
         </div>
     </section>
