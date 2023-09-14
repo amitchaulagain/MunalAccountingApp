@@ -79,29 +79,6 @@
                             </div>
                     </div>
                 </form>
-
-
-                {{--  <form  method="post" class="form-consultation"  action="{{route('basic_email')}}">
-                      @csrf
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Your Name" name="name">
-                      </div>
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Your Email" name="email">
-                      </div>
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Your Contact Number" name="contact">
-                      </div>
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Subject" name="subject">
-                      </div>
-                      <div class="form-group">
-                          <textarea  cols="30" rows="3" class="form-control" placeholder="Message" name="message"></textarea>
-                      </div>
-                      <div class="form-group">
-                          <button type="submit" class="form-control submit px-3">Send A Message</button>
-                      </div>
-                  </form>--}}
             </div>
         </div>
     </div>
