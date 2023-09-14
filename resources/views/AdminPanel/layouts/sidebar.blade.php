@@ -15,58 +15,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="py-0 nav-link @if ($menu == 'category') fw-bolder fs-6 active @endif "
-                    aria-current="page" href="{{ route('list_category') }}">
-                    <div class="d-flex">
-                        <div style="width: 25px" class="fs-5 text-center">
-                            <i class="fas fa-cubes"></i>
-                        </div>
-                        <span class="ms-2 my-auto">
-                            Category
-                        </span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="py-0 nav-link @if ($menu == 'cities') fw-bolder fs-6 active @endif "
-                    aria-current="page" href="{{ route('list_cities') }}">
-                    <div class="d-flex">
-                        <div style="width: 25px" class="fs-5 text-center">
-                            <i class="fas fa-city"></i>
-                        </div>
-                        <span class="ms-2 my-auto">
-                            Cities
-                        </span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="py-0 nav-link @if ($menu == 'facilities') fw-bolder fs-6 active @endif "
-                    aria-current="page" href="{{ route('list_facilities') }}">
-                    <div class="d-flex">
-                        <div style="width: 25px" class="fs-5 text-center">
-                            <i class="fas fa-shapes"></i>
-                        </div>
-                        <span class="ms-2 my-auto">
-                            Facilities
-                        </span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="py-0 nav-link @if ($menu == 'properties') fw-bolder fs-6 active @endif "
-                    aria-current="page" href="{{ route('list_properties') }}">
-                    <div class="d-flex">
-                        <div style="width: 25px" class="fs-5 text-center">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <span class="ms-2 my-auto">
-                            Properties
-                        </span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="py-0 nav-link @if ($menu == 'gallary') fw-bolder fs-6 active @endif "
                     aria-current="page" href="{{ route('list_gallary') }}">
                     <div class="d-flex text-center">
@@ -74,7 +22,7 @@
                             <i class="fas fa-images"></i>
                         </div>
                         <span class="ms-2 my-auto">
-                            Gallary
+                            Slider Images
                         </span>
                     </div>
                 </a>
@@ -88,19 +36,6 @@
                         </div>
                         <span class="ms-2 my-auto">
                             Service
-                        </span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="py-0 nav-link @if ($menu == 'reviews') fw-bolder fs-6 active @endif "
-                    aria-current="page" href="{{ route('list_reviews') }}">
-                    <div class="d-flex">
-                        <div style="width: 25px" class="fs-5 text-center">
-                            <i class="fas fa-comment-alt"></i>
-                        </div>
-                        <span class="ms-2 my-auto">
-                            Reviews
                         </span>
                     </div>
                 </a>
