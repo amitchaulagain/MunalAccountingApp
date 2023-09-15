@@ -65,6 +65,12 @@ composer install
 1. Use below Command and wait till all migrations complete...
 ```bash
 php artisan migrate
+
+OR 
+
+import from init.sql
+find the command for import
+
 ```
 2. Use below Command to Link Storage to Public folder
 ```bash
@@ -89,7 +95,7 @@ admin@admin.com
 ```
 - Admin Password
 ```bash
-admin123
+admin
 ```
 Update CMS and Site Settings inside Admin Panel (/admin/dashboard) Once (empty or filled doesn't matter), and then goto frontend
 > when project loads for first time db won't have values of CMS and Site setting, by updating those fields will be created, so frontend wouldn't show errors after that...
