@@ -15,8 +15,8 @@
                         action="{{ route('AdminLogin') }}">
 
                         @csrf
-                        <x-log-input type="email" name="email" label="Email address" placeholder="name@example.com" />
-                        <x-log-input type="password" name="password" label="Password" placeholder="Password" />
+                        <input class="form-control" type="email" name="email" label="Email address" placeholder="name@example.com" />
+                        <input class="form-control" type="password" name="password" label="Password" placeholder="Password" />
 
                         {{-- <div class="checkbox mb-3">
                             <label>
