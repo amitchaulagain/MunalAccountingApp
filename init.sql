@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categories` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `categories_name_unique` (`name`)
+                              `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                              `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `slug_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `created_at` timestamp NULL DEFAULT NULL,
+                              `updated_at` timestamp NULL DEFAULT NULL,
+                              PRIMARY KEY (`id`),
+                              UNIQUE KEY `categories_name_unique` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,14 +52,14 @@ DROP TABLE IF EXISTS `cities`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cities` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `city` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug_city` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0' COMMENT '1 = active, 0 = disabled',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `cities_city_unique` (`city`)
+                          `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                          `city` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                          `slug_city` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                          `status` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0' COMMENT '1 = active, 0 = disabled',
+                          `created_at` timestamp NULL DEFAULT NULL,
+                          `updated_at` timestamp NULL DEFAULT NULL,
+                          PRIMARY KEY (`id`),
+                          UNIQUE KEY `cities_city_unique` (`city`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -81,12 +81,12 @@ DROP TABLE IF EXISTS `cms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cms` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                       `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                       `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                       `value` text COLLATE utf8mb4_unicode_ci,
+                       `created_at` timestamp NULL DEFAULT NULL,
+                       `updated_at` timestamp NULL DEFAULT NULL,
+                       PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -108,15 +108,15 @@ DROP TABLE IF EXISTS `facilities`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `facilities` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `faci` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug_faci` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fa` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `color` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `facilities_faci_unique` (`faci`)
+                              `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                              `faci` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `slug_faci` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `fa` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `color` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `created_at` timestamp NULL DEFAULT NULL,
+                              `updated_at` timestamp NULL DEFAULT NULL,
+                              PRIMARY KEY (`id`),
+                              UNIQUE KEY `facilities_faci_unique` (`faci`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -137,15 +137,15 @@ DROP TABLE IF EXISTS `failed_jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `failed_jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
+                               `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                               `uuid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                               PRIMARY KEY (`id`),
+                               UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -166,12 +166,12 @@ DROP TABLE IF EXISTS `gallaries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gallaries` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `gal_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                             `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                             `gal_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                             `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                             `created_at` timestamp NULL DEFAULT NULL,
+                             `updated_at` timestamp NULL DEFAULT NULL,
+                             PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -193,12 +193,12 @@ DROP TABLE IF EXISTS `image_sliders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `image_sliders` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                                 `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                                 `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                 `value` text COLLATE utf8mb4_unicode_ci,
+                                 `created_at` timestamp NULL DEFAULT NULL,
+                                 `updated_at` timestamp NULL DEFAULT NULL,
+                                 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -220,10 +220,10 @@ DROP TABLE IF EXISTS `migrations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `migrations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+                              `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                              `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `batch` int(11) NOT NULL,
+                              PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -245,10 +245,10 @@ DROP TABLE IF EXISTS `password_resets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `password_resets` (
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  KEY `password_resets_email_index` (`email`)
+                                   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                   `created_at` timestamp NULL DEFAULT NULL,
+                                   KEY `password_resets_email_index` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -269,18 +269,18 @@ DROP TABLE IF EXISTS `personal_access_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `personal_access_tokens` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `tokenable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tokenable_id` bigint(20) unsigned NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci,
-  `last_used_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
-  KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`)
+                                          `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                                          `tokenable_type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                          `tokenable_id` bigint(20) unsigned NOT NULL,
+                                          `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                          `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                          `abilities` text COLLATE utf8mb4_unicode_ci,
+                                          `last_used_at` timestamp NULL DEFAULT NULL,
+                                          `created_at` timestamp NULL DEFAULT NULL,
+                                          `updated_at` timestamp NULL DEFAULT NULL,
+                                          PRIMARY KEY (`id`),
+                                          UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
+                                          KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -301,31 +301,31 @@ DROP TABLE IF EXISTS `properties`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `properties` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `public` tinyint(1) NOT NULL DEFAULT '1',
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title_slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `featured` tinyint(1) NOT NULL DEFAULT '0',
-  `purpose` enum('sale','rent','pg') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category` bigint(20) NOT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `fe_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `faci` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `rooms` int(11) NOT NULL,
-  `bathrooms` int(11) NOT NULL,
-  `city` bigint(20) NOT NULL,
-  `address` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cont_ph` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `cont_em` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `area` int(11) DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `video` text COLLATE utf8mb4_unicode_ci,
-  `floorplan` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `map` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                              `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                              `public` tinyint(1) NOT NULL DEFAULT '1',
+                              `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `title_slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `price` decimal(10,2) NOT NULL,
+                              `featured` tinyint(1) NOT NULL DEFAULT '0',
+                              `purpose` enum('sale','rent','pg') COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `category` bigint(20) NOT NULL,
+                              `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `fe_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `faci` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `rooms` int(11) NOT NULL,
+                              `bathrooms` int(11) NOT NULL,
+                              `city` bigint(20) NOT NULL,
+                              `address` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `cont_ph` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `cont_em` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `area` int(11) DEFAULT NULL,
+                              `description` text COLLATE utf8mb4_unicode_ci,
+                              `video` text COLLATE utf8mb4_unicode_ci,
+                              `floorplan` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                              `map` text COLLATE utf8mb4_unicode_ci,
+                              `created_at` timestamp NULL DEFAULT NULL,
+                              `updated_at` timestamp NULL DEFAULT NULL,
+                              PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -346,13 +346,13 @@ DROP TABLE IF EXISTS `reviews`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `reviews` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `u_id` bigint(20) NOT NULL,
-  `pro_id` bigint(20) NOT NULL,
-  `review` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                           `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                           `u_id` bigint(20) NOT NULL,
+                           `pro_id` bigint(20) NOT NULL,
+                           `review` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                           `created_at` timestamp NULL DEFAULT NULL,
+                           `updated_at` timestamp NULL DEFAULT NULL,
+                           PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -373,12 +373,12 @@ DROP TABLE IF EXISTS `services`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `services` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `service_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                            `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                            `service_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `created_at` timestamp NULL DEFAULT NULL,
+                            `updated_at` timestamp NULL DEFAULT NULL,
+                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -399,12 +399,12 @@ DROP TABLE IF EXISTS `site_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `site_settings` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                                 `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                                 `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                 `value` text COLLATE utf8mb4_unicode_ci,
+                                 `created_at` timestamp NULL DEFAULT NULL,
+                                 `updated_at` timestamp NULL DEFAULT NULL,
+                                 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -426,13 +426,13 @@ DROP TABLE IF EXISTS `user_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_data` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `about` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `saved` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+                             `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                             `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                             `about` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                             `saved` text COLLATE utf8mb4_unicode_ci,
+                             `created_at` timestamp NULL DEFAULT NULL,
+                             `updated_at` timestamp NULL DEFAULT NULL,
+                             PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -454,17 +454,17 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` enum('U','R','A') COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'R=Root, A=Admin, U=User',
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`)
+                         `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                         `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `email_verified_at` timestamp NULL DEFAULT NULL,
+                         `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `type` enum('U','R','A') COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'R=Root, A=Admin, U=User',
+                         `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                         `created_at` timestamp NULL DEFAULT NULL,
+                         `updated_at` timestamp NULL DEFAULT NULL,
+                         PRIMARY KEY (`id`),
+                         UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
