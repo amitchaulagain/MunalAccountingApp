@@ -34,7 +34,7 @@
                             <th scope="row">{{ $item->id }}</th>
                             <th scope="row"><img height="40rem" class="rounded" style="cursor: pointer"
                                                  data-fancybox="gallery"
-                                                 data-src="{{ asset('/storage/images/' . $item->image) }}"
+                                                 data-src="{{ asset('/storage/images/' . $item->service_image) }}"
                                                  src="{{ asset('/storage/images/' . $item->service_image) }}"
                                                  alt="Error"></th>
                             <th scope="row">{{ $item->title }}</th>

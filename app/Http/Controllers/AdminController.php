@@ -805,13 +805,6 @@ class AdminController extends Controller
         $gal->description = $request->description;
         $image = $request->file('gal_image');
         $gal->save();
-        $iname ="bg".$gal->id;
-        $store = $image->storeAs('public/gallary', $iname);
-        if ($store) {
-            $gal->gal_image = $iname;
-        }
-        $gal->update();
-
         $request->session()->flash('msg', 'Added...');
         $request->session()->flash('msgst', 'success');
 
@@ -824,14 +817,7 @@ class AdminController extends Controller
 
         $gal = Gallary::findorfail($id);
         $gal->description = $request->description;
-        if ($request->hasFile('gal_image')) {
-            $image = $request->file('gal_image');
-            Storage::delete('public/images/' . $gal->image);
-            $store = $image->storeAs('public/gallary', $image);
-            if ($store) {
-                $gal->image = $image.$id;
-            }
-        }
+
         $gal->save();
 
         $request->session()->flash('msg', 'Edited...');
@@ -843,7 +829,7 @@ class AdminController extends Controller
     public function edit_gallary(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:categories,id'
+            'id' => 'exists:gallaries,id'
         ])->validate();
         $id = $request->route()->parameter('id');
 
@@ -884,14 +870,10 @@ class AdminController extends Controller
     {
 
         $service = new Service();
+        $service->title = $request->title;
         $service->description = $request->description;
-        $image = $request->file('service_image');
+
         $service->save();
-        $iname ="bg".$service->id;
-        $store = $image->storeAs('public/service', $iname);
-        if ($store) {
-            $service->service_image = $iname;
-        }
         $service->update();
 
         $request->session()->flash('msg', 'Added...');
@@ -904,8 +886,10 @@ class AdminController extends Controller
 
         $id = $request->route()->parameter('id');
 
-        $service = Gallary::findorfail($id);
+        $service = Service::findorfail($id);
         $service->description = $request->description;
+        $service->title = $request->title;
+
         if ($request->hasFile('service_image')) {
             $image = $request->file('service_image');
             Storage::delete('public/images/' . $service->image);
@@ -921,6 +905,8 @@ class AdminController extends Controller
 
         return redirect(route('list_service'));
     }
+
+
 
     public function edit_service(Request $request)
     {
@@ -949,6 +935,23 @@ class AdminController extends Controller
 
         $data = compact('title', 'menu', 'service');
         return view('AdminPanel.service.list', $data);
+    }
+    public function del_service(Request $request)
+    {
+        $valid = validator($request->route()->parameters(), [
+            'id' => 'exists:services,id'
+        ])->validate();
+        $id = $request->route()->parameter('id');
+
+        if ($valid) {
+            $faci = Service::findorfail($id);
+            $faci->delete();
+        }
+
+        $request->session()->flash('msg', 'Deleted...');
+        $request->session()->flash('msgst', 'danger');
+
+        return redirect(route('list_service'));
     }
 
 }

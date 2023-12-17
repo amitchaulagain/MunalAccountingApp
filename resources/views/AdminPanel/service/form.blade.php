@@ -9,7 +9,7 @@
                         <li class="breadcrumb-item" aria-current="page">Service</li>
                         <li class="breadcrumb-item active">@if (!empty($service))Edit @else Add @endif</li>
                         <div class="d-flex ms-auto">
-                            <a class="btn btn-primary disabled" href="{{ route('add_gallary') }}">Add</a>
+                            <a class="btn btn-primary disabled" href="{{ route('add_service') }}">Add</a>
                         </div>
                     </ol>
                 </div>
@@ -21,22 +21,13 @@
                         <h4 class="">@if (!empty($service))Edit @else Add @endif Service</h4>
                     </div>
                     <div class="card-body">
-                        <form class="row g-3" action="@if (!empty($service)){{ route('gallary_edited', $service->id) }}@else{{ route('gallary_added') }}@endif" method="POST"
+                        <form class="row g-3" action="@if (!empty($service)){{ route('service_edited', $service->id) }}@else{{ route('service_added') }}@endif" method="POST"
                             enctype="multipart/form-data">
                             @csrf
 
                             <div class="col">
 
 
-                                <div class="col-md-12">
-                                    <label for="" class="form-label">Service Image</label>
-                                    <p class="text-muted form-label">for best output upload [400 x 225] Image</p>
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" name="gal_image" id=""
-                                            @if (empty($service)) @endif>
-                                    </div>
-                                    <div class="text-danger mt-0">* @error('image') {{ $message }} @enderror</div>
-                                </div>
 
                                 <div class="col-md-12 mb-2">
                                     <label for="" class="form-label">Title</label>
@@ -58,7 +49,7 @@
                             <div class="col-md-4">
                                 @if (!empty($service))
                                     <label for="" class="form-label">Old Image</label>
-                                    <img class="form-control" src="{{ asset('/storage/gallary/' . $service->image) }}"
+                                    <img class="form-control" src="{{ asset('/storage/gallary/' . $service->service_image) }}"
                                         alt="Error">
                                 @endif
                             </div>
