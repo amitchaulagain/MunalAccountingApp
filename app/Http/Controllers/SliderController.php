@@ -37,13 +37,13 @@ class SliderController extends Controller
             $imageSlider = ImageSlider::where('key', $hero)->first();
             if ($imageSlider) {
                 if (!empty($imageSlider->value)) {
-                    Storage::delete('public/sliders/' . $imageSlider->value);
+                    Storage::delete('public/home/' . $imageSlider->value);
                 }
                 $image = $request->file($hero);
                 //$iname = date('Ym') . '-' . rand() . '.' . $image->extension();
                 $iname = "sliderimage" . '.' . $image->extension();
 
-                $store = $image->storeAs('public/sliders', $iname);
+                $store = $image->storeAs('public/home', $iname);
                 if ($store) {
                     $imageSlider->update(['value' => $iname]);
                 }
@@ -52,7 +52,7 @@ class SliderController extends Controller
                 //$iname = date('Ym') . '-' . rand() . '.' . $image->extension();
                 $iname = "sliderimage" . '.' . $image->extension();
 
-                $store = $image->storeAs('public/sliders', $iname);
+                $store = $image->storeAs('public/home', $iname);
                 if ($store) {
                     $imageSlider = ImageSlider::create(['key' => "one", 'value' => "one.png"]);
                 }
@@ -87,7 +87,7 @@ class SliderController extends Controller
             $imageSlider = ImageSlider::where('key', $key)->first();
             if ($imageSlider) {
                 if (!empty($imageSlider->value)) {
-                    Storage::delete('public/sliders/' . $imageSlider->value);
+                    Storage::delete('public/home/' . $imageSlider->value);
                     $res = $imageSlider->update(['value' => null]);
                 }
             }

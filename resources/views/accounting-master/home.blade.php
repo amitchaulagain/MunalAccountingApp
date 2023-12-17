@@ -3,7 +3,7 @@
 @section('content_box')
     <div class="hero-wrap">
         <div class="home-slider owl-carousel">
-            <div class="slider-item" style="background-image:url({{ asset('/storage/images/bg_1.jpg')}});">
+            <div class="slider-item" style="background-image:url('/images/uploads/home/sliders/bg_1.jpg');">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="slider-item" style="background-image:url({{ asset('/storage/images/bg_2.jpg')}});">
+            <div class="slider-item" style="background-image:url('/images/uploads/home/sliders/bg_2.jpg');">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="slider-item" style="background-image:url({{ asset('/storage/images/bg_3.jpg')}});">
+            <div class="slider-item" style="background-image:url('/images/uploads/home/sliders/bg_3.jpg');">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -315,9 +315,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="img-faqs w-100">
-                        <div class="img mb-4 mb-sm-0" style="background-image:url(images/about-2.jpg);">
+                        <div class="img mb-4 mb-sm-0" style="background-image:url(images/uploads/aboutus/about-2.jpg);">
                         </div>
-                        <div class="img img-2 mb-4 mb-sm-0" style="background-image:url(images/about-1.jpg);">
+                        <div class="img img-2 mb-4 mb-sm-0" style="background-image:url(images/uploads/aboutus/about-1.jpg);">
                         </div>
                     </div>
                 </div>

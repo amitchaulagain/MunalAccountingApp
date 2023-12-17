@@ -3,12 +3,10 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                @if (!empty($logo_image->value))
                     <a class="navbar-brand" href="{{ route('userHome') }}">
-                        <img style="height: 40px" src="{{ asset('storage/siteSettings/' . $logo_image->value) }}"
+                        <img style="height: 40px" src="/images/uploads/logo/logo.jpg"
                             alt="{{ $brand_title->value ?? 'Munal Accounting Services' }}">
                     </a>
-                @endif
                 <a class="navbar-brand" href="{{ route('userHome') }}">{{ $brand_title->value ?? 'MUNAL ACCOUNTING SERVICES' }}</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
