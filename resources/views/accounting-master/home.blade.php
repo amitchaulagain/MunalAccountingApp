@@ -207,6 +207,7 @@
         </div>
     </section>
 
+{{--
     <section class="ftco-section testimony-section bg-light">
         <div class="overlay"></div>
         <div class="container">
@@ -309,6 +310,7 @@
             </div>
         </div>
     </section>
+--}}
 
     <section class="ftco-section ftco-no-pt bg-light ftco-faqs">
         <div class="container">
@@ -430,7 +432,7 @@
         </div>
     </section>
 
-    <section class="ftco-section">
+   {{-- <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
@@ -575,5 +577,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 @endsection

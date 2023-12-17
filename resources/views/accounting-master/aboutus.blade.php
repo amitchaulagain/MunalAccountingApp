@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row d-flex no-gutters">
             <div class="col-md-6 d-flex">
-                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url({{ asset('/storage/cms/' . $CMS['about_image']) }});">
+                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url({{ asset('/images/uploads/aboutus/' . $CMS['about_image']) }});">
                 </div>
             </div>
             <div class="col-md-6 pl-md-5 py-md-5">
@@ -39,6 +39,7 @@
     </div>
 </section>
 
+{{--
 <section class="ftco-counter bg-light ftco-no-pt" id="section-counter">
     <div class="container">
         <div class="row">
@@ -85,6 +86,7 @@
         </div>
     </div>
 </section>
+--}}
 
 
 

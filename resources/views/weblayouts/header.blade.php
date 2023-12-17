@@ -94,4 +94,4 @@
 <!-- END nav -->
 
 
-<body>
+<body style="color: white">
