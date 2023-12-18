@@ -45,11 +45,24 @@
 
 
 
+                                <div class="col-md-12">
+                                    <label for="" class="form-label">Service Image</label>
+                                    <p class="text-muted form-label">for best output upload [400 x 225] Image</p>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" name="service_image" id=""
+                                        @if (empty($service)) @endif>
+                                    </div>
+                                    <div class="text-danger mt-0">* @error('image') {{ $message }} @enderror</div>
+                                </div>
+
+
+
+
                             </div>
                             <div class="col-md-4">
                                 @if (!empty($service))
                                     <label for="" class="form-label">Old Image</label>
-                                    <img class="form-control" src="{{ asset('/storage/gallary/' . $service->service_image) }}"
+                                    <img class="form-control"  src="{{ asset('/images/uploads/services') .'/'. $service->service_image }}"
                                         alt="Error">
                                 @endif
                             </div>

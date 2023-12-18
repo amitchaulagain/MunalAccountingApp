@@ -810,6 +810,7 @@ class AdminController extends Controller
 
         return redirect(route('list_gallary'));
     }
+
     public function gallary_edited(Request $request)
     {
 
@@ -856,7 +857,6 @@ class AdminController extends Controller
     }
 
 
-
     public function add_service(Request $request)
     {
         $title = "Add Service";
@@ -868,19 +868,23 @@ class AdminController extends Controller
 
     public function service_added(Request $request)
     {
-
         $service = new Service();
         $service->title = $request->title;
         $service->description = $request->description;
-
+        $image = $request->file('service_image');
         $service->save();
+        $imageName ="srv".$service->id. '.'.$image->getClientOriginalExtension();
+        $image->move(public_path('/images/uploads/services/'), $imageName);
+        if ($image) {
+            $service->service_image = $imageName;
+        }
         $service->update();
 
         $request->session()->flash('msg', 'Added...');
         $request->session()->flash('msgst', 'success');
-
         return redirect(route('list_service'));
     }
+
     public function service_edited(Request $request)
     {
 
@@ -892,10 +896,13 @@ class AdminController extends Controller
 
         if ($request->hasFile('service_image')) {
             $image = $request->file('service_image');
-            Storage::delete('public/images/' . $service->image);
-            $store = $image->storeAs('public/service', $image);
-            if ($store) {
-                $service->image = $image.$id;
+            $imageName = pathinfo($image, PATHINFO_BASENAME);
+            $imagePath = public_path('path/to/images/') . $imageName;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+                // Image deleted successfully
+            } else {
+                // Image not found or failed to delete
             }
         }
         $service->save();
@@ -907,11 +914,10 @@ class AdminController extends Controller
     }
 
 
-
     public function edit_service(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:categories,id'
+            'id' => 'exists:services,id'
         ])->validate();
         $id = $request->route()->parameter('id');
 
@@ -936,6 +942,7 @@ class AdminController extends Controller
         $data = compact('title', 'menu', 'service');
         return view('AdminPanel.service.list', $data);
     }
+
     public function del_service(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -945,11 +952,44 @@ class AdminController extends Controller
 
         if ($valid) {
             $faci = Service::findorfail($id);
+            $imageName = $faci->service_image; // replace with your actual image name
+            $imagePath = public_path('images/uploads/') . $imageName. '.jpg';
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+                // Image deleted successfully
+            } else {
+                // Image not found or failed to delete
+            }
+
+
             $faci->delete();
         }
 
         $request->session()->flash('msg', 'Deleted...');
         $request->session()->flash('msgst', 'danger');
+
+        return redirect(route('list_service'));
+    }
+
+    public function showForm()
+    {
+        $title = "Upload";
+        $menu = "service";
+
+        $data = compact('title', 'menu');
+        return view('AdminPanel.service.upload', $data);
+    }
+
+    public function upload(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust validation rules as needed
+        ]);
+
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images/uploads'), $imageName);
 
         return redirect(route('list_service'));
     }

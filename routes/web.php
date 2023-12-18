@@ -205,6 +205,14 @@ Route::middleware(AuthCheck::class)->group(function () {
     Route::get('/admin/chng-password', [AdminController::class, 'chng_password'])->name('chng_password');
     Route::post('/admin/chng-password', [AdminController::class, 'save_password'])->name('save_password');
     //Change Password Ends
+
+    //Uploads
+
+    Route::get('/admin/upload', [AdminController::class, 'showForm'])->name('showForm');
+    Route::post('/admin/upload', [AdminController::class, 'upload'])->name('upload');
+
+
+
 });
 
 //if none of above route is used then sended to 404
@@ -213,7 +221,5 @@ Route::get('/{any}', [UserController::class, 'not_found'])->where('any', '.*');
 
 
 
-//Send email
-
-
+//Upload
 
