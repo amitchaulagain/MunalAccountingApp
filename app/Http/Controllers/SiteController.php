@@ -49,8 +49,10 @@ class SiteController extends Controller
                 //$iname = date('Ym') . '-' . rand() . '.' . $image->extension();
                 $iname = "logo" . '.' . $image->extension();
 
-                $store = $image->storeAs('public/siteSettings', $iname);
-                if ($store) {
+
+                $image->move(public_path('images/uploads/logo/'), $iname);
+
+                if ($image) {
                     $siteSetting = SiteSettings::create(['key' => 'logo_image', 'value' => $iname]);
                 }
             }

@@ -51,8 +51,8 @@
                             <div class="col-md-4">
                                 @if (!empty($gal))
                                     <label for="" class="form-label">Old Image</label>
-                                    <img class="form-control" src="{{ asset('/storage/gallary/' . $gal->image) }}"
-                                        alt="Error">
+                                    <img class="form-control"  src="{{ asset('/images/uploads/home/sliders') .'/'. $gal->gal_image }}"
+                                         alt="Error">
                                 @endif
                             </div>
                             <div class="col-12">

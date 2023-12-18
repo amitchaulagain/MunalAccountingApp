@@ -32,8 +32,9 @@
                         <tr>
                             <th scope="row">{{ $item->id }}</th>
                             <th scope="row"><img height="40rem" class="rounded" style="cursor: pointer"
-                                                 data-fancybox="gallery" data-src="{{ asset('/storage/images/' . $item->image) }}"
-                                                 src="{{ asset('/storage/images/' . $item->gal_image) }}" alt="Error"></th>
+                                                 data-src="{{ asset('/images/uploads/home/sliders') .'/' . $item->gal_image}}"
+                                                 src="{{ asset('/images/uploads/home/sliders') .'/'. $item->gal_image }}"
+                                                 alt="Error"></th>
                             <th scope="row">{{ $item->description }}</th>
                             <th scope="row">
                                 <a class="btn btn-success btn-sm" href="{{ route('edit_gallary', $item->id) }}"><i

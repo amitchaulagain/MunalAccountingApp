@@ -801,14 +801,24 @@ class AdminController extends Controller
     public function gallary_added(Request $request)
     {
 
-        $gal = new Gallary;
-        $gal->description = $request->description;
-        $image = $request->file('gal_image');
-        $gal->save();
-        $request->session()->flash('msg', 'Added...');
-        $request->session()->flash('msgst', 'success');
+        {
+            $service = new Gallary();
+            $service->description = $request->description;
+            $image = $request->file('gal_image');
+            $service->save();
+            $imageName = "slider" . $service->id . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('/images/uploads/home/sliders/'), $imageName);
+            if ($image) {
+                $service->gal_image = $imageName;
+            }
+            $service->update();
 
-        return redirect(route('list_gallary'));
+            $request->session()->flash('msg', 'Added...');
+            $request->session()->flash('msgst', 'success');
+            return redirect(route('list_gallary'));
+        }
+
+
     }
 
     public function gallary_edited(Request $request)
@@ -816,10 +826,24 @@ class AdminController extends Controller
 
         $id = $request->route()->parameter('id');
 
-        $gal = Gallary::findorfail($id);
-        $gal->description = $request->description;
+        $service = Gallary::findorfail($id);
+        $service->description = $request->description;
 
-        $gal->save();
+        if ($request->hasFile('gal_image')) {
+            $image = $request->file('gal_image');
+            $imageName = "slider" . $service->id . '.' . $image->getClientOriginalExtension();
+            $imagePath = public_path('images/uploads/home/sliders/') . $service->gal_image;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+                $image->move(public_path('images/uploads/home/sliders/'), $imageName);
+                $service->gal_image = $imageName;
+                // Image deleted successfully
+            } else {
+               // $image->move(public_path('images/uploads/home/sliders/'), $imageName);
+            }
+        }
+
+        $service->save();
 
         $request->session()->flash('msg', 'Edited...');
         $request->session()->flash('msgst', 'success');
@@ -873,7 +897,7 @@ class AdminController extends Controller
         $service->description = $request->description;
         $image = $request->file('service_image');
         $service->save();
-        $imageName ="srv".$service->id. '.'.$image->getClientOriginalExtension();
+        $imageName = "srv" . $service->id . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('/images/uploads/services/'), $imageName);
         if ($image) {
             $service->service_image = $imageName;
@@ -887,7 +911,6 @@ class AdminController extends Controller
 
     public function service_edited(Request $request)
     {
-
         $id = $request->route()->parameter('id');
 
         $service = Service::findorfail($id);
@@ -896,13 +919,15 @@ class AdminController extends Controller
 
         if ($request->hasFile('service_image')) {
             $image = $request->file('service_image');
-            $imageName = pathinfo($image, PATHINFO_BASENAME);
-            $imagePath = public_path('path/to/images/') . $imageName;
+            $imageName = "srv" . $service->id . '.' . $image->getClientOriginalExtension();
+            $imagePath = public_path('images/uploads/services/') . $service->service_image;
             if (file_exists($imagePath)) {
                 unlink($imagePath);
+                $image->move(public_path('images/uploads/services/'), $imageName);
+                $service->service_image = $imageName;
                 // Image deleted successfully
             } else {
-                // Image not found or failed to delete
+                // $image->move(public_path('images/uploads/home/sliders/'), $imageName);
             }
         }
         $service->save();
@@ -925,7 +950,7 @@ class AdminController extends Controller
             $service = service::findorfail($id);
         }
 
-        $title = "Edit Gallary";
+        $title = "Edit Service";
         $menu = "service";
 
         $data = compact('title', 'menu', 'service');
@@ -953,7 +978,7 @@ class AdminController extends Controller
         if ($valid) {
             $faci = Service::findorfail($id);
             $imageName = $faci->service_image; // replace with your actual image name
-            $imagePath = public_path('images/uploads/') . $imageName. '.jpg';
+            $imagePath = public_path('images/uploads/services/') . $imageName;
 
             if (file_exists($imagePath)) {
                 unlink($imagePath);
@@ -970,6 +995,35 @@ class AdminController extends Controller
         $request->session()->flash('msgst', 'danger');
 
         return redirect(route('list_service'));
+    }
+
+    public function del_gallary(Request $request)
+    {
+        $valid = validator($request->route()->parameters(), [
+            'id' => 'exists:gallaries,id'
+        ])->validate();
+        $id = $request->route()->parameter('id');
+
+        if ($valid) {
+            $faci = Gallary::findorfail($id);
+            $imageName = $faci->gal_image; // replace with your actual image name
+            $imagePath = public_path('images/uploads/home/sliders/') . $imageName;
+
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+                // Image deleted successfully
+            } else {
+                // Image not found or failed to delete
+            }
+
+
+            $faci->delete();
+        }
+
+        $request->session()->flash('msg', 'Deleted...');
+        $request->session()->flash('msgst', 'danger');
+
+        return redirect(route('list_gallary'));
     }
 
     public function showForm()
