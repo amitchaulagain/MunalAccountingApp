@@ -557,8 +557,11 @@ class UserController extends Controller
         $title = "Home";
         $siteSetting=$this->siteSetting;
         $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
 
-        $data = compact( 'title', 'siteSetting','gal');
+
+        $data = compact( 'title', 'siteSetting','gal','services','cms');
         return view('accounting-master.home',$data);
     }
 
@@ -566,8 +569,10 @@ class UserController extends Controller
     {
         $title = "About Us";
         $siteSetting=$this->siteSetting;
+        $services = Service::all();
+       // $cms = Cms::all();
 
-        $data = compact( 'title', 'siteSetting');
+        $data = compact( 'title', 'siteSetting','services');
         return view('accounting-master.aboutus',$data);
     }
 
@@ -585,8 +590,9 @@ class UserController extends Controller
     {
         $title = "Contact Us";
         $siteSetting = SiteSettings::pluck('value', 'key');
+        $services = Service::all();
 
-        $data = compact( 'title', 'siteSetting');
+        $data = compact( 'title', 'siteSetting','services');
             return view('accounting-master.contactus',$data);
     }
 

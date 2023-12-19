@@ -96,8 +96,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                     data-fancybox="gallery"
-                                                    data-src="{{ asset('/storage/cms/' . $cms['home_image']) }}"
-                                                    src="{{ asset('/storage/cms/' . $cms['home_image']) }}" alt="Error">
+                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['home_image']) }}"
+                                                     src="{{ asset('/images/uploads/cms/' . $cms['home_image']) }}" alt="Error">
                                             @endif
                                         </div>
                                         <div class="col-md-12 mb-2">
@@ -157,8 +157,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                     data-fancybox="gallery"
-                                                    data-src="{{ asset('/storage/cms/' . $cms['about_image']) }}"
-                                                    src="{{ asset('/storage/cms/' . $cms['about_image']) }}" alt="Error">
+                                                    data-src="{{ asset('/images/uploads/cms/' . $cms['about_image']) }}"
+                                                    src="{{ asset('/images/uploads/cms/' . $cms['about_image']) }}" alt="Error">
                                             @endif
                                         </div>
                                         <div class="col-md-12 mb-2">
