@@ -8092,7 +8092,7 @@ h1, h2, h3, h4, h5,
         color: #fff; }
 
 .ftco-navbar-light {
-  background: #2e67a8 !important;
+  background: #ffffff !important;
   z-index: 3;
   padding: 0;
   -webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
@@ -8791,7 +8791,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-    background: #2e67a8 !important;
+    background: #d9dee3 !important;
 
     padding: 7em 0;
   position: relative; }

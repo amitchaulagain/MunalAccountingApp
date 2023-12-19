@@ -23,6 +23,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
 </head>
 
 <!-- START nav -->
@@ -86,13 +87,34 @@
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/aboutus" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="contactus" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <!-- END nav -->
+<script>
+    $(document).ready(function () {
+        var path = window.location.pathname;
+        $('.nav-item').each(function (index, element) {
+            var url = $(element).children().attr("href");
+            $(element).removeClass('active');
+            if (url == path) {
+                $(element).addClass('active');
+            }
+        });
 
+        /*$('.nav-item').click(function (event) {
+            event.preventDefault();
+            alert($(this).children().attr("href"));
+            $('.nav-item ').removeClass('active');
+            $(this).addClass('active');
+            window.location.href = $(this).children().attr("href");
 
-<body style="color: white">
+        });*/
+    });
+
+</script>
+
+<body style="color: black">

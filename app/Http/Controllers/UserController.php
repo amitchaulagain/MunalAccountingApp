@@ -9,6 +9,7 @@ use App\Models\Facilities;
 use App\Models\Gallary;
 use App\Models\Property;
 use App\Models\Reviews;
+use App\Models\Service;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -555,8 +556,9 @@ class UserController extends Controller
     {
         $title = "Home";
         $siteSetting=$this->siteSetting;
+        $gal = Gallary::all();
 
-        $data = compact( 'title', 'siteSetting');
+        $data = compact( 'title', 'siteSetting','gal');
         return view('accounting-master.home',$data);
     }
 
@@ -573,7 +575,9 @@ class UserController extends Controller
     {
         $title = "Services";
         $siteSetting=$this->siteSetting;
-        $data = compact( 'title', 'siteSetting');
+
+        $services = Service::all();
+        $data = compact( 'title', 'siteSetting','services');
         return view('accounting-master.services',$data);
     }
 
