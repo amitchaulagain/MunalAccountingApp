@@ -34,7 +34,7 @@
             <div class="col-md-12">
                 <div class="bg-wrap">
                     <div class="row">
-                        <div class="col-md-6 d-flex align-items-center">
+                        <div class="col-md-8 d-flex align-items-center">
                             <p class="mb-0 phone pl-md-2">
                                 <a href="#" class="mr-2"><span
                                         class="fa fa-map-marker"></span> {{ $siteSetting['office_address'] ?? '' }}</a>
@@ -44,7 +44,7 @@
                                         class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['email'] ?? '' }}</a>
                             </p>
                         </div>
-                        <div class="col-md-6 d-flex justify-content-md-end">
+                        <div class="col-md-4 d-flex justify-content-md-end">
                             <div class="social-media">
                                 <p class="mb-0 d-flex">
                                     <a href="{{ $siteSetting['facebook_url'] ?? '' }}"
