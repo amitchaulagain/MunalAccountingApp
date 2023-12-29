@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -213,6 +215,20 @@ Route::middleware(AuthCheck::class)->group(function () {
 
 
 
+
+
+    //post
+
+    Route::get('/admin/post', [AdminController::class, 'list_post'])->name('list_post');
+    Route::get('/admin/post/add', [AdminController::class, 'add_post'])->name('add_post');
+    Route::post('/admin/post/add', [AdminController::class, 'post_added'])->name('post_added');
+
+    Route::get('/admin/post/{id}/del', [AdminController::class, 'del_post'])->name('del_post');
+    Route::get('/admin/post/{id}/edit', [AdminController::class, 'edit_post'])->name('edit_post');
+    Route::post('/admin/post/{id}/edit', [AdminController::class, 'post_edited'])->name('post_edited');
+
+
+
 });
 
 //if none of above route is used then sended to 404
@@ -221,5 +237,17 @@ Route::get('/{any}', [UserController::class, 'not_found'])->where('any', '.*');
 
 
 
-//Upload
+//BLOG
 
+
+// frontend pages
+/*Route::get('/', 'PageController@index')->name('home');
+Route::get('/admin/post', 'PageController@post')->name('post');
+Route::get('/post/{post}', 'PageController@showPost')->name('post.view');
+Route::get('/category/{category}', 'PageController@showCategory')->name('categories.view');*/
+
+/*// admin pages
+Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
+    Route::resource('post','PostController');
+    Route::resource('categories','CategoryController')->except('show');
+});*/

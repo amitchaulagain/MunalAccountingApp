@@ -113,6 +113,25 @@
                         </div>
                     </a>
                 </li>
+
+
+                {{--post--}}
+                <li class="nav-item">
+                    <a class="py-0 nav-link @if ($menu == 'list_post') fw-bolder fs-6 active @endif "
+                       aria-current="page" href="{{ route('list_post') }}">
+                        <div class="d-flex text-center">
+                            <div style="width: 25px" class="fs-5">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <span class="ms-2 my-auto">
+                            Posts
+                        </span>
+                        </div>
+                    </a>
+                </li>
+
+
+
             </ul>
         @endif
     </div>
