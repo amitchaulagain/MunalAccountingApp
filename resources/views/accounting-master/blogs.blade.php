@@ -18,7 +18,7 @@
                                         <div><a href="/blog?id={{$post->id}}">Admin</a></div>
                                     </div>
                                 </div>
-                                <h6 class="heading"><a href="/blog?id={{$post->id}}">{{$post->title}}</a></h6>
+                                <h6 class="heading" style="margin-left: 10px"><a href="/blog?id={{$post->id}}">{{$post->title}}</a></h6>
                             </div>
                         </div>
 
