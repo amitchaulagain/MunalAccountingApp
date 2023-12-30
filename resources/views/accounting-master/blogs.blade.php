@@ -14,7 +14,7 @@
                                 </a>
                                 <div class="text p-4">
                                     <div class="meta mb-2">
-                                        <div><a href="/blog?id={{$post->id}}">March 31, 2020</a></div>
+                                        <div><a href="/blog?id={{$post->id}}">{{$post->created_at}}</a></div>
                                         <div><a href="/blog?id={{$post->id}}">Admin</a></div>
                                     </div>
                                 </div>

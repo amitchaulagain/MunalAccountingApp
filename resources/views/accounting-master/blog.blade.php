@@ -27,8 +27,8 @@
                                 <div class="text">
                                     <h3 class="heading"><a href="/blog?id={{$item->id}}">{{$item->title}}</a></h3>
                                     <div class="meta">
-                                        <div><a href="/blog?id={{$item->id}}"><span class="icon-calendar"></span> Mar.
-                                                31, 2020</a></div>
+                                        <div><a href="/blog?id={{$item->id}}"><span
+                                                    class="icon-calendar"></span> {{$post->created_at}}</a></div>
                                         <div><a href="/blog?id={{$item->id}}"><span class="icon-person"></span>
                                                 Admin</a></div>
                                         <div><a href="/blog?id={{$item->id}}"><span class="icon-chat"></span> 19</a>
