@@ -38,7 +38,7 @@
                                         <ul class="list-unstyled">
 
                                             @foreach ($services as $item)
-                                                <li><a href="/services" class="py-1 d-block">{{$item->title}}</a></li>
+                                                <li><a href="/service?id={{$item->id}}" class="py-1 d-block">{{$item->title}}</a></li>
                                             @endforeach
                                         </ul>
                                     </div>
