@@ -94,7 +94,7 @@
 
 
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: -30px">
 
                         @foreach ($services as $item)
                             <li><a class="dropdown-item" href="/service?id={{$item->id}}">{{$item->title}}</a></li>
