@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-md-0 mb-4">
                         <h2 class="footer-heading">About us</h2>
-                        {!! Str::limit($CMS['about_content'], 100)  !!}
+                        {!! Str::limit($CMS['about_content'], 169)  !!}
                         <ul class="ftco-footer-social p-0">
                             <li class="ftco-animate">
                                 <a href="{{ $siteSetting['facebook_url'] ?? '' }}" data-toggle="tooltip"

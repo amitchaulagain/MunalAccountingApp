@@ -30,8 +30,7 @@
             </div>
             <div class="col-md-6 pl-md-5 py-md-5">
                 <div class="heading-section pl-md-4 pt-md-5">
-                    <span class="subheading">Welcome to Accounting</span>
-                    <h2 class="mb-4">We Are the Best Accounting Agency</h2>
+                    <h2 class="mb-4"> {{ $CMS['about_title'] }}</h2>
                     {!! $CMS['about_content'] !!}
                 </div>
             </div>

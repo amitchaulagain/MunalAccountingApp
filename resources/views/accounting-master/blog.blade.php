@@ -9,9 +9,9 @@
                     <p>
                         <img src="/uploads/images/posts/{{$post->post_image}}" alt="" class="img-fluid">
                     </p>
-                    <h2 class="mb-3">{{$post->title}}</h2>
+                    <h2 class="mb-3" style="color: green">{{$post->title}}</h2>
                     <p>
-                        {{$post->body}}
+                        {!! $post->body !!}
                     </p>
 
                 </div> <!-- .col-md-8 -->

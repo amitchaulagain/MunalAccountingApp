@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-6 pl-md-5 py-md-5">
                     <div class="heading-section pl-md-4 pt-md-5">
-                        <h2 class="mb-4"> {{ $CMS['about_title'] }}</h2>
+                        <h2 class="mb-4"> {{ $CMS['home_title'] }}</h2>
                     </div>
                     <div class="services-2 w-100 d-flex">
                         <div class="text pl-4">
