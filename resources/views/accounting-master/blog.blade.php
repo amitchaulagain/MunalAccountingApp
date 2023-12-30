@@ -21,7 +21,7 @@
                         <h3>Recent Blog</h3>
                         @foreach ($posts as $item)
                             <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img mr-4"
+                                <a class="blog-img mr-4" href="/blog?id={{$item->id}}"
                                    style="background-image: url('/images/uploads/posts/{{$item->post_image}}');">
                                 </a>
                                 <div class="text">

@@ -49,25 +49,6 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-no-pt bg-light">
-        <div class="container">
-            <div class="row">
-                @foreach ($services as $item)
-                    <div class="col-md-6 col-lg-4 ftco-animate">
-                        <div class="block-7">
-                            <div class="text-center">
-                                <span class="excerpt d-block">{{$item->title}}</span>
-                                {!!$item->description!!}
-                                <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-
-        </div>
-    </section>
 
 
     {{--
