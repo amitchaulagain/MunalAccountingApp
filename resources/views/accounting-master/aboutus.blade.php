@@ -106,11 +106,11 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
                             <div class="text">
-                                <p class="mb-4">c Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">"Choosing Munal Accounting service was one of the best decisions we made for our financial needs. Their team's expertise in taxation and their proactive approach have been invaluable to us. They genuinely care about our success and always go the extra mile to ensure we're well-informed and on the right track. Their commitment to excellence is evident in every interaction. Highly recommended!"</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(images/uploads/home/person_1.jpg)"></div>
                                     <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
+                                        <p class="name">Sam Mendes</p>
                                         <span class="position">Marketing Manager</span>
                                     </div>
                                 </div>
@@ -121,12 +121,12 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
                             <div class="text">
-                                <p class="mb-4">b Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">"My individual tax return was a stress-free experience. Their attention to detail and knowledge of the latest tax regulations ensured that I maximized my returns while staying compliant. The team was responsive, thorough, and made the entire process seamless. I'll definitely be returning next year and would recommend them to anyone seeking reliable tax services."</p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(images/uploads/home/person_2.jpg)"></div>
                                     <div class="pl-3">
                                         <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <span class="position">IT Assistant</span>
                                     </div>
                                 </div>
                             </div>
@@ -136,42 +136,12 @@
                         <div class="testimony-wrap py-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
                             <div class="text">
-                                <p class="mb-4">a Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">"Entrusting Munal Accounting  with our company's accounting and salary management was one of the best decisions we've made. Their meticulous approach ensures that our finances are in order and that our employees are paid accurately and on time.Their expertise has been instrumental in streamlining our processes and providing invaluable financial insights." </p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img" style="background-image: url(images/uploads/home/person_3.jpg)"></div>
                                     <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                            <div class="text">
-                                <p class="mb-4"> d Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                            <div class="text">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img" style="background-image: url(images/uploads/home/person_4.jpg)"></div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <p class="name">Shubarna Sharma</p>
+                                        <span class="position">Manager,Oporto</span>
                                     </div>
                                 </div>
                             </div>
