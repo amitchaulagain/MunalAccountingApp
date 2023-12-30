@@ -55,7 +55,7 @@ class AppServiceProvider extends ServiceProvider
         });
         view()->composer(['frontend.home', 'frontend.about', 'frontend.faq', 'frontend.terms',
             'accounting-master.home','accounting-master.aboutus',
-            'accounting-master.contactus','accounting-master.services'
+            'accounting-master.contactus','accounting-master.services','accounting-master.service','accounting-master.blogs','accounting-master.blog'
         ], function ($view) {
             $CMS = cms::pluck('value', 'key');
 

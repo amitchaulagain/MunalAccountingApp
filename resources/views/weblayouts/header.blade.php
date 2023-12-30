@@ -87,8 +87,25 @@
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/aboutus" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link "
+                       id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        @foreach ($services as $item)
+                            <li><a class="dropdown-item" href="/service?id={{$item->id}}">{{$item->title}}</a></li>
+                        @endforeach
+
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
+
+
             </ul>
         </div>
     </div>

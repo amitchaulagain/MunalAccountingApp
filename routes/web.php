@@ -56,6 +56,14 @@ Route::get('/contactus', [UserController::class, 'contactus'])->name('contactus'
 
 Route::post('/sendemail/send', [EmailController::class, 'basic_email'])->name('basic_email');
 
+Route::get('/service', [UserController::class, 'single_service'])->name('single_service');
+
+Route::get('/blogs', [UserController::class, 'list_blogs'])->name('list_blogs');
+
+Route::get('/blog', [UserController::class, 'single_blog'])->name('single_blog');
+
+
+
 
 
 //showing properties in various ways

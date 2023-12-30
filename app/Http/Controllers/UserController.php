@@ -7,6 +7,7 @@ use App\Models\City;
 use App\Models\cms;
 use App\Models\Facilities;
 use App\Models\Gallary;
+use App\Models\Post;
 use App\Models\Property;
 use App\Models\Reviews;
 use App\Models\Service;
@@ -22,7 +23,8 @@ class UserController extends Controller
 
     public $siteSetting;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->siteSetting = SiteSettings::pluck('value', 'key');
     }
 
@@ -35,6 +37,7 @@ class UserController extends Controller
         $data = compact('title', 'menu');
         return view('errors.404', $data);
     }
+
     public function loginForm()
     {
         $title = "Log In";
@@ -42,6 +45,7 @@ class UserController extends Controller
         $data = compact('title');
         return view('User.UserLogIn', $data);
     }
+
     public function login(Request $request)
     {
         $request->validate([
@@ -120,6 +124,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'user');
         return view('User.Profile', $data);
     }
+
     //edit profile Page
     public function edituserprofile(Request $request)
     {
@@ -132,6 +137,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'user');
         return view('User.editProfile', $data);
     }
+
     public function editeduserprofile(Request $request)
     {
         $user = $request->session()->get('user');
@@ -166,6 +172,7 @@ class UserController extends Controller
 
         return redirect(route('UserProfile'));
     }
+
     //delete profile image using AJAX
     public function del_profile_img(Request $request)
     {
@@ -197,6 +204,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'user');
         return view('User.chngPassword', $data);
     }
+
     public function user_save_password(Request $request)
     {
         $request->validate([
@@ -234,6 +242,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'featuredPro', 'newlyAdded', 'showcate', 'catedata');
         return view('frontend.home', $data);
     }
+
     //Showing Properties
     public function show(Request $request)
     {
@@ -251,6 +260,7 @@ class UserController extends Controller
             return view('frontend.show', $data);
         }
     }
+
     public function show_category(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -272,6 +282,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'show', 'cate_fltr');
         return view('frontend.show', $data);
     }
+
     public function show_city(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -293,6 +304,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'show', 'city_fltr');
         return view('frontend.show', $data);
     }
+
     public function show_purpose(Request $request)
     {
         $purpose_fltr = $request->route()->parameter('purpose');
@@ -310,6 +322,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'show', 'purpose_fltr');
         return view('frontend.show', $data);
     }
+
     public function show_pro(Request $request)
     {
         $valid = validator($request->route()->parameters(), [
@@ -341,6 +354,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'item', 'gals', 'faci', 'user_reviews', 'reviews');
         return view('frontend.property', $data);
     }
+
     //filter Property
     public function ajaxFilter(Request $request)
     {
@@ -355,14 +369,14 @@ class UserController extends Controller
             }
             $city = $request->city;
             if ($city == '*') {
-                $cityS = ['city',  '!=', null];
+                $cityS = ['city', '!=', null];
             } else {
                 $city = City::where('slug_city', '=', $city)->first();
                 $cityS = ['city', '=', $city->id];
             }
             $purpose = $request->purpose;
             if ($purpose == '*') {
-                $purposeS = ['purpose',  '!=', null];
+                $purposeS = ['purpose', '!=', null];
             } else {
                 $purposeS = ['purpose', '=', $purpose];
             }
@@ -410,6 +424,7 @@ class UserController extends Controller
             return view('frontend.showinitem', compact('show'));
         }
     }
+
     //search Property
     public function propSearch(Request $request)
     {
@@ -439,6 +454,7 @@ class UserController extends Controller
         $data = compact('title', 'menu', 'show', 'SecStr', 'purpose');
         return view('frontend.show', $data);
     }
+
     //saving Property Ajax
     public function save_pro($pro, $id, Request $request)
     {
@@ -471,6 +487,7 @@ class UserController extends Controller
             return $res;
         }
     }
+
     public function show_saved_pro(Request $request)
     {
         $userId = $request->session()->get('user')['id'];
@@ -511,6 +528,7 @@ class UserController extends Controller
             return json_encode($res, true);
         }
     }
+
     //deleting review with ajax
     public function del_review($id, Request $request)
     {
@@ -535,6 +553,7 @@ class UserController extends Controller
         $data = compact('title', 'menu');
         return view('frontend.about', $data);
     }
+
     public function show_faq(Request $request)
     {
         $title = 'FAQ';
@@ -543,6 +562,7 @@ class UserController extends Controller
         $data = compact('title', 'menu');
         return view('frontend.faq', $data);
     }
+
     public function show_terms(Request $request)
     {
         $title = 'Terms';
@@ -555,35 +575,35 @@ class UserController extends Controller
     public function home(Request $request)
     {
         $title = "Home";
-        $siteSetting=$this->siteSetting;
+        $siteSetting = $this->siteSetting;
         $gal = Gallary::all();
         $services = Service::all();
         $cms = Cms::all();
 
 
-        $data = compact( 'title', 'siteSetting','gal','services','cms');
-        return view('accounting-master.home',$data);
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.home', $data);
     }
 
     public function aboutus(Request $request)
     {
         $title = "About Us";
-        $siteSetting=$this->siteSetting;
+        $siteSetting = $this->siteSetting;
         $services = Service::all();
-       // $cms = Cms::all();
+        // $cms = Cms::all();
 
-        $data = compact( 'title', 'siteSetting','services');
-        return view('accounting-master.aboutus',$data);
+        $data = compact('title', 'siteSetting', 'services');
+        return view('accounting-master.aboutus', $data);
     }
 
     public function services(Request $request)
     {
         $title = "Services";
-        $siteSetting=$this->siteSetting;
+        $siteSetting = $this->siteSetting;
 
         $services = Service::all();
-        $data = compact( 'title', 'siteSetting','services');
-        return view('accounting-master.services',$data);
+        $data = compact('title', 'siteSetting', 'services');
+        return view('accounting-master.services', $data);
     }
 
     public function contactus(Request $request)
@@ -592,13 +612,53 @@ class UserController extends Controller
         $siteSetting = SiteSettings::pluck('value', 'key');
         $services = Service::all();
 
-        $data = compact( 'title', 'siteSetting','services');
-            return view('accounting-master.contactus',$data);
+        $data = compact('title', 'siteSetting', 'services');
+        return view('accounting-master.contactus', $data);
     }
 
+    public function single_service(Request $request)
+    {
+        $title = "Services ";
+        $siteSetting = SiteSettings::pluck('value', 'key');
+        $services = Service::all();
 
+        $id = $request->input('id');
 
+        $service = Service::findorfail($id);
 
+        $data = compact('title', 'siteSetting', 'service', 'services');
+        return view('accounting-master.service', $data);
+    }
+
+    public function single_blog(Request $request)
+    {
+        $title = "Blog ";
+        $siteSetting = SiteSettings::pluck('value', 'key');
+        $services = Service::all();
+
+        $id = $request->input('id');
+
+        $posts = Post::where('featured', true)
+            ->get();
+
+        $post = Post::findorfail($id);
+
+        $data = compact('title', 'siteSetting', 'post', 'services','posts');
+        return view('accounting-master.blog', $data);
+    }
+
+    public function list_blogs(Request $request)
+    {
+        $title = "Blog ";
+        $siteSetting = SiteSettings::pluck('value', 'key');
+        $services = Service::all();
+
+        $posts = Post::where('featured', true)
+            ->get();
+
+        $data = compact('title', 'siteSetting', 'posts', 'services');
+        return view('accounting-master.blogs', $data);
+    }
 
 
 }
