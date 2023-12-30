@@ -36,8 +36,8 @@
                             <th scope="row">{{ $item->id }}</th>
                             <th scope="row"><img height="40rem" class="rounded" style="cursor: pointer"
                                                  data-fancybox="gallery"
-                                                 data-src="{{ asset('/images/uploads/post') .'/' . $item->post_image}}"
-                                                 src="{{ asset('/images/uploads/post') .'/'. $item->post_image }}"
+                                                 data-src="{{ asset('/images/uploads/posts') .'/' . $item->post_image}}"
+                                                 src="{{ asset('/images/uploads/posts') .'/'. $item->post_image }}"
                                                  alt="Error"></th>
                             <th scope="row">{{ $item->title }}</th>
                             <th scope="row">{{ $item->slug }}</th>

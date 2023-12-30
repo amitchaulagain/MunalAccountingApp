@@ -41,14 +41,14 @@
                                     <div class="card card-primary">
                                         <div class="card-body">
                                             <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1"
-                                                       value="@if (!empty($post)){{ $post->featured }}@else{{ old('featured') }}@endif"
+                                                <input type="checkbox" name="featured" class="form-check-input" id="exampleCheck1"
+                                                       value="1"
                                                        @if (!empty($post))
                                                            @if ($post->featured)
                                                                checked
                                                     @endif
-                                                @endif>
-                                                <label class="form-check-label" name="featured" for="exampleCheck1">Featured
+                                                    @endif>
+                                                <label class="form-check-label"  for="exampleCheck1">Featured
                                                     Blog</label>
                                             </div>
 
@@ -73,24 +73,39 @@
                                                     @endif</textarea>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="image">Post Image</label>
-                                                <input type="file" class="form-control" name="service_image" id=""
-                                                @if (empty($post)) @endif>
+                                            <div class="col-md-12">
+                                                <label for="" class="form-label">Post Image</label>
+                                                <p class="text-muted form-label">for best output upload [400 x 225]
+                                                    Image</p>
+                                                <div class="input-group">
+                                                    <input type="file" class="form-control" name="post_image" id=""
+                                                    @if (empty($post)) @endif>
+                                                </div>
+                                                <div class="text-danger mt-0">
+                                                    * @error('image') {{ $message }} @enderror</div>
                                             </div>
-                                            <div class="text-danger mt-0">
-                                                * @error('image') {{ $message }} @enderror</div>
 
                                         </div>
-                                        <!-- /.card-body -->
+                                        <div class="col-md-4">
+                                            @if (!empty($post))
+                                                <label for="" class="form-label">Old Image</label>
+                                                <img class="form-control"
+                                                     src="{{ asset('/images/uploads/posts') .'/'. $post->post_image }}"
+                                                     alt="Error">
+                                            @endif
+                                        </div>
+                                        <div class="text-danger mt-0">
+                                            * @error('image') {{ $message }} @enderror</div>
+
                                     </div>
-                                    <!-- /.card -->
+                                    <!-- /.card-body -->
                                 </div>
+                                <!-- /.card -->
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button class="btn @if (!empty($service)) btn-success @else btn-primary @endif"
-                                            type="submit">@if (!empty($service))
+                                    <button class="btn @if (!empty($post)) btn-success @else btn-primary @endif"
+                                            type="submit">@if (!empty($post))
                                             Update
                                         @else
                                             Submit

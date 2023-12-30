@@ -37,10 +37,15 @@
                                 </div>
 
                                 <div class="col-md-12 mb-2">
-                                    <label for="" class="form-label">Service Description</label>
-                                    <input type="text" class="form-control" name="description" value="@if (!empty($service)){{ $service->description }}@else{{ old('description') }}@endif"
-                                           required>
-                                    <div class="text-danger">* @error('description') {{ $message }} @enderror</div>
+                                    <div class="form-group">
+                                        <label for="description">Post Description</label>
+                                        <textarea id="description" name="description" class="ckeditor">
+                                                    @if (!empty($service))
+                                                {{ $service->description }}
+                                            @else
+                                                {{ old('description') }}
+                                            @endif</textarea>
+                                    </div>
                                 </div>
 
 
@@ -54,9 +59,6 @@
                                     </div>
                                     <div class="text-danger mt-0">* @error('image') {{ $message }} @enderror</div>
                                 </div>
-
-
-
 
                             </div>
                             <div class="col-md-4">

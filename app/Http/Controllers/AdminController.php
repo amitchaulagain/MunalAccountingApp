@@ -840,7 +840,7 @@ class AdminController extends Controller
                 $service->gal_image = $imageName;
                 // Image deleted successfully
             } else {
-               // $image->move(public_path('images/uploads/home/sliders/'), $imageName);
+                // $image->move(public_path('images/uploads/home/sliders/'), $imageName);
             }
         }
 
@@ -898,9 +898,11 @@ class AdminController extends Controller
         $service->description = $request->description;
         $image = $request->file('service_image');
         $service->save();
-        $imageName = "srv" . $service->id . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('/images/uploads/services/'), $imageName);
+
+
         if ($image) {
+            $imageName = "srv" . $service->id . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('/images/uploads/services/'), $imageName);
             $service->service_image = $imageName;
         }
         $service->update();
@@ -921,14 +923,20 @@ class AdminController extends Controller
         if ($request->hasFile('service_image')) {
             $image = $request->file('service_image');
             $imageName = "srv" . $service->id . '.' . $image->getClientOriginalExtension();
-            $imagePath = public_path('images/uploads/services/') . $service->service_image;
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
+            if ($service->service_image != null) {
+
+                $imagePath = public_path('images/uploads/services/') . $service->service_image;
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                    $image->move(public_path('images/uploads/services/'), $imageName);
+                    $service->service_image = $imageName;
+                    // Image deleted successfully
+                }
+            }
+
+            else{
                 $image->move(public_path('images/uploads/services/'), $imageName);
                 $service->service_image = $imageName;
-                // Image deleted successfully
-            } else {
-                // $image->move(public_path('images/uploads/home/sliders/'), $imageName);
             }
         }
         $service->save();
@@ -978,15 +986,15 @@ class AdminController extends Controller
 
         if ($valid) {
             $faci = Service::findorfail($id);
-            $imageName = $faci->service_image; // replace with your actual image name
-            $imagePath = public_path('images/uploads/services/') . $imageName;
+            $imageName = $faci->service_image;
+            if ($imageName != null) {
+                $imagePath = public_path('images/uploads/services/') . $imageName;
 
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
-                // Image deleted successfully
-            } else {
-                // Image not found or failed to delete
-            }
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                    // Image deleted successfully
+                }
+            }// replace with your actual image name
 
 
             $faci->delete();
@@ -1050,23 +1058,20 @@ class AdminController extends Controller
     }
 
 
-
-
-
     /*post*/
 
-    public function list_post(Request $request){
-        $title = "Service";
-        $menu = "service";
+    public function list_post(Request $request)
+    {
+        $title = "Post";
+        $menu = "post";
         $posts = Post::all();
-        $categories = Category::all();
-        $featured = Post::featured()->take(3)->get();
         // dd($featured);
-        $data = compact('posts','featured','categories','title', 'menu');
+        $data = compact('posts', 'title', 'menu');
         return view('AdminPanel.post.list', $data);
     }
 
-    public function listing_post(Request $request){
+    public function listing_post(Request $request)
+    {
         $title = "Service";
         $menu = "service";
         $posts = Post::where('featured', true)
@@ -1075,12 +1080,9 @@ class AdminController extends Controller
         $categories = Category::all();
         $featured = Post::featured()->take(3)->get();
         // dd($featured);
-        $data = compact('posts','featured','categories','title', 'menu');
+        $data = compact('posts', 'featured', 'categories', 'title', 'menu');
         return view('AdminPanel.post.list', $data);
     }
-
-
-
 
 
     public function add_post(Request $request)
@@ -1090,8 +1092,7 @@ class AdminController extends Controller
         $categories = Category::all();
 
 
-
-        $data = compact('title', 'menu','categories');
+        $data = compact('title', 'menu', 'categories');
         return view('AdminPanel.post.form', $data);
     }
 
@@ -1102,13 +1103,20 @@ class AdminController extends Controller
         $post->excerpt = $request->excerpt;
         $post->body = $request->body;
 
-        $post->featured = $request->featured;
+        if ($request->has('featured')) {
+            $post->featured = $request->featured;
+        } else {
+            $post->featured = 0;
+        }
+
         $image = $request->file('post_image');
         $post->save();
-        $imageName = "post" . $post->id . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('/images/uploads/blog/'), $imageName);
+
+
         if ($image) {
-            $post->image = $imageName;
+            $imageName = "post" . $post->id . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('/images/uploads/posts/'), $imageName);
+            $post->post_image = $imageName;
         }
         $post->update();
 
@@ -1129,78 +1137,84 @@ class AdminController extends Controller
         if ($request->hasFile('post_image')) {
             $image = $request->file('post_image');
             $imageName = "post" . $post->id . '.' . $image->getClientOriginalExtension();
-            $imagePath = public_path('images/uploads/post/') . $post->post_image;
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
-                $image->move(public_path('images/uploads/post/'), $imageName);
+            if ($post->post_image != null) {
+
+                $imagePath = public_path('images/uploads/posts/') . $post->post_image;
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                    $image->move(public_path('images/uploads/posts/'), $imageName);
+                    $post->post_image = $imageName;
+                    // Image deleted successfully
+                }
+            }
+
+            else{
+                $image->move(public_path('images/uploads/posts/'), $imageName);
                 $post->post_image = $imageName;
-                // Image deleted successfully
-            } else {
-                // $image->move(public_path('images/uploads/home/sliders/'), $imageName);
             }
         }
-        $post->save();
+            $post->save();
 
-        $request->session()->flash('msg', 'Edited...');
-        $request->session()->flash('msgst', 'success');
+            $request->session()->flash('msg', 'Edited...');
+            $request->session()->flash('msgst', 'success');
 
-        return redirect(route('list_post'));
-    }
-
-
-    public function edit_post(Request $request)
-    {
-        $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:posts,id'
-        ])->validate();
-        $id = $request->route()->parameter('id');
-
-        if ($valid) {
-            $post = post::findorfail($id);
+            return redirect(route('list_post'));
         }
 
-        $title = "Edit Post";
-        $menu = "Post";
 
-        $categories = Category::all();
+        public
+        function edit_post(Request $request)
+        {
+            $valid = validator($request->route()->parameters(), [
+                'id' => 'exists:posts,id'
+            ])->validate();
+            $id = $request->route()->parameter('id');
 
-
-        $data = compact('title', 'menu', 'post','categories');
-        return view('AdminPanel.post.form', $data);
-    }
-
-
-    public function del_post(Request $request)
-    {
-        $valid = validator($request->route()->parameters(), [
-            'id' => 'exists:post,id'
-        ])->validate();
-        $id = $request->route()->parameter('id');
-
-        if ($valid) {
-            $faci = Service::findorfail($id);
-            $imageName = $faci->post_image; // replace with your actual image name
-            $imagePath = public_path('images/uploads/post/') . $imageName;
-
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
-                // Image deleted successfully
-            } else {
-                // Image not found or failed to delete
+            if ($valid) {
+                $post = post::findorfail($id);
             }
 
+            $title = "Edit Post";
+            $menu = "Post";
 
+            $categories = Category::all();
+
+
+            $data = compact('title', 'menu', 'post', 'categories');
+            return view('AdminPanel.post.form', $data);
+        }
+
+
+        public
+        function del_post(Request $request)
+        {
+            $valid = validator($request->route()->parameters(), [
+                'id' => 'exists:posts,id'
+            ])->validate();
+            $id = $request->route()->parameter('id');
+
+            if ($valid) {
+                $faci = Post::findorfail($id);
+                $imageName = $faci->post_image; // replace with your actual image name
+
+                if ($imageName != null) {
+
+                    $imagePath = public_path('images/uploads/posts/') . $imageName;
+
+                    if (file_exists($imagePath)) {
+                        unlink($imagePath);
+                        // Image deleted successfully
+                    }
+                }
+
+            }
             $faci->delete();
+
+            $request->session()->flash('msg', 'Deleted...');
+            $request->session()->flash('msgst', 'danger');
+
+            return redirect(route('list_post'));
         }
 
-        $request->session()->flash('msg', 'Deleted...');
-        $request->session()->flash('msgst', 'danger');
 
-        return redirect(route('list_post'));
     }
-
-
-
-
-
-}
