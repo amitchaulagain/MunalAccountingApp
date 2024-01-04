@@ -1,3 +1,49 @@
+<style>
+    #popup {
+        position: fixed;
+        bottom: -200px; /* Initially positioned below the viewport */
+        color: #fff;
+        transition: transform 1s ease-in-out; /* Add transition for smooth sliding */
+    }
+
+    .visible {
+        transform: translateY(-100%) translateX(0); /* Slide from bottom to top */
+
+    }
+
+
+    .hidden {
+        transform: translateY(100%) translateX(0); /* Slide from bottom to top */
+        /*opacity: 0;*/
+        pointer-events: none;
+    }
+</style>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        setInterval(showPopup, 8000); // Show popup every 5 seconds
+    });
+
+    function showPopup() {
+        const popup = document.getElementById('popup');
+        popup.classList.remove('hidden'); // Remove the 'hidden' class to make the popup visible
+        popup.classList.add('visible'); // Add the 'visible' class to trigger the sliding animation
+
+        // Schedule the popup to be hidden after 3 seconds
+        setTimeout(hidePopup, 3000);
+    }
+
+    function hidePopup() {
+        const popup = document.getElementById('popup');
+        popup.classList.remove('visible'); // Remove the 'visible' class to trigger the reverse animation
+
+        // Wait for the animation to complete before hiding the popup completely
+        setTimeout(function () {
+            popup.classList.add('hidden'); // Add the 'hidden' class to hide the popup
+        }, 1); // Assuming the animation duration is 0.5s (500ms)
+    }
+</script>
+
 <footer class="footer">
     <div class="container-fluid px-lg-5">
         <div class="row">
@@ -29,6 +75,15 @@
                             </li>
                         </ul>
                     </div>
+                    <div id="popup" class="hidden col-md-3">
+                        <div class="testimony-wrap py-4  ">
+                            <div class="icon d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-quote-left"></span></div>
+                            <div class="text">
+                                <span style="width: 200px;" class="mb-4">15 people recently read an article about 7 mistakes FHB make & how to avoid them | 27 people recently booked an appointment with our broker for consultation | 22 people contacted Capkon HQ through our website</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-8">
                         <div class="row justify-content-center">
                             <div class="col-md-12 col-lg-10">
@@ -38,7 +93,8 @@
                                         <ul class="list-unstyled">
 
                                             @foreach ($services as $item)
-                                                <li><a href="/service?id={{$item->id}}" class="py-1 d-block">{{$item->title}}</a></li>
+                                                <li><a href="/service?id={{$item->id}}"
+                                                       class="py-1 d-block">{{$item->title}}</a></li>
                                             @endforeach
                                         </ul>
                                     </div>

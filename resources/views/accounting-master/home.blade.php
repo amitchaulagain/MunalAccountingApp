@@ -30,9 +30,27 @@
         <div class="container">
             <div class="row d-flex no-gutters">
                 <div class="col-md-6 d-flex">
-                    <div
-                        class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
-                        style="background-image:url(images/about.jpg);">
+                    <div class="hero">
+                        <h1>Australian Tax Calculator</h1>
+                        <form id="taxForm">
+                            <label for="income">Income:</label>
+                            <input type="number" id="income" required><br><br>
+
+                            <label for="extraIncome">Extra Income:</label>
+                            <input type="number" id="extraIncome" required><br><br>
+
+                            <label for="frequency">Frequency:</label>
+                            <select id="frequency">
+                                <option value="weekly">Weekly</option>
+                                <option value="fortnightly">Fortnightly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="annually">Annually</option>
+                            </select><br><br>
+
+                            <button type="button" onclick="calculateTax()">Calculate Tax</button>
+                        </form>
+
+                        <div id="result"></div>
                     </div>
                 </div>
                 <div class="col-md-6 pl-md-5 py-md-5">
@@ -528,4 +546,77 @@
              </div>
          </div>
      </section>--}}
+    <script>
+        function calculateTax() {
+            const income = parseFloat(document.getElementById("income").value);
+            const extraIncome = parseFloat(document.getElementById("extraIncome").value);
+            const frequency = document.getElementById("frequency").value;
+
+            let totalIncome;
+            switch (frequency) {
+                case 'weekly':
+                    totalIncome = (income + extraIncome) * 52;
+                    break;
+                case 'fortnightly':
+                    totalIncome = (income + extraIncome) * 26;
+                    break;
+                case 'monthly':
+                    totalIncome = (income + extraIncome) * 12;
+                    break;
+                case 'annually':
+                    totalIncome = income + extraIncome;
+                    break;
+            }
+
+            let taxDue = 0;
+
+            if (totalIncome <= 18200) {
+                taxDue = 0;
+            } else if (totalIncome <= 45000) {
+                taxDue = 0.19 * (totalIncome - 18200);
+            } else if (totalIncome <= 120000) {
+                taxDue = 5092 + 0.325 * (totalIncome - 45000);
+            } else if (totalIncome <= 180000) {
+                taxDue = 29467 + 0.37 * (totalIncome - 120000);
+            } else {
+                taxDue = 51667 + 0.45 * (totalIncome - 180000);
+            }
+
+            const medicareLevy = 0.02 * totalIncome; // Assuming the Medicare Levy is 2% for simplicity
+            const afterTaxIncome = totalIncome - taxDue - medicareLevy;
+            const marginalTaxRate = getMarginalTaxRate(totalIncome);
+
+            const result = `
+    Your taxable income: $${totalIncome.toFixed(2)}<br>
+    Income tax payable: $${taxDue.toFixed(2)}<br>
+    Medicare levy payable: $${medicareLevy.toFixed(2)}<br>
+    Your income after tax & Medicare levy: $${afterTaxIncome.toFixed(2)}<br>
+    Your marginal tax rate: ${marginalTaxRate.toFixed(1)}%<br>
+    This means for an annual income of $${totalIncome.toFixed(2)} you pay:<br>
+    No tax on income between $1 - $18,200 $0<br>
+    19c for every dollar between $18,201 - $45,000 $${(0.19 * (45000 - 18200)).toFixed(2)}<br>
+    32.5c for every dollar between $45,001 - $120,000 $${(0.325 * (120000 - 45000)).toFixed(2)}<br>
+    Income tax payable $${taxDue.toFixed(2)}<br>
+    `;
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function getMarginalTaxRate(income) {
+            if (income <= 18200) {
+                return 0;
+            } else if (income <= 45000) {
+                return 19;
+            } else if (income <= 120000) {
+                return 32.5;
+            } else if (income <= 180000) {
+                return 37;
+            } else {
+                return 45;
+            }
+        }
+
+
+    </script>
+
 @endsection
