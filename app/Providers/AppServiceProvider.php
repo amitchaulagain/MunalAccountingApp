@@ -55,7 +55,8 @@ class AppServiceProvider extends ServiceProvider
         });
         view()->composer(['frontend.home', 'frontend.about', 'frontend.faq', 'frontend.terms',
             'accounting-master.home','accounting-master.aboutus',
-            'accounting-master.contactus','accounting-master.services','accounting-master.service','accounting-master.blogs','accounting-master.blog'
+            'accounting-master.contactus','accounting-master.services','accounting-master.service','accounting-master.blogs','accounting-master.blog','accounting-master.lodge-in-person','accounting-master.online','accounting-master.tax-review','accounting-master.small-business','accounting-master.bas','accounting-master.company-accounting',
+            'accounting-master.bookkeeping',
         ], function ($view) {
             $CMS = cms::pluck('value', 'key');
 

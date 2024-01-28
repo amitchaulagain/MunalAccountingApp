@@ -659,6 +659,90 @@ class UserController extends Controller
         $data = compact('title', 'siteSetting', 'posts', 'services');
         return view('accounting-master.blogs', $data);
     }
+    public function lodge_in_person(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.lodge-in-person', $data);
+    }
+    public function online(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.online', $data);
+    }
+    public function tax_review(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.tax-review', $data);
+    }
+    public function small_business(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.small-business', $data);
+    }
+    public function bas(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.bas', $data);
+    }
+    public function company_accounting(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.company-accounting', $data);
+    }
+    public function bookkeeping(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.bookkeeping', $data);
+    }
 
 
 }

@@ -73,11 +73,7 @@
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="/"> <img
-                src="{{ asset('/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
-        </a>
-
+    <div class="col-md-8">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,52 +81,325 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav m-auto">
-                <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/aboutus" class="nav-link">About Us</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link "
-                       id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Services <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <a class="navbar-brand" href="/"> <img
+                        src="{{ asset('/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
+                </a>
+                <li class="nav-item active"><a href="/" class="nav-link">Individual Tax</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Business Services</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Income Tax Course</a></li>
 
 
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: -30px">
+                {{--  <li class="nav-item dropdown">
+                      <a class="nav-link "
+                         id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Services <i class="fa fa-caret-down" aria-hidden="true"></i>
 
-                        @foreach ($services as $item)
-                            <li><a class="dropdown-item" href="/service?id={{$item->id}}">{{$item->title}}</a></li>
-                        @endforeach
 
-                    </ul>
-                </li>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: -30px">
+
+                          @foreach ($services as $item)
+                              <li><a class="dropdown-item" href="/service?id={{$item->id}}">{{$item->title}}</a></li>
+                          @endforeach
+
+                      </ul>
+                  </li>--}}
                 <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
                 <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
-
-
             </ul>
         </div>
     </div>
+    <div class="col-md-4">
+        <a style="float: right; margin-right: 20px; color: black" href="tel://{{ $siteSetting['phone'] ?? '' }}"> <span
+                class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a>
+        <a style="float: right; margin-right: 20px; color: black" href="mailto:{{ $siteSetting['email'] ?? '' }}"><span
+                class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['email'] ?? '' }}</a>
+    </div>
+
+    <div id="overlay1">
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
+                </div>
+
+                <div style="top:-14px;" class="col-md-6">
+                    <a href="/lodge-in-person"><h3>Book with your local office</h3></a>
+
+                    <p>
+                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
+                        400+
+                        offices nationwide.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
+                </div>
+
+                <div style="top:-14px;" class="col-md-6">
+                    <a href="/online">
+                        <h3>Online with an expert</h3>
+                    </a>
+                    <p>
+                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
+                        400+
+                        offices nationwide.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="/tax-review">
+                        <h3>Second Look Assessment</h3>
+                    </a>
+                    <p>We will review your tax return and check that you have received the maximum refund.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="overlay-content">
+
+
+        </div>
+        <!-- Close button -->
+        <div id="close-btn">Close</div>
+    </div>
+    <div id="overlay2">
+        <div class="overlay-item-box">
+            <div class="row">
+                <div style="top:-14px;" class="col-md-6">
+
+                    <a href="/small-business">
+                        <h3>
+                            Sole Trader & Partnership
+                        </h3>
+                    </a>
+
+                    <p>
+                        If your business is set up as a sole trader or partnership, we can help you.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="overlay-item-box">
+            <div class="row">
+                <div style="top:-14px;" class="col-md-6">
+                    <a href="/bas"><h3> Sole Trader BAS
+                        </h3>
+                    </a>
+                    <p>
+                        FREE Business Activity Statement* to all first time H&R Block BAS clients.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-7">
+
+                    <a href="/company-accounting">
+                        <h3> Company & Trust
+                        </h3>
+                    </a>
+
+                    <p> Let us help you navigate the accounting and tax responsibilities that comes with running a
+                        business.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="/bas">
+                        <h3> Bookkeeping
+                        </h3>
+                    </a>
+
+                    <p> Expert set up and support, we'll take the time and hassle out of managing your books.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="overlay-content">
+
+
+        </div>
+        <!-- Close button -->
+        <div id="close-btn">Close</div>
+    </div>
+    <div id="overlay3">
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
+                </div>
+
+                <div style="top:-14px;" class="col-md-6">
+                    <h3>Book with your local office</h3>
+
+                    <p>
+                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
+                        400+
+                        offices nationwide.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
+                </div>
+
+                <div style="top:-14px;" class="col-md-6">
+                    <h3>Online with an expert</h3>
+
+                    <p>
+                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
+                        400+
+                        offices nationwide.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>Second Look Assessment</h3>
+
+                    <p>We will review your tax return and check that you have received the maximum refund.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="overlay-content">
+
+
+        </div>
+        <!-- Close button -->
+        <div id="close-btn">Close</div>
+    </div>
+    <div id="overlay4">
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
+                </div>
+
+                <div style="top:-14px;" class="col-md-6">
+                    <h3>Book with your local office</h3>
+
+                    <p>
+                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
+                        400+
+                        offices nationwide.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
+                </div>
+
+                <div style="top:-14px;" class="col-md-6">
+                    <h3>Online with an expert</h3>
+
+                    <p>
+                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
+                        400+
+                        offices nationwide.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>Second Look Assessment</h3>
+
+                    <p>We will review your tax return and check that you have received the maximum refund.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="overlay-content">
+
+
+        </div>
+        <!-- Close button -->
+        <div id="close-btn">Close</div>
+    </div>
+
+
 </nav>
 <!-- END nav -->
 <script>
-    $(document).ready(function () {
-        var path = window.location.pathname;
-        $('.nav-item').each(function (index, element) {
-            var url = $(element).children().attr("href");
-            $(element).removeClass('active');
-            if (url == path) {
-                $(element).addClass('active');
-            }
-        });
 
-        /*$('.nav-item').click(function (event) {
-            event.preventDefault();
-            alert($(this).children().attr("href"));
-            $('.nav-item ').removeClass('active');
-            $(this).addClass('active');
-            window.location.href = $(this).children().attr("href");
-
-        });*/
-    });
 
 </script>
 

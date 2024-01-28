@@ -62,6 +62,21 @@ Route::get('/blogs', [UserController::class, 'list_blogs'])->name('list_blogs');
 
 Route::get('/blog', [UserController::class, 'single_blog'])->name('single_blog');
 
+Route::get('/lodge-in-person', [UserController::class, 'lodge_in_person'])->name('lodge_in_persion');
+
+Route::get('/online', [UserController::class, 'online'])->name('online');
+
+Route::get('/tax-review', [UserController::class, 'tax_review'])->name('tax_review');
+Route::get('/small-business', [UserController::class, 'small_business'])->name('small_business');
+Route::get('/bas', [UserController::class, 'bas'])->name('bas');
+
+Route::get('/company-accounting', [UserController::class, 'company_accounting'])->name('company_accounting');
+Route::get('/bookkeeping', [UserController::class, 'bookkeeping'])->name('bookkeeping');
+
+
+
+
+
 
 
 

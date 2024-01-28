@@ -144,7 +144,7 @@
                             </div>
                             <br>
                             <div class="form-group">
-                                <button type="submit" class="form-control submit px-3">Send A Message</button>
+                                <button type="submit" class="header-button">Send A Message</button>
                             </div>
                         </div>
                     </div>
