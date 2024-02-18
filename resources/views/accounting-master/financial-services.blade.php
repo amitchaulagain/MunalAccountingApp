@@ -3,7 +3,7 @@
 @section('content_box')
 
     <div class="row">
-                <span class="header" style="margin-top: 50px">
+                <span class="header" style="margin-top: 100px">
                     Financial Services
                 </span>
         <br>
