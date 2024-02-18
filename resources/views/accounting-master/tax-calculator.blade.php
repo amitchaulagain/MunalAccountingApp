@@ -1,40 +1,11 @@
 @extends('weblayouts.app')
 
 @section('content_box')
-    <section class="ftco-section ftco-no-pt bg-light">
-        <div class="row main">
-
-            <div class="col-md-6 ">
-                <div class="home-row">
-                        <span class="header">
-                            Maximise your tax refund, your way </span>
-
-                    <div class="header-text">
-                        <br>
-                        <p>Book an appointment with a local Tax Expert or start online now.</p></div>
-
-                    <a href="/contactus#hero">
-                        <button class="header-button"> Book an appointment</button>
-                    </a>
-
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img class="home-image"
-                     src="{{ asset('/images/uploads/cms/' . $CMS['home_image_1']) }}">
-            </div>
-        </div>
-
-    </section>
 
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
-            <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['home_image_2']) }}" width="500px"
-                     height="400px">
-            </div>
-            <div class="col-md-6">
-                <div class="header-text">
+            <div class="col-md-10">
+                <div class="header-text" style="margin-top: 50px">
                     <p>Income Tax - Calculator, 2023</p></div>
                 <div class="header-tax">Check how your refund could be like
                     <span id="refresh"> <i style="color: orange; float: right; cursor: pointer; margin-right:40px;"
@@ -43,7 +14,6 @@
 
                 </div>
                 <form class="form-inline" id="taxForm">
-                    <div class="row">
 
                         <div class="col-md-6">
                             <label for="income">Income:</label>
@@ -65,7 +35,6 @@
                                        aria-label="Username" aria-describedby="basic-addon1" required>
                             </div>
                         </div>
-                    </div>
 
                     <div class="row">
                         <div class="col-md-6">
@@ -109,54 +78,7 @@
 
 
 
-     <section class="ftco-section bg-light">
-         <div class="container">
-             <div class="row justify-content-center pb-5 mb-3">
-                 <div class="col-md-7 heading-section text-center ftco-animate">
-                     <span class="header">Why Munal ? </span>
-                 </div>
-             </div>
-             <div class="row">
-                 <div class="col-md-6 col-lg-4 ftco-animate">
-                     <div class="block-7">
-                         <div class="text-center">
-                             <span class="excerpt d-block">Maximum refund Guarantee</span>
 
-                             <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span>At H&R Block, we're all about getting you more. More human service, more personal attention, and most importantly, more on your tax refund.</li>
-                             </ul>
-
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-6 col-lg-4 ftco-animate">
-                     <div class="block-7">
-                         <div class="text-center">
-                             <span class="excerpt d-block">Open nights and weekends</span>
-
-                             <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span>We know that finding time to do your taxes can be tricky, so we make sure we extend our opening hours, especially during Tax Season, to give you more availabilities..</li>
-                             </ul>
-
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-6 col-lg-4 ftco-animate">
-                     <div class="block-7">
-                         <div class="text-center">
-                             <span class="excerpt d-block">Excellent Customer Service</span>
-
-                             <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span> Excellent customer service can set a company apart. If your company is known for its responsiveness, helpfulness, and overall positive customer experience, it could be a key factor.</li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-
-
-             </div>
-         </div>
-     </section>
     <script>
         function calculateTax() {
             document.getElementById("result").classList.add("show");
@@ -285,3 +207,5 @@
     </script>
 
 @endsection
+
+

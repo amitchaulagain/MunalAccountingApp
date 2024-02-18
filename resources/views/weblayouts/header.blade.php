@@ -72,8 +72,8 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="col-md-8">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light fixed-top" id="ftco-navbar">
+    <div class="col-md-9">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,10 +84,10 @@
                 <a class="navbar-brand" href="/"> <img
                         src="{{ asset('/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
                 </a>
-                <li class="nav-item active"><a href="/" class="nav-link">Individual Tax</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Business Services</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Resources</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Income Tax Course</a></li>
+                <li class="nav-item active"><a href="/tax-return" class="nav-link">Individual Tax</a></li>
+                <li class="nav-item"><a href="/business-services" class="nav-link">Business Services</a></li>
+                <li class="nav-item"><a href="/financial-services" class="nav-link">Financial Services</a></li>
+                <li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
 
 
                 {{--  <li class="nav-item dropdown">
@@ -110,7 +110,7 @@
             </ul>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <a style="float: right; margin-right: 20px; color: black" href="tel://{{ $siteSetting['phone'] ?? '' }}"> <span
                 class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a>
         <a style="float: right; margin-right: 20px; color: black" href="mailto:{{ $siteSetting['email'] ?? '' }}"><span
@@ -144,17 +144,14 @@
                 <div class="col-md-1">
                     <img
                         width="80" height="80" alt="Book with your local office"
-                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
                 </div>
 
                 <div style="top:-14px;" class="col-md-6">
-                    <a href="/online">
-                        <h3>Online with an expert</h3>
-                    </a>
+                    <a href="/online"><h3>Online with an expert</h3></a>
+
                     <p>
-                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
-                        400+
-                        offices nationwide.</p>
+                        Our Tax Experts will complete your tax return online with you, so you can stay at home..</p>
                 </div>
 
 
@@ -177,12 +174,6 @@
         </div>
 
 
-        <div id="overlay-content">
-
-
-        </div>
-        <!-- Close button -->
-        <div id="close-btn">Close</div>
     </div>
     <div id="overlay2">
         <div class="overlay-item-box">
@@ -242,7 +233,7 @@
         <div class="overlay-item-box">
             <div class="row">
                 <div class="col-md-7">
-                    <a href="/bas">
+                    <a href="/bookkeeping">
                         <h3> Bookkeeping
                         </h3>
                     </a>
@@ -256,13 +247,6 @@
 
         </div>
 
-
-        <div id="overlay-content">
-
-
-        </div>
-        <!-- Close button -->
-        <div id="close-btn">Close</div>
     </div>
     <div id="overlay3">
         <div class="overlay-item-box">
@@ -270,22 +254,22 @@
                 <div class="col-md-1">
                     <img
                         width="80" height="80" alt="Book with your local office"
-                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
                 <div style="top:-14px;" class="col-md-6">
-                    <h3>Book with your local office</h3>
-
+                    <a href="/smsf">
+                        <h3>Self Managed Super Funds</h3>
+                    </a>
                     <p>
-                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
-                        400+
-                        offices nationwide.</p>
+                        Get more control over your super and retirement planning with H&R Block.</p>
                 </div>
 
 
             </div>
 
         </div>
+
         <div class="overlay-item-box">
             <div class="row">
                 <div class="col-md-1">
@@ -295,62 +279,20 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-6">
-                    <h3>Online with an expert</h3>
-
+                    <a href="/financial-planning">
+                        <h3>Financial Planning & Advice</h3>
+                    </a>
                     <p>
-                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
-                        400+
-                        offices nationwide.</p>
+                        Let us assist you with all your financial requirements.</p>
                 </div>
 
 
             </div>
 
         </div>
-
-        <div class="overlay-item-box">
-            <div class="row">
-                <div class="col-md-7">
-                    <h3>Second Look Assessment</h3>
-
-                    <p>We will review your tax return and check that you have received the maximum refund.</p>
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-        <div id="overlay-content">
-
-
-        </div>
-        <!-- Close button -->
-        <div id="close-btn">Close</div>
     </div>
     <div id="overlay4">
-        <div class="overlay-item-box">
-            <div class="row">
-                <div class="col-md-1">
-                    <img
-                        width="80" height="80" alt="Book with your local office"
-                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
-                </div>
 
-                <div style="top:-14px;" class="col-md-6">
-                    <h3>Book with your local office</h3>
-
-                    <p>
-                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
-                        400+
-                        offices nationwide.</p>
-                </div>
-
-
-            </div>
-
-        </div>
         <div class="overlay-item-box">
             <div class="row">
                 <div class="col-md-1">
@@ -360,12 +302,12 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-6">
-                    <h3>Online with an expert</h3>
+                    <a href="/tax-calculator">
+                        <h3>Tax Calculator</h3>
+                    </a>
 
                     <p>
-                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
-                        400+
-                        offices nationwide.</p>
+                        Calculate your tax return quickly with our easy to use tax calculator.</p>
                 </div>
 
 
@@ -375,10 +317,19 @@
 
         <div class="overlay-item-box">
             <div class="row">
-                <div class="col-md-7">
-                    <h3>Second Look Assessment</h3>
+                <div class="col-md-1">
+                    <img
+                        width="80" height="80" alt="Book with your local office"
+                        src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
+                </div>
 
-                    <p>We will review your tax return and check that you have received the maximum refund.</p>
+                <div style="top:-14px;" class="col-md-6">
+                    <a href="/tax-checklist">
+                        <h3>Tax Checklist</h3>
+                    </a>
+
+                    <p>
+                        Prepare for a quick and efficient tax return experience with our checklist.</p>
                 </div>
 
 
@@ -387,12 +338,6 @@
         </div>
 
 
-        <div id="overlay-content">
-
-
-        </div>
-        <!-- Close button -->
-        <div id="close-btn">Close</div>
     </div>
 
 

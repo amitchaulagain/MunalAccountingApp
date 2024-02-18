@@ -72,6 +72,19 @@ Route::get('/bas', [UserController::class, 'bas'])->name('bas');
 
 Route::get('/company-accounting', [UserController::class, 'company_accounting'])->name('company_accounting');
 Route::get('/bookkeeping', [UserController::class, 'bookkeeping'])->name('bookkeeping');
+Route::get('/tax-return', [UserController::class, 'tax_return'])->name('tax_return');
+Route::get('/business-services', [UserController::class, 'business_services'])->name('business_services');
+Route::get('/financial-services', [UserController::class, 'financial_services'])->name('financial_services');
+Route::get('/smsf', [UserController::class, 'smsf'])->name('smsf');
+Route::get('/financial-planning', [UserController::class, 'financial_planning'])->name('financial_planning');
+
+
+
+Route::get('/resources', [UserController::class, 'resources'])->name('resources');
+
+Route::get('/tax-calculator', [UserController::class, 'tax_calculator'])->name('tax_calculator');
+Route::get('/tax-checklist', [UserController::class, 'tax_checklist'])->name('tax_checklist');
+
 
 
 

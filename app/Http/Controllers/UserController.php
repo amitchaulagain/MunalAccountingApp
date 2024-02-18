@@ -744,5 +744,101 @@ class UserController extends Controller
         return view('accounting-master.bookkeeping', $data);
     }
 
+    public function tax_return(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.tax-return', $data);
+    }
+    public function business_services(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.business-services', $data);
+    }
+    public function financial_services(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.financial-services', $data);
+    }
+    public function financial_planning(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.financial-planning', $data);
+    }
+    public function smsf(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.smsf', $data);
+    }
+    public function tax_calculator(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.tax-calculator', $data);
+    }
+    public function tax_checklist(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.tax-checklist', $data);
+    }
+    public function resources(Request $request)
+    {
+        $title = "Home";
+        $siteSetting = $this->siteSetting;
+        $gal = Gallary::all();
+        $services = Service::all();
+        $cms = Cms::all();
+
+
+        $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
+        return view('accounting-master.resources', $data);
+    }
 
 }

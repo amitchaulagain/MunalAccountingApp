@@ -138,11 +138,11 @@ class SiteController extends Controller
                 }
             }
         }*/
-        if ($request->hasFile('home_image')) {
-            $cms = cms::where('key', 'home_image')->first();
+        if ($request->hasFile('home_image_1')) {
+            $cms = cms::where('key', 'home_image_1')->first();
             if ($cms) {
-                $image = $request->file('home_image');
-                $imageName = "home" . '.' . $image->getClientOriginalExtension();
+                $image = $request->file('home_image_1');
+                $imageName = "home1" . '.' . $image->getClientOriginalExtension();
                 $imagePath = public_path('images/uploads/cms/') .'/'. $imageName;
 //                if (file_exists($imagePath)) {
 //                    unlink($imagePath);
@@ -153,11 +153,35 @@ class SiteController extends Controller
                     $cms->update(['value' => $imageName]);
                 }
             } else {
-                $image = $request->file('home_image');
-                $imageName = "home"  . $image->getClientOriginalExtension();
+                $image = $request->file('home_image_1');
+                $imageName = "home1"  . $image->getClientOriginalExtension();
                 $image->move(public_path('images/uploads/services/'), $imageName);
                 if ($image) {
-                    $cms = cms::create(['key' => 'home_image', 'value' => $imageName]);
+                    $cms = cms::create(['key' => 'home_image_1', 'value' => $imageName]);
+                }
+            }
+        }
+
+        if ($request->hasFile('home_image_2')) {
+            $cms = cms::where('key', 'home_image_2')->first();
+            if ($cms) {
+                $image = $request->file('home_image_2');
+                $imageName = "home2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') .'/'. $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('home_image_2');
+                $imageName = "home2"  . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/services/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'home_image_2', 'value' => $imageName]);
                 }
             }
         }
@@ -186,7 +210,7 @@ class SiteController extends Controller
             }
         }
 
-        foreach ($request->except(['_token', 'home_image', 'about_image']) as $key => $value) {
+        foreach ($request->except(['_token', 'home_image_1','home_image_2', 'about_image']) as $key => $value) {
             $cms = cms::where('key', $key)->first();
             if ($cms) {
                 $cms->update(compact('value'));

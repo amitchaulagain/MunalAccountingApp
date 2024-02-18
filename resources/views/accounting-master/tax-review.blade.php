@@ -67,6 +67,74 @@
          </div>--}}
 
     </section>
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="header">How Second Look Assessment works ? </span>
+                </div>
+            </div>
+        </div>
+        <div class="row main">
+            <div class="col-lg-6">
+                <div class="row" style="margin-bottom: 40px">
+                    <div class="col-lg-2" style="float: left">
+                        <div class="circle-box">1</div>
+                    </div>
+                    <div class="col-lg-10" style="float: left">
+                        <span class="bolder-text"> You bring in your old tax return
+</span>
+                        <p class="header-text">Bring us your previous year’s tax return. We will review and look for any errors made by others.</p>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 40px">
+
+                    <div class="col-lg-2" style="float: left">
+                        <div class="circle-box">2</div>
+                    </div>
+                    <div class="col-lg-10" style="float: left">
+                        <span class="bolder-text">We will take a look at your return
+</span>
+                        <p class="header-text"> We’ll conduct a thorough review of your past returns, looking for any deductions you may still be entitled to.
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 40px">
+
+                    <div class="col-lg-2" style="float: left">
+                        <div class="circle-box">3</div>
+                    </div>
+                    <div class="col-lg-10" style="float: left">
+                        <span class="bolder-text"> We will file an adjustment with the ATO
+</span>
+                        <p class="header-text"> If we find any errors made by others, we can file an amendment and get you back the money missed out on.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <img src="{{ asset('/images/uploads/home/second-look.jpg') }}">
+                </div>
+            </div>
+        </div>
+
+
+        {{-- <div class="col-md-6 pl-md-5 py-md-5">
+             <div class="heading-section pl-md-4 pt-md-5">
+                 <h2 class="mb-4"> {{ $CMS['home_title'] }}</h2>
+             </div>
+             <div class="services-2 w-100 d-flex">
+                 <div class="text pl-4">
+                     <p>{!! $CMS['home_content'] !!}</p>
+                 </div>
+             </div>
+         </div>--}}
+
+    </section>
+
 
 @endsection
 

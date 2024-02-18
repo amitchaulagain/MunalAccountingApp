@@ -214,22 +214,52 @@
     $('.nav-item  a').mouseenter(function () {
 
 
+
         // Display link text within the overlay
         if ($(this).text() == 'Individual Tax') {
             $("#overlay1").fadeIn();
             $("#overlay2").fadeOut();
             $("#overlay3").fadeOut();
+            $("#overlay4").fadeOut();
+
+            $(".main").addClass('disabled-div');
 
         }
-        if ($(this).text() == 'Business Services') {
+        else if ($(this).text() == 'Business Services') {
             $("#overlay1").fadeOut();
             $("#overlay2").fadeIn();
             $("#overlay3").fadeOut();
+            $("#overlay4").fadeOut();
+
+            $(".main").addClass('disabled-div');
+
         }
-        if ($(this).text() == 'Resources') {
+        else if ($(this).text() == 'Financial Services') {
             $("#overlay1").fadeOut();
             $("#overlay2").fadeOut();
             $("#overlay3").fadeIn();
+            $("#overlay4").fadeOut();
+
+            $(".main").addClass('disabled-div');
+
+        }
+        else if ($(this).text() == 'Resources') {
+            $("#overlay1").fadeOut();
+            $("#overlay2").fadeOut();
+            $("#overlay3").fadeOut();
+            $("#overlay4").fadeIn();
+
+            $(".main").addClass('disabled-div');
+
+        }
+        else {
+            $("#overlay1").fadeOut();
+            $("#overlay2").fadeOut();
+            $("#overlay3").fadeOut();
+            $("#overlay4").fadeOut();
+            $(".main").removeClass('disabled-div');
+
+
         }
 
 
@@ -245,8 +275,14 @@
         $("#overlay2").fadeIn();
 
         // Display link text within the overlay
-    }); $('#overlay3').mouseenter(function () {
+    });
+    $('#overlay3').mouseenter(function () {
         $("#overlay3").fadeIn();
+
+        // Display link text within the overlay
+    });
+    $('#overlay4').mouseenter(function () {
+        $("#overlay4").fadeIn();
 
         // Display link text within the overlay
     });
@@ -254,24 +290,32 @@
 
     $('#overlay1').mouseleave(function () {
         $("#overlay1").fadeOut();
+        //alert("hero")
+        $(".main").removeClass('disabled-div');
 
 
         // Display link text within the overlay
     });
     $('#overlay2').mouseleave(function () {
         $("#overlay2").fadeOut();
+        $(".main").removeClass('disabled-div');
+
 
         // Display link text within the overlay
     });
     $('#overlay3').mouseleave(function () {
         $("#overlay3").fadeOut();
+        $(".main").removeClass('disabled-div');
+
 
         // Display link text within the overlay
     });
+    $('#overlay4').mouseleave(function () {
+        $("#overlay4").fadeOut();
+        $(".main").removeClass('disabled-div');
 
-    $("#close-btn").click(function () {
-        // Hide the overlay when the close button is clicked
-        $("#overlay1").fadeOut();
+
+        // Display link text within the overlay
     });
 
 

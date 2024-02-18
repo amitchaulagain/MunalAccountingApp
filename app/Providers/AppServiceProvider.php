@@ -57,6 +57,17 @@ class AppServiceProvider extends ServiceProvider
             'accounting-master.home','accounting-master.aboutus',
             'accounting-master.contactus','accounting-master.services','accounting-master.service','accounting-master.blogs','accounting-master.blog','accounting-master.lodge-in-person','accounting-master.online','accounting-master.tax-review','accounting-master.small-business','accounting-master.bas','accounting-master.company-accounting',
             'accounting-master.bookkeeping',
+
+            'accounting-master.tax-return',
+            'accounting-master.business-services',
+            'accounting-master.financial-services',
+            'accounting-master.smsf',
+            'accounting-master.financial-planning',
+            'accounting-master.tax-calculator',
+            'accounting-master.tax-checklist',
+            'accounting-master.resources',
+
+
         ], function ($view) {
             $CMS = cms::pluck('value', 'key');
 
