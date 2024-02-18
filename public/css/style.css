@@ -13822,3 +13822,7 @@ th, td {
     text-align: center;
 
 }
+.hovered-text:hover {
+    background-color: #f3e6cc; /* Change the background color as desired */
+}
+

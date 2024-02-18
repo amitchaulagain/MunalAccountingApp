@@ -126,7 +126,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/lodge-in-person"><h3>Book with your local office</h3></a>
 
                     <p>
@@ -147,7 +147,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/21/212a6447-697d-4414-af93-78562da8abc3.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/online"><h3>Online with an expert</h3></a>
 
                     <p>
@@ -178,7 +178,7 @@
     <div id="overlay2">
         <div class="overlay-item-box">
             <div class="row">
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
 
                     <a href="/small-business">
                         <h3>
@@ -197,7 +197,7 @@
         </div>
         <div class="overlay-item-box">
             <div class="row">
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/bas"><h3> Sole Trader BAS
                         </h3>
                     </a>
@@ -213,7 +213,7 @@
 
         <div class="overlay-item-box">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7 hovered-text">
 
                     <a href="/company-accounting">
                         <h3> Company & Trust
@@ -232,7 +232,7 @@
 
         <div class="overlay-item-box">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7 hovered-text">
                     <a href="/bookkeeping">
                         <h3> Bookkeeping
                         </h3>
@@ -257,7 +257,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/smsf">
                         <h3>Self Managed Super Funds</h3>
                     </a>
@@ -278,7 +278,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/financial-planning">
                         <h3>Financial Planning & Advice</h3>
                     </a>
@@ -301,7 +301,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/tax-calculator">
                         <h3>Tax Calculator</h3>
                     </a>
@@ -323,7 +323,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6">
+                <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/tax-checklist">
                         <h3>Tax Checklist</h3>
                     </a>
