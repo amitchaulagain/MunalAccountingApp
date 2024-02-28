@@ -7,21 +7,20 @@
             <div class="col-md-6 ">
                 <div style="margin-top: 120px;" class="home-row">
                         <span class="header">
-                            Bookkeeping & Payroll services that save you time
+                             {!! $CMS['bookkeeping_header1'] !!}
  </span>
 
                     <div class="header-text">
                         <br>
-                        <p>With expert set up and support, we'll take the time and hassle out of managing your book which leaves you the time to get on with your business.
-
-                        </p></div>
-                    <button class="header-button"> Enquire Now </button>
+                        <p>{!! $CMS['bookkeeping_content1'] !!}</p>
+                    </div>
+                    <button class="header-button"> Enquire Now</button>
 
                 </div>
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image"  src="{{ asset('/images/uploads/cms/' . $CMS['bookkeeping_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 
@@ -43,7 +42,7 @@
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="header">Get your weekends back with Munal bookkeeping services. Prices from $199 per month.
+                    <span class="header"> {!! $CMS['bookkeeping_header2'] !!}
 
 
   </span>
@@ -53,7 +52,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Accounting Software Set-Up
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header3'] !!}
 
 </span>
 
@@ -65,7 +64,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Accounts Payable & Receivable
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header4'] !!}
 </span>
 
                         </div>
@@ -74,18 +73,8 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Payroll & Superannuation
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header5'] !!}
 
-
-</span>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <span class="excerpt d-block">BAS / IAS Lodgements
 
 </span>
 
@@ -95,15 +84,8 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Single Touch Payroll</span>
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header6'] !!}
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <span class="excerpt d-block">Management Reporting
 </span>
 
                         </div>
@@ -112,7 +94,15 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Cashflow Management
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header7'] !!} </span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header8'] !!}
 </span>
 
                         </div>
@@ -121,19 +111,26 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Benchmarking & KPI-Tracking
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header9'] !!}
 </span>
 
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block">{!! $CMS['bookkeeping_header10'] !!}
+</span>
 
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
         </div>
     </section>
-
 
 @endsection
 

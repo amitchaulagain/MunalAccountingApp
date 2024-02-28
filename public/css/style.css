@@ -13823,6 +13823,7 @@ th, td {
 
 }
 .hovered-text:hover {
-    background-color: #f3e6cc; /* Change the background color as desired */
+    background-color: #f3e6cc;
+    cursor: pointer;/* Change the background color as desired */
 }
 

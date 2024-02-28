@@ -4,7 +4,7 @@
 
         <div class="row">
                 <span class="header" style="margin-top: 100px">
-                    Business Services
+                    {!! $CMS['business_services_header1'] !!}
                 </span>
             <br>
             <br>
@@ -14,7 +14,7 @@
 
         <div class="row">
             <span class="header-text" style="text-align: center">
-                <p style="width: 40%; margin-left: 30%">We can help you navigate the accounting and tax responsibilities that come with running a business.
+                <p style="width: 40%; margin-left: 30%"> {!! $CMS['business_services_content1'] !!}
             </span>
 
             <br>
@@ -27,12 +27,12 @@
             <div class="col-md-6 ">
                 <div class="home-row">
                         <span class="header">
-                            Sole Trader & Partnership
+                             {!! $CMS['business_services_header2'] !!}
  </span>
 
                     <div class="header-text">
                         <br>
-                        <p>If your business is set up as a sole trader or partnership, we can help you..</p></div>
+                        <p> {!! $CMS['business_services_content2'] !!}</p></div>
 
                     <a href="/small-business">
                         <button class="header-button"> Learn More</button>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['business_services_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
         </div>
@@ -62,21 +62,20 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['business_services_image2']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
             <div class="col-md-6 ">
 
                 <div class="home-row">
                         <span class="header">
-                            Company & Trust
+                             {!! $CMS['business_services_header3'] !!}
 
  </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Let us help you navigate the accounting and tax responsibilities that comes with running a
-                            business.
+                        <p> {!! $CMS['business_services_content3'] !!}
                         </p></div>
 
                     <a href="/company-accounting">
@@ -95,14 +94,13 @@
             <div class="col-md-6 ">
                 <div class="home-row">
                         <span class="header">
-                           Bookkeeping & Payroll
+                           {!! $CMS['business_services_header4'] !!}
 
  </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Expert set up and support, we'll take the time and hassle out of managing your books.
-                            .</p></div>
+                        <p> {!! $CMS['business_services_content4'] !!}</p></div>
 
                     <a href="/bookkeeping">
                         <button class="header-button"> Learn More</button>
@@ -112,7 +110,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['business_services_image3']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
         </div>

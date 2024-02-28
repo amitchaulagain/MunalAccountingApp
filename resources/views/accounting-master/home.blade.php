@@ -7,11 +7,11 @@
             <div class="col-md-6 ">
                 <div class="home-row">
                         <span class="header">
-                            Maximise your tax refund, your way </span>
+                             {{$CMS['home_header1']}} </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Book an appointment with a local Tax Expert or start online now.</p></div>
+                        <p> {{$CMS['home_content1']}}</p></div>
 
                     <a href="/contactus#hero">
                         <button class="header-button"> Book an appointment</button>
@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-6">
                 <img class="home-image"
-                     src="{{ asset('/images/uploads/cms/' . $CMS['home_image_1']) }}">
+                     src="{{ asset('/images/uploads/cms/' . $CMS['home_image1']) }}">
             </div>
         </div>
 
@@ -30,7 +30,7 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['home_image_2']) }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['home_image2']) }}" width="500px"
                      height="400px">
             </div>
             <div class="col-md-6">
@@ -113,17 +113,17 @@
          <div class="container">
              <div class="row justify-content-center pb-5 mb-3">
                  <div class="col-md-7 heading-section text-center ftco-animate">
-                     <span class="header">Why Munal ? </span>
+                     <span class="header"> {{$CMS['home_header2']}} </span>
                  </div>
              </div>
              <div class="row">
                  <div class="col-md-6 col-lg-4 ftco-animate">
                      <div class="block-7">
                          <div class="text-center">
-                             <span class="excerpt d-block">Maximum refund Guarantee</span>
+                             <span class="excerpt d-block"> {{$CMS['home_header3']}}</span>
 
                              <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span>At H&R Block, we're all about getting you more. More human service, more personal attention, and most importantly, more on your tax refund.</li>
+                                 <li><span class="fa fa-check mr-2"></span>{!! $CMS['home_content3'] !!}</li>
                              </ul>
 
                          </div>
@@ -132,10 +132,10 @@
                  <div class="col-md-6 col-lg-4 ftco-animate">
                      <div class="block-7">
                          <div class="text-center">
-                             <span class="excerpt d-block">Open nights and weekends</span>
+                             <span class="excerpt d-block"> {{$CMS['home_header4']}}</span>
 
                              <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span>We know that finding time to do your taxes can be tricky, so we make sure we extend our opening hours, especially during Tax Season, to give you more availabilities..</li>
+                                 <li><span class="fa fa-check mr-2"></span>{!!$CMS['home_content4']  !!}</li>
                              </ul>
 
                          </div>
@@ -144,10 +144,10 @@
                  <div class="col-md-6 col-lg-4 ftco-animate">
                      <div class="block-7">
                          <div class="text-center">
-                             <span class="excerpt d-block">Excellent Customer Service</span>
+                             <span class="excerpt d-block"> {{$CMS['home_header5']}}</span>
 
                              <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span> Excellent customer service can set a company apart. If your company is known for its responsiveness, helpfulness, and overall positive customer experience, it could be a key factor.</li>
+                                 <li><span class="fa fa-check mr-2"></span> {!! $CMS['home_content5'] !!}</li>
                              </ul>
                          </div>
                      </div>

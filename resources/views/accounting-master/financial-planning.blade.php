@@ -7,12 +7,12 @@
             <div class="col-md-6 ">
                 <div style="margin-top: 120px;" class="home-row">
                         <span class="header">
-                           Financial Planning & Advice
+                           {!! $CMS['financial_planning_header1'] !!}
  </span>
 
                     <div class="header-text">
                         <br>
-                        <p>H&R Block has partnered with Lydian Financial Services & My Money Sorted, leading Australian providers of lending and financial advice, to assist you with all your financial requirements.
+                        <p> {!! $CMS['financial_planning_content1'] !!}
 
                         </p></div>
                     <button class="header-button"> Enquire Now</button>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['financial_planning_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 
@@ -45,12 +45,11 @@
             <div class="col-md-6 ">
                 <div style="margin-top: 120px;" class="home-row">
                         <span class="header">
-We help you with Financial Planning & Advice
- </span>
+ {!! $CMS['financial_planning_header2'] !!} </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Are you looking to apply for a new mortgage or refinance an existing mortgage at a better rate? Would you like to develop your retirement pathway plan? Do you need to manage your superannuation? Have you reviewed and covered your risks? Do you have a Will? Do you require financial planning and advice? If the answer to any of these questions is ‘YES’, then we have good news for you! H&R Block has partnered with Lydian Financial Services & My Money Sorted, leading Australian providers of lending and financial advice, to assist you with all your financial requirements. Applying over 20 years of experience, Lydian & My Money Sorted help H&R Block clients navigate the tricky and often confusing process of assessing your needs, evaluating your options and securing the right financial service, or other financial products for you.
+                        <p> {!! $CMS['financial_planning_content2'] !!}
 
 
 
@@ -61,7 +60,7 @@ We help you with Financial Planning & Advice
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['financial_planning_image2']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 
@@ -82,14 +81,14 @@ We help you with Financial Planning & Advice
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="header">We offer broad range of services  </span>
+                    <span class="header"> {!! $CMS['financial_planning_header3'] !!}  </span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Lending & Finance
+                            <span class="excerpt d-block"> {!! $CMS['financial_planning_header4'] !!}
 
 </span>
 
@@ -101,7 +100,7 @@ We help you with Financial Planning & Advice
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Savings & Investments</span>
+                            <span class="excerpt d-block"> {!! $CMS['financial_planning_header5'] !!}</span>
 
                         </div>
                     </div>
@@ -109,7 +108,7 @@ We help you with Financial Planning & Advice
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Retirement Planning
+                            <span class="excerpt d-block"> {!! $CMS['financial_planning_header6'] !!}
 
 </span>
 
@@ -119,7 +118,7 @@ We help you with Financial Planning & Advice
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Superannuation
+                            <span class="excerpt d-block"> {!! $CMS['financial_planning_header7'] !!}
 </span>
 
                         </div>
@@ -128,7 +127,7 @@ We help you with Financial Planning & Advice
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Wills & Estate Planning</span>
+                            <span class="excerpt d-block"> {!! $CMS['financial_planning_header8'] !!}</span>
 
                         </div>
                     </div>
@@ -136,7 +135,7 @@ We help you with Financial Planning & Advice
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Financial Planning & Advice</span>
+                            <span class="excerpt d-block"> {!! $CMS['financial_planning_header9'] !!}</span>
 
                         </div>
                     </div>

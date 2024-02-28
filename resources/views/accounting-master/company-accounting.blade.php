@@ -7,11 +7,11 @@
             <div class="col-md-6 ">
                 <div style="margin-top: 120px;" class="home-row">
                         <span class="header">
-                           Assisting you with your Company & Trust Accounting </span>
+                            {!! $CMS['company_accounting_header1'] !!} </span>
 
                     <div class="header-text">
                         <br>
-                        <p>We can help you navigate the accounting and tax responsibilities that come with running a business.
+                        <p> {!! $CMS['company_accounting_content1'] !!}
                            </div>
                     <button class="header-button"> Enquire now</button>
 
@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['company_accounting_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 
@@ -45,14 +45,14 @@
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="header">We have an extensive range of services to assist your business  </span>
+                    <span class="header"> {!! $CMS['company_accounting_header2'] !!} </span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Accounting Services
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header3'] !!}
 
 </span>
 
@@ -64,7 +64,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Setting up a Business</span>
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header4'] !!}</span>
 
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">ASIC Compliance
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header5'] !!}
 
 </span>
 
@@ -82,7 +82,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Financial Reporting
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header6'] !!}
 </span>
 
                         </div>
@@ -91,7 +91,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Single Touch Payroll</span>
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header7'] !!}</span>
 
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Performance & KPI-Tracking</span>
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header8'] !!}</span>
 
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Cashflow & Budgets</span>
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header9'] !!}</span>
 
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
-                            <span class="excerpt d-block">Business-Plans</span>
+                            <span class="excerpt d-block"> {!! $CMS['company_accounting_header10'] !!}</span>
 
                         </div>
                     </div>

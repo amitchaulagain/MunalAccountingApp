@@ -1,0 +1,16 @@
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('182', 'financial_planning_header1', 'First BAS with H&R Block FREE*', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('183', 'financial_planning_content1', '<p>You&#39;ve trusted us with your tax in the past, now give us a chance to show how we can help with your Business Activity Statements. H&amp;R Block are the small business &amp; sole trader experts. Whether you are looking for more expertise or more time back for your business, we are here for you. To prove our commitment to you, we are offering a FREE BAS* to all first time H&amp;R Block BAS clients. *T&amp;C&#39;s Apply</p>', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('184', 'financial_planning_header2', 'What we offer ?', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `updated_at`) VALUES ('117', 'financial_planning_content2', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('185', 'financial_planning_header3', 'BAS AGENT LODGMENT EXTENSION', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('186', 'financial_planning_content3', '<p>If you work with a registered tax agent like H&amp;R Block you are automatically given an extension on your BAS due date.</p>', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('187', 'financial_planning_header4', 'FIRST BAS FREE & 20% OFF YOUR TAX RETURN IF YOU LODGE ALL 4 BAS WITH US', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('188', 'financial_planning_header5', 'BAS PRICING FROM $99', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('189', 'financial_planning_header6', 'SOLE TRADER AND SMALL BUSINESS TAX EXPERTS', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('190', 'financial_planning_header7', 'LESS TIME ON TAX, MORE TIME FOR YOUR BUSINESS', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('191', 'financial_planning_header8', 'In office, over the phone or via email convenience', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('192', 'financial_planning_header8', 'In office, over the phone or via email convenience', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('193', 'financial_planning_header9', 'In office, over the phone or via email convenience', '2024-02-27 19:31:41');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES ('194', 'financial_planning_image1', 'financial_planning1.jpg', '2023-12-19 08:26:30', '2024-02-11 12:29:36');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES ('154', 'financial_planning_image2', 'financial_planning1.jpg', '2023-12-19 08:26:30', '2024-02-11 12:29:36');
+
