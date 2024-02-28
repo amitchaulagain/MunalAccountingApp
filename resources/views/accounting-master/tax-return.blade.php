@@ -81,22 +81,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img src="{!! asset('/images/uploads/home/second-look.jpg') !!}">
+                    <img src="{{ asset('/images/uploads/cms/' . $CMS['individual_tax_image2']) }}">
                 </div>
             </div>
         </div>
 
-
-       {{-- {!!-- <div class="col-md-6 pl-md-5 py-md-5">
-             <div class="heading-section pl-md-4 pt-md-5">
-                 <h2 class="mb-4"> {!! $CMS['home_title'] !!}</h2>
-             </div>
-             <div class="services-2 w-100 d-flex">
-                 <div class="text pl-4">
-                     <p>{!! $CMS['home_content'] !!}</p>
-                 </div>
-             </div>
-         </div>--!!}--}}
 
     </section>
 
