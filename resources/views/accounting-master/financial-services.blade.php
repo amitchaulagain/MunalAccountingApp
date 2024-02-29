@@ -4,7 +4,7 @@
 
     <div class="row">
                 <span class="header" style="margin-top: 100px">
-                    Financial Services
+                    {!! $CMS['financial_services_header1'] !!}
                 </span>
         <br>
         <br>
@@ -14,7 +14,9 @@
 
     <div class="row">
             <span class="header-text" style="text-align: center">
-                <p style="width: 40%; margin-left: 30%">We have a range of financial services available to assist with your needs.
+                <p style="width: 40%; margin-left: 30%">
+                {!! $CMS['financial_services_content1'] !!}
+
             </span>
 
         <br>
@@ -27,12 +29,14 @@
             <div class="col-md-6 ">
                 <div class="home-row">
                         <span class="header">
-                    Self Managed Super Funds (SMSF)
+                                    {!! $CMS['financial_services_header2'] !!}
+
  </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Get more control over your super and retirement planning with H&R Block.
+                        <p>                {!! $CMS['financial_services_content2'] !!}
+
                         </p></div>
 
                     <a href="/small-business">
@@ -43,7 +47,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['financial_services_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
         </div>
@@ -63,21 +67,21 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/second-look.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['financial_services_image2']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
             <div class="col-md-6 ">
 
                 <div class="home-row">
                         <span class="header">
-                            Loans and Financial Advice
+                                            {!! $CMS['financial_services_header3'] !!}
 
-
- </span>
+                        </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Are you looking to apply for a new mortgage or refinance an existing mortgage at a better rate? Would you like to develop your retirement pathway plan? We have good news for you!
+                        <p>                {!! $CMS['financial_services_content3'] !!}
+
                         </p></div>
 
                     <a href="/company-accounting">

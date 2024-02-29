@@ -94,6 +94,12 @@
                                             aria-controls="nav-bookkeeping"
                                             aria-selected="false"> Bookkeeping
                                     </button>
+
+                                    <button class="nav-link" id="financial-services-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-financial-services" type="button" role="tab"
+                                            aria-controls="nav-financial-services"
+                                            aria-selected="false"> Financial Services
+                                    </button>
                                     <button class="nav-link" id="smsf-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-smsf" type="button" role="tab"
                                             aria-controls="nav-smsf"
@@ -2497,6 +2503,142 @@
                                                      data-fancybox="gallery"
                                                      data-src="{{ asset('/images/uploads/cms/' . $cms['smsf_image1']) }}"
                                                      src="{{ asset('/images/uploads/cms/' . $cms['smsf_image1']) }}"
+                                                     alt="Error">
+                                            @endif
+                                        </div>
+
+                                        @if (session()->get('AdminUser')['type'] == 'R')
+                                            <div class="col-md-12">
+                                                <button class="btn btn-success" type="submit">Update</button>
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade " id="nav-financial-services" role="tabpanel"
+                                     aria-labelledby="nav-financial-services-tab">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Header 1</label>
+                                            <input type="text" class="form-control" name="financial_services_header1"
+                                                   value="{{ $cms['financial_services_header1'] ?? '' }}">
+                                            <div class="text-danger">
+                                                @error('financial_services_header1')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Content 1</label>
+                                            <textarea name="financial_services_content1" id="financial_services_content1"
+                                                      class="ckeditor">{{ $cms['financial_services_content1'] ?? '' }}</textarea>
+
+
+                                            <div class="text-danger">
+                                                @error('financial_services_content1')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Header 2</label>
+                                            <input type="text" class="form-control" name="financial_services_header2"
+                                                   value="{{ $cms['financial_services_header2'] ?? '' }}">
+                                            <div class="text-danger">
+                                                @error('financial_services_header2')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Content 2</label>
+
+                                            <textarea name="financial_services_content2" id="financial_services_content2"
+                                                      class="ckeditor">{{ $cms['financial_services_content2'] ?? '' }}</textarea>
+                                            <div class="text-danger">
+                                                @error('financial_services_content2')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Header 3</label>
+                                            <input type="text" class="form-control" name="financial_services_header3"
+                                                   value="{{ $cms['financial_services_header3'] ?? '' }}">
+                                            <div class="text-danger">
+                                                @error('financial_services_header4')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Content 3</label>
+
+                                            <textarea name="financial_services_content2" id="financial_services_content3"
+                                                      class="ckeditor">{{ $cms['financial_services_content3'] ?? '' }}</textarea>
+                                            <div class="text-danger">
+                                                @error('financial_services_content3')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+
+
+
+                                        <h5 class="card-title">Images</h5>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Image 1</label>
+                                            <input type="file" class="form-control" name="financial_services_image1">
+                                            <div class="text-danger">
+                                                @error('financial_services_image1')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            @if (!empty($cms['financial_services_image1']))
+                                                <label for="" class="form-label">Current Image</label>
+                                                @if (session()->get('AdminUser')['type'] == 'R')
+                                                    <button data-name="Home Image" data-key="financial_services_image1"
+                                                            class="mb-2 btn btn-danger btn-sm ajaxDelete">
+                                                        <i class="fa fa-remove" aria-hidden="true"></i>
+                                                        Remove
+                                                    </button>
+                                                @endif
+                                                <img height="200px" class="form-control w-auto" style="cursor: pointer"
+                                                     data-fancybox="gallery"
+                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image1']) }}"
+                                                     src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image1']) }}"
+                                                     alt="Error">
+                                            @endif
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-2">
+                                            <label for="" class="form-label">Image 2</label>
+                                            <input type="file" class="form-control" name="financial_services_image2">
+                                            <div class="text-danger">
+                                                @error('financial_services_image2')
+                                                * {{ $message }}
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            @if (!empty($cms['financial_services_image2']))
+                                                <label for="" class="form-label">Current Image</label>
+                                                @if (session()->get('AdminUser')['type'] == 'R')
+                                                    <button data-name="Home Image" data-key="financial_services_image2"
+                                                            class="mb-2 btn btn-danger btn-sm ajaxDelete">
+                                                        <i class="fa fa-remove" aria-hidden="true"></i>
+                                                        Remove
+                                                    </button>
+                                                @endif
+                                                <img height="200px" class="form-control w-auto" style="cursor: pointer"
+                                                     data-fancybox="gallery"
+                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image2']) }}"
+                                                     src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>

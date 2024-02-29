@@ -1,0 +1,10 @@
+
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('196', 'financial_services_header1', 'Financial Planning & Advice', '2024-02-28 12:23:56');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('197', 'financial_services_content1', '<p>H&amp;R Block has partnered with Lydian Financial Services &amp; My Money Sorted, leading Australian providers of lending and financial advice, to assist you with all your financial requirements.</p>', '2024-02-28 12:23:56');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('198', 'financial_services_header2', 'We help you with Financial Planning & Advice', '2024-02-28 12:23:56');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `updated_at`) VALUES ('199', 'financial_services_content2', '2024-02-28 12:23:56');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('200', 'financial_services_header3', 'We offer broad range of services', '2024-02-28 12:23:56');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `updated_at`) VALUES ('201', 'financial_services_content3', '', '2024-02-27 19:31:41');
+
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES ('202', 'financial_services_image1', 'financial_services1.jpg', '2023-12-19 08:26:30', '2024-02-11 12:29:36');
+INSERT INTO `munal_accounting`.`cms` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES ('203', 'financial_services_image2', 'financial_services1.jpg', '2023-12-19 08:26:30', '2024-02-11 12:29:36');

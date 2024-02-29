@@ -8,18 +8,18 @@
             <div class="col-md-6 ">
                 <div style="margin-top: 120px;" class="home-row">
                         <span class="header">
-                            Lodge Tax Online with an Expert </span>
+                           {!! $CMS['online_header1'] !!} </span>
 
                     <div class="header-text">
                         <br>
-                        <p>Want your return prepared by an experienced tax consultant, but can’t make it into the office? Online Tax Adviser has you covered. Get the same service you expect in person, but through the convenience of our secure online portal..</p></div>
+                        <p>{!! $CMS['online_content1'] !!}</p></div>
                     <button class="header-button"> Lodge with an expert</button>
 
                 </div>
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/online.jpg') }}" width="500px"
+                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['online_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 
@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="header">How does online with an expert work?</span>
+                    <span class="header">{!! $CMS['online_header2'] !!}</span>
                 </div>
             </div>
         </div>
@@ -51,9 +51,9 @@
                         <div class="circle-box">1</div>
                     </div>
                     <div class="col-lg-10" style="float: left">
-                        <span class="bolder-text"> You fill out our secure form
+                        <span class="bolder-text"> {!! $CMS['online_header3'] !!}
 </span>
-                        <p class="header-text">Fill in your details, upload your tax documents and one of our tax agents will contact you. Your tax consultant is always ready to answer your questions online.
+                        <p class="header-text">{!! $CMS['online_content3'] !!}
                         </p>
                     </div>
                 </div>
@@ -63,8 +63,8 @@
                         <div class="circle-box">2</div>
                     </div>
                     <div class="col-lg-10" style="float: left">
-                        <span class="bolder-text">Our experts work on your return</span>
-                        <p class="header-text"> Once we’ve all your information, we carefully prepare your return to make sure we don’t miss any deductions or offsets. After the hard work is done for you, just review your tax return online. Once you’re happy, just give us the go-ahead to lodge it.</p>
+                        <span class="bolder-text">{!! $CMS['online_header4'] !!}</span>
+                        <p class="header-text"> {!! $CMS['online_content4'] !!}</p>
                     </div>
                 </div>
                 <div class="row" style="margin-bottom: 40px">
@@ -73,8 +73,8 @@
                         <div class="circle-box">3</div>
                     </div>
                     <div class="col-lg-10" style="float: left">
-                        <span class="bolder-text"> You can expect a rapid return</span>
-                        <p class="header-text">With a quick turnaround on your returns and refund from the ATO, there are no long waiting periods.</p>
+                        <span class="bolder-text">{!! $CMS['online_header5'] !!}</span>
+                        <p class="header-text"> {!! $CMS['online_content5'] !!}</p>
                     </div>
                 </div>
 
@@ -82,22 +82,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img src="{{ asset('/images/uploads/home/second-look.jpg') }}">
+                    <img src="{{ asset('/images/uploads/cms/' . $CMS['online_image2']) }}">
                 </div>
             </div>
         </div>
 
-
-        {{-- <div class="col-md-6 pl-md-5 py-md-5">
-             <div class="heading-section pl-md-4 pt-md-5">
-                 <h2 class="mb-4"> {{ $CMS['home_title'] }}</h2>
-             </div>
-             <div class="services-2 w-100 d-flex">
-                 <div class="text pl-4">
-                     <p>{!! $CMS['home_content'] !!}</p>
-                 </div>
-             </div>
-         </div>--}}
 
     </section>
 

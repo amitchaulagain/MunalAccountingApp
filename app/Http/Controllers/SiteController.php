@@ -206,7 +206,7 @@ class SiteController extends Controller
                 }
             } else {
                 $image = $request->file('individual_tax_image1');
-                $imageName = "individual_tax2" . $image->getClientOriginalExtension();
+                $imageName = "individual_tax1" . $image->getClientOriginalExtension();
                 $image->move(public_path('images/uploads/cms/'), $imageName);
                 if ($image) {
                     $cms = cms::create(['key' => 'individual_tax_image1', 'value' => $imageName]);
@@ -240,6 +240,438 @@ class SiteController extends Controller
         }
 
 
+        if ($request->hasFile('lodge_in_person_image1')) {
+            $cms = cms::where('key', 'lodge_in_person_image1')->first();
+            if ($cms) {
+                $image = $request->file('lodge_in_person_image1');
+                $imageName = "lodge_in_person1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('lodge_in_person_image1');
+                $imageName = "lodge_in_person1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'lodge_in_person_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('lodge_in_person_image2')) {
+            $cms = cms::where('key', 'lodge_in_person_image2')->first();
+            if ($cms) {
+                $image = $request->file('lodge_in_person_image2');
+                $imageName = "lodge_in_person2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('lodge_in_person_image2');
+                $imageName = "lodge_in_person2" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'lodge_in_person_image2', 'value' => $imageName]);
+                }
+            }
+        }
+
+        if ($request->hasFile('online_image1')) {
+            $cms = cms::where('key', 'online_image1')->first();
+            if ($cms) {
+                $image = $request->file('online_image1');
+                $imageName = "online1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('online_image1');
+                $imageName = "online1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'online_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('online_image2')) {
+            $cms = cms::where('key', 'online_image2')->first();
+            if ($cms) {
+                $image = $request->file('online_image2');
+                $imageName = "online2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('online_image2');
+                $imageName = "online2" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'online_image2', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('tax_review_image1')) {
+            $cms = cms::where('key', 'tax_review_image1')->first();
+            if ($cms) {
+                $image = $request->file('tax_review_image1');
+                $imageName = "tax_review1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('tax_review_image1');
+                $imageName = "tax_review1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'tax_review_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('tax_review_image2')) {
+            $cms = cms::where('key', 'tax_review_image2')->first();
+            if ($cms) {
+                $image = $request->file('tax_review_image2');
+                $imageName = "tax_review2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('tax_review_image2');
+                $imageName = "tax_review2" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'tax_review_image2', 'value' => $imageName]);
+                }
+            }
+        }
+        if ($request->hasFile('business_services_image1')) {
+            $cms = cms::where('key', 'business_services_image1')->first();
+            if ($cms) {
+                $image = $request->file('business_services_image1');
+                $imageName = "business_services1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('business_services_image1');
+                $imageName = "business_services1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'business_services_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('business_services_image2')) {
+            $cms = cms::where('key', 'business_services_image2')->first();
+            if ($cms) {
+                $image = $request->file('business_services_image2');
+                $imageName = "business_services2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('business_services_image2');
+                $imageName = "business_services2" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'business_services_image2', 'value' => $imageName]);
+                }
+            }
+        }
+        if ($request->hasFile('business_services_image3')) {
+            $cms = cms::where('key', 'business_services_image3')->first();
+            if ($cms) {
+                $image = $request->file('business_services_image3');
+                $imageName = "business_services3" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('business_services_image3');
+                $imageName = "business_services3" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'business_services_image3', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('small_business_image1')) {
+            $cms = cms::where('key', 'small_business_image1')->first();
+            if ($cms) {
+                $image = $request->file('small_business_image1');
+                $imageName = "small_business1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('small_business_image1');
+                $imageName = "small_business1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'small_business_image1', 'value' => $imageName]);
+                }
+            }
+        }
+        if ($request->hasFile('bas_image1')) {
+            $cms = cms::where('key', 'bas_image1')->first();
+            if ($cms) {
+                $image = $request->file('bas_image1');
+                $imageName = "bas1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('bas_image1');
+                $imageName = "bas1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'bas_image1', 'value' => $imageName]);
+                }
+            }
+        }
+        if ($request->hasFile('company_accounting_image1')) {
+            $cms = cms::where('key', 'company_accounting_image1')->first();
+            if ($cms) {
+                $image = $request->file('company_accounting_image1');
+                $imageName = "company_accounting1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('company_accounting_image1');
+                $imageName = "company_accounting1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'company_accounting_image1', 'value' => $imageName]);
+                }
+            }
+        }
+        if ($request->hasFile('bookkeeping_image1')) {
+            $cms = cms::where('key', 'bookkeeping_image1')->first();
+            if ($cms) {
+                $image = $request->file('bookkeeping_image1');
+                $imageName = "bookkeeping1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('bookkeeping_image1');
+                $imageName = "bookkeeping1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'bookkeeping_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+        if ($request->hasFile('financial_services_image1')) {
+            $cms = cms::where('key', 'financial_services_image1')->first();
+            if ($cms) {
+                $image = $request->file('financial_services_image1');
+                $imageName = "financial_services1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('financial_services_image1');
+                $imageName = "financial_services1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'financial_services_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+
+        if ($request->hasFile('financial_services_image2')) {
+            $cms = cms::where('key', 'financial_services_image2')->first();
+            if ($cms) {
+                $image = $request->file('financial_services_image2');
+                $imageName = "financial_services2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('financial_services_image2');
+                $imageName = "financial_services2" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'financial_services_image2', 'value' => $imageName]);
+                }
+            }
+        }
+
+        if ($request->hasFile('smsf_image1')) {
+            $cms = cms::where('key', 'smsf_image1')->first();
+            if ($cms) {
+                $image = $request->file('smsf_image1');
+                $imageName = "smsf1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('smsf_image1');
+                $imageName = "smsf1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'smsf_image1', 'value' => $imageName]);
+                }
+            }
+        }
+        if ($request->hasFile('financial_planning_image1')) {
+            $cms = cms::where('key', 'financial_planning_image1')->first();
+            if ($cms) {
+                $image = $request->file('financial_planning_image1');
+                $imageName = "financial_planning1" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('financial_planning_image1');
+                $imageName = "financial_planning1" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'financial_planning_image1', 'value' => $imageName]);
+                }
+            }
+        }
+
+        if ($request->hasFile('financial_planning_image2')) {
+            $cms = cms::where('key', 'financial_planning_image2')->first();
+            if ($cms) {
+                $image = $request->file('financial_planning_image2');
+                $imageName = "financial_planning2" . '.' . $image->getClientOriginalExtension();
+                $imagePath = public_path('images/uploads/cms/') . '/' . $imageName;
+//                if (file_exists($imagePath)) {
+//                    unlink($imagePath);
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                // Image deleted successfully
+                // }
+                if ($image) {
+                    $cms->update(['value' => $imageName]);
+                }
+            } else {
+                $image = $request->file('financial_planning_image2');
+                $imageName = "financial_planning2" . $image->getClientOriginalExtension();
+                $image->move(public_path('images/uploads/cms/'), $imageName);
+                if ($image) {
+                    $cms = cms::create(['key' => 'financial_planning_image2', 'value' => $imageName]);
+                }
+            }
+        }
         if ($request->hasFile('about_image')) {
             $cms = cms::where('key', 'about_image')->first();
             if ($cms) {
@@ -264,7 +696,14 @@ class SiteController extends Controller
             }
         }
 
-        foreach ($request->except(['_token', 'home_image1', 'home_image2', 'about_image','individual_tax_image1', 'individual_tax_image2']) as $key => $value) {
+        foreach ($request->except(['_token', 'home_image1', 'home_image2', 'about_image',
+            'individual_tax_image1', 'individual_tax_image2','lodge_in_person_image1', 'lodge_in_person_image2',
+            'online_image1', 'online_image2','tax_review_image1', 'tax_review_image2','business_services_image1',
+            'business_services_image2','business_services_image3', 'small_business_image1', 'bas_image1',
+            'company_accounting_image1','bookkeeping_image1','financial_services_image1', 'financial_services_image2',
+            'smsf_image1', 'financial_planning_image1', 'financial_planning_image2'
+
+            ]) as $key => $value) {
             $cms = cms::where('key', $key)->first();
             if ($cms) {
                 $cms->update(compact('value'));
