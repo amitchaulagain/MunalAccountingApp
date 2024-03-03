@@ -11,7 +11,7 @@
 
                     <div class="header-text">
                         <br>
-                        <p>{!! $CMS['small_business_content1'] !!}
+                        <p>{!! $CMS['smsf_content1'] !!}
 
                         </p></div>
                     <button class="header-button"> Book an appointment</button>

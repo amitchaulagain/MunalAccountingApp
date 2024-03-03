@@ -18,7 +18,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image"
+                <img class="home-image"
                      src="{!! asset('/images/uploads/cms/' . $CMS['individual_tax_image1']) !!}">
             </div>
         </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img src="{{ asset('/images/uploads/cms/' . $CMS['individual_tax_image2']) }}">
+                    <img class="main-image" src="{{ asset('/images/uploads/cms/' . $CMS['individual_tax_image2']) }}">
                 </div>
             </div>
         </div>

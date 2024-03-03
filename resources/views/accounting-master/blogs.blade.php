@@ -8,8 +8,10 @@
             <span class="bolder-blog-category">
             Tax Tips
             </span>
+            <br>
+            <br>
             <div class="row ">
-                @foreach ($posts as $post)
+                @foreach ($posts_tax_tips as $post)
                     <a href="/blog?id={{$post->id}}">
                         <div class="col-md-4  ftco-animate">
                             <div class="blog-entry align-self-stretch">
@@ -39,10 +41,47 @@
 
         <div class="container">
             <span class="bolder-blog-category">
-                Tax Returns
+                Investment & Planning
             </span>
+            <br>
+            <br>
+
+
             <div class="row ">
-                @foreach ($posts as $post)
+                @foreach ($posts_investments as $post)
+                    <a href="/blog?id={{$post->id}}">
+                        <div class="col-md-4  ftco-animate">
+                            <div class="blog-entry align-self-stretch">
+                                <a href="/blog?id={{$post->id}}" class="block-20 rounded"
+                                   style="background-image: url('/images/uploads/posts/{{$post->post_image}}');">
+                                </a>
+                                <div class="text p-4">
+                                    <div class="meta mb-2">
+                                        <div><a href="/blog?id={{$post->id}}">{{$post->created_at}}</a></div>
+                                        <div><a href="/blog?id={{$post->id}}">Admin</a></div>
+                                    </div>
+                                </div>
+                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a
+                                        href="/blog?id={{$post->id}}">{{$post->title}}</a></h6>
+                            </div>
+                        </div>
+
+                    </a>
+
+                @endforeach
+
+            </div>
+        </div>
+        <br> <br>
+
+        <div class="container">
+            <span class="bolder-blog-category">
+                Insights & Advice
+            </span>
+            <br>
+            <br>
+            <div class="row ">
+                @foreach ($posts_insights as $post)
                     <a href="/blog?id={{$post->id}}">
                         <div class="col-md-4  ftco-animate">
                             <div class="blog-entry align-self-stretch">

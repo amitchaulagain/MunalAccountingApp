@@ -5,7 +5,7 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
             <div class="col-md-10">
-                <div class="header-text" style="margin-top: 50px">
+                <div class="header-text" style="margin-top: 150px">
                     <p>Income Tax - Calculator, 2023</p></div>
                 <div class="header-tax">Check how your refund could be like
                     <span id="refresh"> <i style="color: orange; float: right; cursor: pointer; margin-right:40px;"
@@ -22,7 +22,7 @@
                                     <span class="input-group-text" id="basic-addon1">@</span>
                                 </div>
                                 <input id="income" type="number" class="form-control" placeholder="Income"
-                                       aria-label="Username" aria-describedby="basic-addon1" required>
+                                       aria-label="Username" aria-describedby="basic-addon1"  value="0" required>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -32,7 +32,7 @@
                                     <span class="input-group-text" id="basic-addon1">@</span>
                                 </div>
                                 <input id="extraIncome" type="number" class="form-control" placeholder="Extra Income"
-                                       aria-label="Username" aria-describedby="basic-addon1" required>
+                                       aria-label="Username" aria-describedby="basic-addon1" value="0" required>
                             </div>
                         </div>
 
@@ -180,7 +180,6 @@
     `;
 
             document.getElementById("result").innerHTML = result;
-            alert(result)
         }
 
         function getMarginalTaxRate(income) {

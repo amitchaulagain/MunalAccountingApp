@@ -21,7 +21,8 @@
             </div>
             <div class="col-md-6">
                 <img class="home-image"
-                     src="{{ asset('/images/uploads/cms/' . $CMS['home_image1']) }}">
+                     src="{{ asset('/images/uploads/cms/' . $CMS['home_image1']) }}" width="500px"
+                     height="auto">
             </div>
         </div>
 
@@ -51,7 +52,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">@</span>
                                 </div>
-                                <input id="income" type="number" class="form-control" placeholder="Income"
+                                <input id="income" type="number" class="form-control" placeholder="Income" value="0"
                                        aria-label="Username" aria-describedby="basic-addon1" required>
                             </div>
                         </div>
@@ -62,7 +63,7 @@
                                     <span class="input-group-text" id="basic-addon1">@</span>
                                 </div>
                                 <input id="extraIncome" type="number" class="form-control" placeholder="Extra Income"
-                                       aria-label="Username" aria-describedby="basic-addon1" required>
+                                       aria-label="Username" aria-describedby="basic-addon1" value="0" required>
                             </div>
                         </div>
                     </div>
@@ -258,7 +259,6 @@
     `;
 
             document.getElementById("result").innerHTML = result;
-            alert(result)
         }
 
         function getMarginalTaxRate(income) {

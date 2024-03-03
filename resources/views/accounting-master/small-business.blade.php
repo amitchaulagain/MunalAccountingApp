@@ -19,8 +19,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['small_business_image1']) }}" width="500px"
-                     height="400px" style="margin-top: 120px;">
+                <img class="home-image" src="{{ asset('/images/uploads/cms/' . $CMS['small_business_image1']) }}" >
             </div>
 
 

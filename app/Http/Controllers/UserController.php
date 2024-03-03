@@ -653,10 +653,19 @@ class UserController extends Controller
         $siteSetting = SiteSettings::pluck('value', 'key');
         $services = Service::all();
 
-        $posts = Post::where('featured', true)
+        $posts_tax_tips = Post::where('featured', true)
+            ->where('excerpt', 'Tax Tips')
             ->get();
 
-        $data = compact('title', 'siteSetting', 'posts', 'services');
+        $posts_investments = Post::where('featured', true)
+            ->where('excerpt', 'Investment & Planning')
+            ->get();
+
+        $posts_insights = Post::where('featured', true)
+            ->where('excerpt', 'Insights & Advice')
+            ->get();
+
+        $data = compact('title', 'siteSetting', 'posts_tax_tips','posts_investments','posts_insights', 'services');
         return view('accounting-master.blogs', $data);
     }
     public function lodge_in_person(Request $request)
@@ -838,7 +847,7 @@ class UserController extends Controller
 
 
         $data = compact('title', 'siteSetting', 'gal', 'services', 'cms');
-        return view('accounting-master.resources', $data);
+        return view('accounting-master.tax-calculator', $data);
     }
 
 }

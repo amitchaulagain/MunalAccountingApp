@@ -95,7 +95,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img src="{{ asset('/images/uploads/cms/' . $CMS['tax_review_image2']) }}">
+                    <img class="main-image" src="{{ asset('/images/uploads/cms/' . $CMS['tax_review_image2']) }}">
                 </div>
             </div>
         </div>

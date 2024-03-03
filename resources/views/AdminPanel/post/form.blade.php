@@ -58,6 +58,16 @@
                                                        value="@if (!empty($post)){{ $post->title }}@else{{ old('title') }}@endif"
                                                        required>
                                             </div>
+                                            <div style="color: red">
+                                                <h5>******** Only accepts one of three values (Post Excerpt) ******</h5>
+                                                <p >-->Tax Tips</p>
+                                                <p>-->Investment & Planning</p>
+                                                <p>-->Insights & Advice</p>
+                                            </div>
+
+
+
+
                                             <div class="form-group">
                                                 <label for="excerpt">Post Excerpt</label>
                                                 <input type="text" name="excerpt" class="form-control"

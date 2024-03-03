@@ -13686,9 +13686,20 @@ textarea.form-control {
 
 .home-image {
 
-    padding: 50px;
-    margin-top: 40px;
+    /*padding: 50px;*/
+    margin-top: 100px;
+    margin-left: 30px;
+    width:500px;
+    height:auto;
 }
+.main-image {
+
+    /*padding: 50px;*/
+    margin-left: 30px;
+    width:500px;
+    height:auto;
+}
+
 
 .home-row {
     position: relative;
@@ -13820,6 +13831,7 @@ th, td {
     font-size: 30px;
     font-weight: bolder;
     text-align: center;
+
 
 }
 .hovered-text:hover {
