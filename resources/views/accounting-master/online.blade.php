@@ -13,7 +13,10 @@
                     <div class="header-text">
                         <br>
                         <p>{!! $CMS['online_content1'] !!}</p></div>
-                    <button class="header-button"> Lodge with an expert</button>
+
+                    <a href="/contactus#hero">
+                        <button class="header-button"> Lodge with an expert</button>
+                    </a>
 
                 </div>
             </div>

@@ -14,8 +14,9 @@
                         <br>
                         <p>{!! $CMS['bookkeeping_content1'] !!}</p>
                     </div>
-                    <button class="header-button"> Enquire Now</button>
-
+                    <a href="/contactus#hero">
+                        <button class="header-button"> Enquire Now</button>
+                    </a>
                 </div>
             </div>
 

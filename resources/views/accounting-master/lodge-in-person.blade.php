@@ -15,8 +15,9 @@
                         <p>
                             {!! $CMS['lodge_in_person_content1'] !!} </span>
                         </p></div>
-                    <button class="header-button"> Book an appointment</button>
-
+                    <a href="/contactus#hero">
+                        <button class="header-button"> Book an appointment</button>
+                    </a>
                 </div>
             </div>
 

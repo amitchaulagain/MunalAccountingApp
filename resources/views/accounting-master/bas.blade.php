@@ -17,8 +17,9 @@
                    {{-- <p style="font-weight: bold">
                         To prove our commitment to you, we are offering a FREE BAS* to all first time H&R Block BAS clients. *T&C's Apply
                     </p>--}}
-                    <button class="header-button"> Book an appointment</button>
-
+                    <a href="/contactus#hero">
+                        <button class="header-button"> Book an appointment</button>
+                    </a>
                 </div>
             </div>
 

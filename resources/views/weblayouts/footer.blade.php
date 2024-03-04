@@ -47,11 +47,11 @@
 <footer class="footer">
     <div class="container-fluid px-lg-5">
         <div class="row">
-            <div class="col-md-7 py-5">
+            <div class="col-md-6 py-5">
                 <div class="row">
-                    <div class="col-md-4 mb-md-0 mb-4">
-                        <h2 class="footer-heading">About us</h2>
-                        {!! Str::limit($CMS['about_content'], 169)  !!}
+                    <div class="col-md-6 mb-md-0 mb-4">
+                        <h2 class="footer-heading">Connect with us</h2>
+                        <p style="color: #e7e1e1">Reach out to us via phone, email, or visit our office. Our friendly team is ready to assist you with any questions or service inquiries.</p>
                         <ul class="ftco-footer-social p-0">
                             <li class="ftco-animate">
                                 <a href="{{ $siteSetting['facebook_url'] ?? '' }}" data-toggle="tooltip"
@@ -80,31 +80,21 @@
                             <div class="icon d-flex align-items-center justify-content-center"><span
                                     class="fa fa-quote-left"></span></div>
                             <div class="text">
-                                <span style="width: 200px;" class="mb-4">15 people recently read an article about 7 mistakes FHB make & how to avoid them | 27 people recently booked an appointment with our broker for consultation | 22 people contacted Capkon HQ through our website</span>
+                                <span style="width: 200px;" class="mb-4"> 27 people recently booked an appointment with our team for consultation. </span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-md-12 col-lg-10">
                                 <div class="row">
                                     <div class="col-md-6 mb-md-0 mb-6">
-                                        <h2 class="footer-heading">Services</h2>
-                                        <ul class="list-unstyled">
-
-                                            @foreach ($services as $item)
-                                                <li><a href="/service?id={{$item->id}}"
-                                                       class="py-1 d-block">{{$item->title}}</a></li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6 mb-md-0 mb-6">
                                         <h2 class="footer-heading">Discover</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="/" class="py-1 d-block">Home</a></li>
-                                            <li><a href="/aboutus" class="py-1 d-block">About us</a></li>
-                                            <li><a href="/contactus" class="py-1 d-block">Contact us</a></li>
-                                            <li><a href="/services" class="py-1 d-block">Services</a></li>
+                                            <li><a href="/tax-return" class="py-1 d-block">Individual Tax Services</a></li>
+                                            <li><a href="/business-services" class="py-1 d-block">Business Services</a></li>
+                                            <li><a href="/financial-services" class="py-1 d-block">Financial Services</a></li>
+                                            <li><a href="/resources" class="py-1 d-block">Calculator</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -114,7 +104,7 @@
                 </div>
 
             </div>
-            <div class="col-md-5 ">
+            <div class="col-md-6 ">
                 <br><br>
                 <h2 class="footer-heading">Free consultation</h2>
                 <form method="post" class="form-consultation" action="{{route('basic_email')}}">

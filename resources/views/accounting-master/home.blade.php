@@ -11,7 +11,7 @@
 
                     <div class="header-text">
                         <br>
-                        <p> {{$CMS['home_content1']}}</p></div>
+                        <p> {!! $CMS['home_content1'] !!}</p></div>
 
                     <a href="/contactus#hero">
                         <button class="header-button"> Book an appointment</button>
@@ -110,54 +110,54 @@
 
 
 
-     <section class="ftco-section bg-light">
-         <div class="container">
-             <div class="row justify-content-center pb-5 mb-3">
-                 <div class="col-md-7 heading-section text-center ftco-animate">
-                     <span class="header"> {{$CMS['home_header2']}} </span>
-                 </div>
-             </div>
-             <div class="row">
-                 <div class="col-md-6 col-lg-4 ftco-animate">
-                     <div class="block-7">
-                         <div class="text-center">
-                             <span class="excerpt d-block"> {{$CMS['home_header3']}}</span>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <span class="header"> {{$CMS['home_header2']}} </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block"> {{$CMS['home_header3']}}</span>
 
-                             <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span>{!! $CMS['home_content3'] !!}</li>
-                             </ul>
+                            <ul class="pricing-text mb-5">
+                                <li><span class="fa fa-check mr-2"></span>{!! $CMS['home_content3'] !!}</li>
+                            </ul>
 
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-6 col-lg-4 ftco-animate">
-                     <div class="block-7">
-                         <div class="text-center">
-                             <span class="excerpt d-block"> {{$CMS['home_header4']}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block"> {{$CMS['home_header4']}}</span>
 
-                             <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span>{!!$CMS['home_content4']  !!}</li>
-                             </ul>
+                            <ul class="pricing-text mb-5">
+                                <li><span class="fa fa-check mr-2"></span>{!!$CMS['home_content4']  !!}</li>
+                            </ul>
 
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-6 col-lg-4 ftco-animate">
-                     <div class="block-7">
-                         <div class="text-center">
-                             <span class="excerpt d-block"> {{$CMS['home_header5']}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="block-7">
+                        <div class="text-center">
+                            <span class="excerpt d-block"> {{$CMS['home_header5']}}</span>
 
-                             <ul class="pricing-text mb-5">
-                                 <li><span class="fa fa-check mr-2"></span> {!! $CMS['home_content5'] !!}</li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
+                            <ul class="pricing-text mb-5">
+                                <li><span class="fa fa-check mr-2"></span> {!! $CMS['home_content5'] !!}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
 
-             </div>
-         </div>
-     </section>
+            </div>
+        </div>
+    </section>
     <script>
         function calculateTax() {
             document.getElementById("result").classList.add("show");
