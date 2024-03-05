@@ -87,7 +87,7 @@
                 <li class="nav-item active"><a href="/tax-return" class="nav-link">Individual Tax</a></li>
                 <li class="nav-item"><a href="/business-services" class="nav-link">Business Services</a></li>
                 <li class="nav-item"><a href="/financial-services" class="nav-link">Financial Services</a></li>
-                <li class="nav-item"><a href="/resources" class="nav-link"><span style="color: orange">Calculator</span>
+                <li class="nav-item"><a href="/tax-calculator" class="nav-link"><span style="color: orange">Calculator</span>
                         <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                              fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
                             <path
