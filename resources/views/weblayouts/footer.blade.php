@@ -80,7 +80,8 @@
                             <div class="icon d-flex align-items-center justify-content-center"><span
                                     class="fa fa-quote-left"></span></div>
                             <div class="text">
-                                <span style="width: 200px;" class="mb-4"> 27 people recently booked an appointment with our team for consultation. </span>
+                                <span style="width: 200px;" class="mb-4"> {{ $siteSetting['popup_content'] ?? '' }}
+                                </span>
                             </div>
                         </div>
                     </div>

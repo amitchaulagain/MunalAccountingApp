@@ -84,7 +84,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img src="{{ asset('/images/uploads/cms/' . $CMS['lodge_in_person_image2']) }}">
+                    <img src="{{ asset('/images/uploads/cms/' . $CMS['lodge_in_person_image2']) }}" width="500px" height="auto" style="margin-left: 10px">
                 </div>
             </div>
         </div>

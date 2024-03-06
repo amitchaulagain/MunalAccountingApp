@@ -146,13 +146,11 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
-                    <a href="/lodge-in-person"><h3>Book with your local office</h3></a>
+                    <a href="/lodge-in-person"><h3>Book with our office</h3></a>
 
 
                     <p>
-                        Have a Tax Expert handle everything, from start to finish. Meet in person at one of our
-                        400+
-                        offices nationwide.</p>
+                        Let a tax professional help you take care of everything, guiding you through the entire process.</p>
                 </div>
 
 
@@ -173,7 +171,7 @@
                     <a href="/online"><h3>Online with an expert</h3></a>
 
                     <p>
-                        Our Tax Experts will complete your tax return online with you, so you can stay at home..</p>
+                        Let a tax professional help you of completing your tax return online,allowing you to conveniently handle the process from the comfort of your home.</p>
                 </div>
 
 
@@ -222,7 +220,8 @@
                     </a>
 
                     <p>
-                        If your business is set up as a sole trader or partnership, we can help you.
+                        If you're running a business as a sole trader or in partnership, we've got the expertise to support you.
+
                     </p>
                 </div>
 
@@ -237,7 +236,7 @@
                         </h3>
                     </a>
                     <p>
-                        FREE Business Activity Statement* to all first time H&R Block BAS clients.
+                        We help you in preparing Business Activity Statement. We've got that expertise to assist you.
                     </p>
                 </div>
 
@@ -255,8 +254,7 @@
                         </h3>
                     </a>
 
-                    <p> Let us help you navigate the accounting and tax responsibilities that comes with running a
-                        business.
+                    <p> Allow us to guide you through the accounting and tax responsibilities that come with managing a business.
                     </p>
                 </div>
 
@@ -285,7 +283,7 @@
                         </h3>
                     </a>
 
-                    <p> Expert set up and support, we'll take the time and hassle out of managing your books.
+                    <p>Let our experts handle the setup and provide ongoing support, making bookkeeping a seamless and hassle-free experience for you.
                     </p>
                 </div>
 
