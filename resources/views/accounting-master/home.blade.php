@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-6">
                 <img class="home-image"
-                     src="{{ asset('public/images/uploads/cms/' . $CMS['home_image1']) }}" width="500px"
+                     src="{{ asset('/public/images/uploads/cms/' . $CMS['home_image1']) }}" width="500px"
                      height="auto">
             </div>
         </div>
@@ -31,7 +31,7 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('public/images/uploads/cms/' . $CMS['home_image2']) }}" width="500px"
+                <img class="tax-image" src="{{ asset('/public/images/uploads/cms/' . $CMS['home_image2']) }}" width="500px"
                      height="400px">
             </div>
             <div class="col-md-6">

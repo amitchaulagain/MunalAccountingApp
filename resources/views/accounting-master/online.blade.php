@@ -22,7 +22,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="home-image" src="{{ asset('public/images/uploads/cms/' . $CMS['online_image1']) }}" width="500px"
+                <img class="home-image" src="{{ asset('/public/images/uploads/cms/' . $CMS['online_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 
@@ -85,7 +85,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img class="main-image" src="{{ asset('public/images/uploads/cms/' . $CMS['online_image2']) }}">
+                    <img class="main-image" src="{{ asset('/public/images/uploads/cms/' . $CMS['online_image2']) }}">
                 </div>
             </div>
         </div>

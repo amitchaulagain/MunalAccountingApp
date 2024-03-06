@@ -22,7 +22,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('public/images/uploads/cms/' . $CMS['lodge_in_person_image1']) }}"
+                <img class="tax-image" src="{{ asset('/public/images/uploads/cms/' . $CMS['lodge_in_person_image1']) }}"
                      width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
@@ -84,7 +84,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="row">
-                    <img src="{{ asset('public/images/uploads/cms/' . $CMS['lodge_in_person_image2']) }}" width="500px" height="auto" style="margin-left: 10px">
+                    <img src="{{ asset('/public/images/uploads/cms/' . $CMS['lodge_in_person_image2']) }}" width="500px" height="auto" style="margin-left: 10px">
                 </div>
             </div>
         </div>

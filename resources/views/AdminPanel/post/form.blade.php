@@ -100,7 +100,7 @@
                                             @if (!empty($post))
                                                 <label for="" class="form-label">Old Image</label>
                                                 <img class="form-control"
-                                                     src="{{ asset('public/images/uploads/posts') .'/'. $post->post_image }}"
+                                                     src="{{ asset('/public/images/uploads/posts') .'/'. $post->post_image }}"
                                                      alt="Error">
                                             @endif
                                         </div>

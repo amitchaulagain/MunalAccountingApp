@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="home-image" src="{{ asset('public/images/uploads/cms/' . $CMS['small_business_image1']) }}" >
+                <img class="home-image" src="{{ asset('/public/images/uploads/cms/' . $CMS['small_business_image1']) }}" >
             </div>
 
 
