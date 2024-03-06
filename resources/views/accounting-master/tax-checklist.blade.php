@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/home/checklist.png') }}" width="500px"
+                <img class="tax-image" src="{{ asset('public/images/uploads/home/checklist.png') }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
 

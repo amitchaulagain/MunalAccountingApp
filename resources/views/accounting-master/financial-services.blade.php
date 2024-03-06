@@ -47,7 +47,7 @@
             </div>
 
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['financial_services_image1']) }}" width="500px"
+                <img class="tax-image" src="{{ asset('public/images/uploads/cms/' . $CMS['financial_services_image1']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
         </div>
@@ -67,7 +67,7 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="row main">
             <div class="col-md-6">
-                <img class="tax-image" src="{{ asset('/images/uploads/cms/' . $CMS['financial_services_image2']) }}" width="500px"
+                <img class="tax-image" src="{{ asset('public/images/uploads/cms/' . $CMS['financial_services_image2']) }}" width="500px"
                      height="400px" style="margin-top: 120px;">
             </div>
             <div class="col-md-6 ">

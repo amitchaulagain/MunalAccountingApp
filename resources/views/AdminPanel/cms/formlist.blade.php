@@ -309,8 +309,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['home_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['home_image1']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['home_image1']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['home_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -335,8 +335,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['home_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['home_image2']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['home_image2']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['home_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -399,8 +399,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['about_image']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['about_image']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['about_image']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['about_image']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -670,8 +670,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['individual_tax_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['individual_tax_image1']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['individual_tax_image1']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['individual_tax_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -696,8 +696,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['individual_tax_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['individual_tax_image2']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['individual_tax_image2']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['individual_tax_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -847,8 +847,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['lodge_in_person_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['lodge_in_person_image1']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['lodge_in_person_image1']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['lodge_in_person_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -873,8 +873,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['lodge_in_person_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['lodge_in_person_image2']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['lodge_in_person_image2']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['lodge_in_person_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1024,8 +1024,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['online_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['online_image1']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['online_image1']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['online_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1050,8 +1050,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['online_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['online_image2']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['online_image2']) }}"
+                                                     src="{{ asset('publicpublic/images/uploads/cms/' . $cms['online_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1221,8 +1221,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['tax_review_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['tax_review_image1']) }}"
+                                                     data-src="{{ asset('publicpublic/images/uploads/cms/' . $cms['tax_review_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['tax_review_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1247,8 +1247,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['tax_review_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['tax_review_image2']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['tax_review_image2']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['tax_review_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1374,8 +1374,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['business_services_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['business_services_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['business_services_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['business_services_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1400,8 +1400,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['business_services_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['business_services_image2']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['business_services_image2']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['business_services_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1426,8 +1426,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['business_services_image3']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['business_services_image3']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['business_services_image3']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['business_services_image3']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1640,8 +1640,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['small_business_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['small_business_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['small_business_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['small_business_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -1855,8 +1855,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['bas_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['bas_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['bas_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['bas_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2028,8 +2028,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['company_accounting_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['company_accounting_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['company_accounting_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['company_accounting_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2201,8 +2201,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['bookkeeping_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['bookkeeping_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['bookkeeping_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['bookkeeping_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2501,8 +2501,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['smsf_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['smsf_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['smsf_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['smsf_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2609,8 +2609,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['financial_services_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['financial_services_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2637,8 +2637,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['financial_services_image2']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['financial_services_image2']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['financial_services_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2807,8 +2807,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['financial_planning_image1']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['financial_planning_image1']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['financial_planning_image1']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['financial_planning_image1']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>
@@ -2834,8 +2834,8 @@
                                                 @endif
                                                 <img height="200px" class="form-control w-auto" style="cursor: pointer"
                                                      data-fancybox="gallery"
-                                                     data-src="{{ asset('/images/uploads/cms/' . $cms['financial_planning_image2']) }}"
-                                                     src="{{ asset('/images/uploads/cms/' . $cms['financial_planning_image2']) }}"
+                                                     data-src="{{ asset('public/images/uploads/cms/' . $cms['financial_planning_image2']) }}"
+                                                     src="{{ asset('public/images/uploads/cms/' . $cms['financial_planning_image2']) }}"
                                                      alt="Error">
                                             @endif
                                         </div>

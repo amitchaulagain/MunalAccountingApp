@@ -82,7 +82,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav m-auto">
                 <a class="navbar-brand" href="/"> <img
-                        src="{{ asset('/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
+                        src="{{ asset('public/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
                 </a>
                 <li class="nav-item active"><a href="/tax-return" class="nav-link">Individual Tax</a></li>
                 <li class="nav-item"><a href="/business-services" class="nav-link">Business Services</a></li>

@@ -64,7 +64,7 @@
                             <div class="col-md-4">
                                 @if (!empty($service))
                                     <label for="" class="form-label">Old Image</label>
-                                    <img class="form-control"  src="{{ asset('/images/uploads/services') .'/'. $service->service_image }}"
+                                    <img class="form-control"  src="{{ asset('public/images/uploads/services') .'/'. $service->service_image }}"
                                         alt="Error">
                                 @endif
                             </div>
