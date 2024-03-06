@@ -92,10 +92,10 @@
                                     <div class="col-md-6 mb-md-0 mb-6">
                                         <h2 class="footer-heading">Discover</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="/tax-return" class="py-1 d-block">Individual Tax Services</a></li>
+                                            <li><a href="/tax-return" class="py-1 d-block">Tax Services</a></li>
                                             <li><a href="/business-services" class="py-1 d-block">Business Services</a></li>
                                             <li><a href="/financial-services" class="py-1 d-block">Financial Services</a></li>
-                                            <li><a href="/resources" class="py-1 d-block">Calculator</a></li>
+                                            <li><a href="/tax-calculator" class="py-1 d-block">Calculator</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -152,6 +152,16 @@
                                                     @enderror
                                                 </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="form-label">PopUp Content</label>
+                                                <input type="text" class="form-control" name="popup_content"
+                                                       value="{{ $siteSetting['popup_content'] ?? '' }}">
+                                                <div class="text-danger">
+                                                    @error('popup_content')
+                                                    * {{ $message }}
+                                                    @enderror
+                                                </div>
+                                            </div>
                                         </div>
 
                                     </div>
