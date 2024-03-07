@@ -146,7 +146,7 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
-                    <a href="/lodge-in-person"><h3>Book with our office</h3></a>
+                    <a href="/lodge-in-person"><h4>Book with our office</h4></a>
 
 
                     <p>
@@ -168,7 +168,7 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
-                    <a href="/online"><h3>Online with an expert</h3></a>
+                    <a href="/online"><h4>Online with an expert</h4></a>
 
                     <p>
                         Let a tax professional help you of completing your tax return online,allowing you to conveniently handle the process from the comfort of your home.</p>
@@ -196,7 +196,7 @@
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/tax-review">
-                        <h3>Tax Review</h3>
+                        <h4>Tax Review</h4>
                     </a>
                     <p>We will review your tax return and check that you have received the maximum refund.</p>
                 </div>
@@ -214,9 +214,9 @@
                 <div style="top:-14px;" class="col-md-6 hovered-text">
 
                     <a href="/small-business">
-                        <h3>
+                        <h4>
                             Sole Trader & Partnership
-                        </h3>
+                        </h4>
                     </a>
 
                     <p>
@@ -232,8 +232,8 @@
         <div class="overlay-item-box">
             <div class="row">
                 <div style="top:-14px;" class="col-md-6 hovered-text">
-                    <a href="/bas"><h3> Sole Trader BAS
-                        </h3>
+                    <a href="/bas"><h4> Sole Trader BAS
+                        </h4>
                     </a>
                     <p>
                         We help you in preparing Business Activity Statement. We've got that expertise to assist you.
@@ -250,8 +250,8 @@
                 <div class="col-md-7 hovered-text">
 
                     <a href="/company-accounting">
-                        <h3> Company & Trust
-                        </h3>
+                        <h4> Company & Trust
+                        </h4>
                     </a>
 
                     <p> Allow us to guide you through the accounting and tax responsibilities that come with managing a business.
@@ -277,10 +277,10 @@
 
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div  class="col-md-6 hovered-text">
                     <a href="/bookkeeping">
-                        <h3> Bookkeeping
-                        </h3>
+                        <h4> Bookkeeping
+                        </h4>
                     </a>
 
                     <p>Let our experts handle the setup and provide ongoing support, making bookkeeping a seamless and hassle-free experience for you.
@@ -311,7 +311,7 @@
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/smsf">
-                        <h3>Self Managed Super Funds</h3>
+                        <h4>Self Managed Super Funds</h4>
                     </a>
                     <p>
                         Get more control over your super and retirement planning with H&R Block.</p>
@@ -335,9 +335,9 @@
 
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="margin-left: 18px" class="col-md-6 hovered-text">
                     <a href="/financial-planning">
-                        <h3>Financial Planning & Advice</h3>
+                        <h4>Financial Planning & Advice</h4>
                     </a>
                     <p>
                         Let us assist you with all your financial requirements.</p>
@@ -360,7 +360,7 @@
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/tax-calculator">
-                        <h3>Tax Calculator</h3>
+                        <h4>Tax Calculator</h4>
                     </a>
 
                     <p>
@@ -382,7 +382,7 @@
 
                 <div style="top:-14px;" class="col-md-6 hovered-text">
                     <a href="/tax-checklist">
-                        <h3>Tax Checklist</h3>
+                        <h4>Tax Checklist</h4>
                     </a>
 
                     <p>

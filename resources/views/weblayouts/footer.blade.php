@@ -75,7 +75,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="popup" class="hidden col-md-3">
+                   {{-- <div id="popup" class="hidden col-md-3">
                         <div class="testimony-wrap py-4  ">
                             <div class="icon d-flex align-items-center justify-content-center"><span
                                     class="fa fa-quote-left"></span></div>
@@ -84,7 +84,7 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-md-12 col-lg-10">
