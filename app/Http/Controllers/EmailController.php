@@ -21,7 +21,7 @@ class EmailController extends Controller
         ]);
 
 
-        $recipientEmail = 'munalaccounting@gmail.com';
+        $recipientEmail = 'contact@munaltax.com';
 
         $data = array(
             'name' => $request->name,

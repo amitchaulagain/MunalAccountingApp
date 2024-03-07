@@ -145,7 +145,7 @@
                     </svg>
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/lodge-in-person"><h4>Book with our office</h4></a>
 
 
@@ -167,7 +167,7 @@
                     </svg>
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/online"><h4>Online with an expert</h4></a>
 
                     <p>
@@ -194,7 +194,7 @@
                     </svg>
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/tax-review">
                         <h4>Tax Review</h4>
                     </a>
@@ -211,7 +211,7 @@
     <div id="overlay2">
         <div class="overlay-item-box">
             <div class="row">
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
 
                     <a href="/small-business">
                         <h4>
@@ -231,7 +231,7 @@
         </div>
         <div class="overlay-item-box">
             <div class="row">
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/bas"><h4> Sole Trader BAS
                         </h4>
                     </a>
@@ -277,7 +277,7 @@
 
                 </div>
 
-                <div  class="col-md-6 hovered-text">
+                <div  class="col-md-7 hovered-text">
                     <a href="/bookkeeping">
                         <h4> Bookkeeping
                         </h4>
@@ -309,7 +309,7 @@
                     </svg>
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/smsf">
                         <h4>Self Managed Super Funds</h4>
                     </a>
@@ -335,7 +335,7 @@
 
                 </div>
 
-                <div style="margin-left: 18px" class="col-md-6 hovered-text">
+                <div style="margin-left: 18px" class="col-md-7 hovered-text">
                     <a href="/financial-planning">
                         <h4>Financial Planning & Advice</h4>
                     </a>
@@ -358,7 +358,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/tax-calculator">
                         <h4>Tax Calculator</h4>
                     </a>
@@ -380,7 +380,7 @@
                         src="https://pubweb-kentico.s3.ap-southeast-2.amazonaws.com/hrb/files/74/741668be-e210-45e5-b373-eae213df216a.png">
                 </div>
 
-                <div style="top:-14px;" class="col-md-6 hovered-text">
+                <div style="top:-14px;" class="col-md-7 hovered-text">
                     <a href="/tax-checklist">
                         <h4>Tax Checklist</h4>
                     </a>
