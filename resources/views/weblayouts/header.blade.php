@@ -128,9 +128,9 @@
     </div>
     <div class="col-md-3">
         <a style="float: right; margin-right: 20px; color: black" href="tel://{{ $siteSetting['phone'] ?? '' }}"> <span
-                style="color: orange" class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a>
-        <a style="float: right; margin-right: 20px; color: black" href="mailto:{{ $siteSetting['email'] ?? '' }}"><span
-                style="color: orange" class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['email'] ?? '' }}</a>
+                style="color: orange" class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a> <br>
+        <a style="float: right; margin-right: 20px; color: black" href="mailto:{{ $siteSetting['site_email'] ?? '' }}"><span
+                style="color: orange" class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['site_email'] ?? '' }}</a>
     </div>
 
     <div id="overlay1">
