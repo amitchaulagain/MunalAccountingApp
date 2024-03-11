@@ -2268,7 +2268,7 @@
                                             <input type="text" class="form-control" name="smsf_header3"
                                                    value="{{ $cms['smsf_header3'] ?? '' }}">
                                             <div class="text-danger">
-                                                @error('smsf_header4')
+                                                @error('smsf_header3')
                                                 * {{ $message }}
                                                 @enderror
                                             </div>
@@ -2276,7 +2276,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 3</label>
 
-                                            <textarea name="smsf_content2" id="smsf_content3"
+                                            <textarea name="smsf_content3" id="smsf_content3"
                                                       class="ckeditor">{{ $cms['smsf_content3'] ?? '' }}</textarea>
                                             <div class="text-danger">
                                                 @error('smsf_content3')
@@ -2341,7 +2341,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 6</label>
 
-                                            <textarea name="smsf_content5" id="smsf_content6"
+                                            <textarea name="smsf_content6" id="smsf_content6"
                                                       class="ckeditor">{{ $cms['smsf_content6'] ?? '' }}</textarea>
                                             <div class="text-danger">
                                                 @error('smsf_content6')
@@ -2355,7 +2355,7 @@
                                             <input type="text" class="form-control" name="smsf_header7"
                                                    value="{{ $cms['smsf_header7'] ?? '' }}">
                                             <div class="text-danger">
-                                                @error('smsf_header6')
+                                                @error('smsf_header7')
                                                 * {{ $message }}
                                                 @enderror
                                             </div>
@@ -2363,10 +2363,10 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 7</label>
 
-                                            <textarea name="smsf_content5" id="smsf_content7"
+                                            <textarea name="smsf_content7" id="smsf_content7"
                                                       class="ckeditor">{{ $cms['smsf_content7'] ?? '' }}</textarea>
                                             <div class="text-danger">
-                                                @error('smsf_content6')
+                                                @error('smsf_content7')
                                                 * {{ $message }}
                                                 @enderror
                                             </div>
@@ -2377,7 +2377,7 @@
                                             <input type="text" class="form-control" name="smsf_header8"
                                                    value="{{ $cms['smsf_header8'] ?? '' }}">
                                             <div class="text-danger">
-                                                @error('smsf_header6')
+                                                @error('smsf_header8')
                                                 * {{ $message }}
                                                 @enderror
                                             </div>
@@ -2385,7 +2385,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 8</label>
 
-                                            <textarea name="smsf_content5" id="smsf_content8"
+                                            <textarea name="smsf_content8" id="smsf_content8"
                                                       class="ckeditor">{{ $cms['smsf_content8'] ?? '' }}</textarea>
                                             <div class="text-danger">
                                                 @error('smsf_content8')
@@ -2395,8 +2395,8 @@
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Header 9</label>
-                                            <input type="text" class="form-control" name="smsf_header6"
-                                                   value="{{ $cms['smsf_header6'] ?? '' }}">
+                                            <input type="text" class="form-control" name="smsf_header9"
+                                                   value="{{ $cms['smsf_header9'] ?? '' }}">
                                             <div class="text-danger">
                                                 @error('smsf_header9')
                                                 * {{ $message }}
@@ -2406,7 +2406,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 9</label>
 
-                                            <textarea name="smsf_content5" id="smsf_content9"
+                                            <textarea name="smsf_content9" id="smsf_content9"
                                                       class="ckeditor">{{ $cms['smsf_content9'] ?? '' }}</textarea>
                                             <div class="text-danger">
                                                 @error('smsf_content9')
@@ -2417,7 +2417,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Header 10</label>
                                             <input type="text" class="form-control" name="smsf_header10"
-                                                   value="{{ $cms['smsf_header6'] ?? '' }}">
+                                                   value="{{ $cms['smsf_header10'] ?? '' }}">
                                             <div class="text-danger">
                                                 @error('smsf_header10')
                                                 * {{ $message }}
@@ -2470,7 +2470,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 12</label>
 
-                                            <textarea name="smsf_content11" id="smsf_content12"
+                                            <textarea name="smsf_content12" id="smsf_content12"
                                                       class="ckeditor">{{ $cms['smsf_content12'] ?? '' }}</textarea>
                                             <div class="text-danger">
                                                 @error('smsf_content12')
