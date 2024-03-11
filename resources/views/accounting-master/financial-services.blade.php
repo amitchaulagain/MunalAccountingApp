@@ -39,7 +39,7 @@
 
                         </p></div>
 
-                    <a href="/small-business">
+                    <a href="/smsf">
                         <button class="header-button"> Learn More</button>
                     </a>
 
@@ -84,7 +84,7 @@
 
                         </p></div>
 
-                    <a href="/company-accounting">
+                    <a href="/financial-planning">
                         <button class="header-button"> Learn More</button>
                     </a>
 

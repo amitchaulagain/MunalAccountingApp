@@ -2568,7 +2568,7 @@
                                             <input type="text" class="form-control" name="financial_services_header3"
                                                    value="{{ $cms['financial_services_header3'] ?? '' }}">
                                             <div class="text-danger">
-                                                @error('financial_services_header4')
+                                                @error('financial_services_header3')
                                                 * {{ $message }}
                                                 @enderror
                                             </div>
@@ -2576,7 +2576,7 @@
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Content 3</label>
 
-                                            <textarea name="financial_services_content2" id="financial_services_content3"
+                                            <textarea name="financial_services_content3" id="financial_services_content3"
                                                       class="ckeditor">{{ $cms['financial_services_content3'] ?? '' }}</textarea>
                                             <div class="text-danger">
                                                 @error('financial_services_content3')
