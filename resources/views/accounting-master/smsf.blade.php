@@ -14,7 +14,10 @@
                         <p>{!! $CMS['smsf_content1'] !!}
 
                         </p></div>
-                    <button class="header-button"> Book an appointment</button>
+
+                    <a href="/contactus#hero">
+                        <button class="header-button"> Book an appointment</button>
+                    </a>
 
                 </div>
             </div>

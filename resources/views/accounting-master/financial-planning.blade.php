@@ -53,10 +53,10 @@
                         <br>
                         <p> {!! $CMS['financial_planning_content2'] !!}
 
-
-
                         </p></div>
-                    <button class="header-button"> Enquire Now</button>
+                    <a href="/contactus#hero">
+                        <button class="header-button"> Enquire Now</button>
+                    </a>
 
                 </div>
             </div>
