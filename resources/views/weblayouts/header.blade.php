@@ -87,7 +87,8 @@
                 <li class="nav-item active"><a href="/tax-return" class="nav-link">Individual Tax</a></li>
                 <li class="nav-item"><a href="/business-services" class="nav-link">Business Services</a></li>
                 <li class="nav-item"><a href="/financial-services" class="nav-link">Financial Services</a></li>
-                <li class="nav-item"><a href="/tax-calculator" class="nav-link"><span style="color: orange">Calculator</span>
+                <li class="nav-item"><a href="/tax-calculator" class="nav-link"><span
+                            style="color: orange">Calculator</span>
                         <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                              fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
                             <path
@@ -129,7 +130,8 @@
     <div class="col-md-3">
         <a style="float: right; margin-right: 20px; color: black" href="tel://{{ $siteSetting['phone'] ?? '' }}"> <span
                 style="color: orange" class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a> <br>
-        <a style="float: right; margin-right: 20px; color: black" href="mailto:{{ $siteSetting['site_email'] ?? '' }}"><span
+        <a style="float: right; margin-right: 20px; color: black"
+           href="mailto:{{ $siteSetting['site_email'] ?? '' }}"><span
                 style="color: orange" class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['site_email'] ?? '' }}</a>
     </div>
 
@@ -146,11 +148,13 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-7 hovered-text">
-                    <a href="/lodge-in-person"><h4>Book with our office</h4></a>
+                    <a href="/lodge-in-person"><h4>Shares and Cryptocurrency
+                        </h4></a>
 
 
                     <p>
-                        Let a tax professional help you take care of everything, guiding you through the entire process.</p>
+                        Let a tax professional help you take care of everything, guiding you through the entire
+                        process.</p>
                 </div>
 
 
@@ -168,10 +172,11 @@
                 </div>
 
                 <div style="top:-14px;" class="col-md-7 hovered-text">
-                    <a href="/online"><h4>Online with an expert</h4></a>
+                    <a href="/online"><h4>Property Investors</h4></a>
 
                     <p>
-                        Let a tax professional help you of completing your tax return online,allowing you to conveniently handle the process from the comfort of your home.</p>
+                        Let a tax professional help you of completing your tax return online,allowing you to
+                        conveniently handle the process from the comfort of your home.</p>
                 </div>
 
 
@@ -215,12 +220,13 @@
 
                     <a href="/small-business">
                         <h4>
-                            Sole Trader & Partnership
+                            Sole Trader & Uber
                         </h4>
                     </a>
 
                     <p>
-                        If you're running a business as a sole trader or in partnership, we've got the expertise to support you.
+                        If you're running a business as a sole trader or in partnership, we've got the expertise to
+                        support you.
 
                     </p>
                 </div>
@@ -231,8 +237,27 @@
         </div>
         <div class="overlay-item-box">
             <div class="row">
-                <div style="top:-14px;" class="col-md-7 hovered-text">
-                    <a href="/bas"><h4> Sole Trader BAS
+                <div class="col-md-7 hovered-text">
+
+                    <a href="/company-accounting">
+                        <h4> Company & Trusts
+                        </h4>
+                    </a>
+
+                    <p> Allow us to guide you through the accounting and tax responsibilities that come with managing a
+                        business.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="overlay-item-box">
+            <div class="row">
+                <div class="col-md-7 hovered-text">
+                    <a href="/bas"><h4> Payroll & BAS
+
                         </h4>
                     </a>
                     <p>
@@ -245,45 +270,19 @@
 
         </div>
 
+
         <div class="overlay-item-box">
+
             <div class="row">
+
                 <div class="col-md-7 hovered-text">
-
-                    <a href="/company-accounting">
-                        <h4> Company & Trust
-                        </h4>
-                    </a>
-
-                    <p> Allow us to guide you through the accounting and tax responsibilities that come with managing a business.
-                    </p>
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <div class="overlay-item-box">
-
-            <div class="row">
-                <div class="col-md-1">
-                    <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                         class="bi bi-journals" viewBox="0 0 16 16">
-                        <path
-                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2"/>
-                        <path
-                            d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0"/>
-                    </svg>
-
-                </div>
-
-                <div  class="col-md-7 hovered-text">
                     <a href="/bookkeeping">
                         <h4> Bookkeeping
                         </h4>
                     </a>
 
-                    <p>Let our experts handle the setup and provide ongoing support, making bookkeeping a seamless and hassle-free experience for you.
+                    <p>Let our experts handle the setup and provide ongoing support, making bookkeeping a seamless and
+                        hassle-free experience for you.
                     </p>
                 </div>
 
@@ -291,62 +290,25 @@
             </div>
 
         </div>
-
     </div>
     <div id="overlay3">
+         <br> <br>
         <div class="overlay-item-box">
             <div class="row">
-                <div class="col-md-1">
-                    <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                         class="bi bi-cash-coin" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                              d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
-                        <path
-                            d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/>
-                        <path
-                            d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/>
-                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/>
-                    </svg>
-                </div>
 
-                <div style="top:-14px;" class="col-md-7 hovered-text">
-                    <a href="/smsf">
-                        <h4>Self Managed Super Funds</h4>
-                    </a>
-                    <p>
-                        Get more control over your super and retirement planning with H&R Block.</p>
-                </div>
+
+                <p>
+                    Munal Tax has partnered with FinMate to assist with home loans and other financial
+                    services.</p>
+                <p>
+                Please visit: <a href="https://www.finmates.com.au/">www.finmates.com.au</a></p>
+
 
 
             </div>
 
         </div>
 
-        <div class="overlay-item-box">
-            <div class="row">
-                <div class="col-md-1">
-                    <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                         class="bi bi-calendar-week" viewBox="0 0 16 16">
-                        <path
-                            d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
-                        <path
-                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                    </svg>
-
-                </div>
-
-                <div style="margin-left: 18px" class="col-md-7 hovered-text">
-                    <a href="/financial-planning">
-                        <h4>Financial Planning & Advice</h4>
-                    </a>
-                    <p>
-                        Let us assist you with all your financial requirements.</p>
-                </div>
-
-
-            </div>
-
-        </div>
     </div>
     <div id="overlay4">
 

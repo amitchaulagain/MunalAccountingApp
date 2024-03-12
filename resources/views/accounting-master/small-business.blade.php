@@ -40,13 +40,8 @@
     </section>
     <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row justify-content-center pb-5 mb-3">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="header"> {!! $CMS['small_business_header2'] !!}  </span>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4 ftco-animate">
+                <div class="col-md-6 col-lg-6 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
                             <span class="excerpt d-block"> {!! $CMS['small_business_header3'] !!}
@@ -61,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
+                <div class="col-md-6 col-lg-6 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
                             <span class="excerpt d-block"> {!! $CMS['small_business_header4'] !!}
@@ -75,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
+             {{--   <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="block-7">
                         <div class="text-center">
                             <span class="excerpt d-block"> {!! $CMS['small_business_header5'] !!} </span>
@@ -127,7 +122,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div>--}}
 
 
 

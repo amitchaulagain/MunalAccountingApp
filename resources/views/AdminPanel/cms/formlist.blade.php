@@ -52,17 +52,17 @@
                                     <button class="nav-link" id="nav-lodge-in-person-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-lodge-in-person" type="button" role="tab"
                                             aria-controls="nav-lodge-in-person"
-                                            aria-selected="false">Book with local office
+                                            aria-selected="false">Shares & Cryptocurrency
                                     </button>
                                     <button class="nav-link" id="nav-online-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-online" type="button" role="tab"
                                             aria-controls="nav-online"
-                                            aria-selected="false">Online with an expert
+                                            aria-selected="false">Property Investors
                                     </button>
                                     <button class="nav-link" id="nav-tax-review-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-tax-review" type="button" role="tab"
                                             aria-controls="nav-tax-review"
-                                            aria-selected="false">Second Look Assessment
+                                            aria-selected="false">Tax Review
                                     </button>
 
                                     <button class="nav-link" id="nav-business-services-tab" data-bs-toggle="tab"
@@ -74,25 +74,31 @@
                                     <button class="nav-link" id="nav-small-business-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-small-business" type="button" role="tab"
                                             aria-controls="nav-small-business"
-                                            aria-selected="false"> Sole Trader & Partnership
+                                            aria-selected="false"> Sole Trader & Uber
                                     </button>
-
-                                    <button class="nav-link" id="bas-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-bas" type="button" role="tab"
-                                            aria-controls="nav-bas"
-                                            aria-selected="false"> Sole Trader BAS
-                                    </button>
-
                                     <button class="nav-link" id="company-accounting-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-company-accounting" type="button" role="tab"
                                             aria-controls="nav-company-accounting"
                                             aria-selected="false"> Company & Trust
                                     </button>
+                                    <button class="nav-link" id="bas-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-bas" type="button" role="tab"
+                                            aria-controls="nav-bas"
+                                            aria-selected="false"> Payroll & BAS
+                                    </button>
+
+
 
                                     <button class="nav-link" id="bookkeeping-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-bookkeeping" type="button" role="tab"
                                             aria-controls="nav-bookkeeping"
                                             aria-selected="false"> Bookkeeping
+                                    </button>
+
+                                    <button class="nav-link" id="smsf-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-smsf" type="button" role="tab"
+                                            aria-controls="nav-smsf"
+                                            aria-selected="false"> Software Installation And Training
                                     </button>
 
                                     <button class="nav-link" id="financial-services-tab" data-bs-toggle="tab"

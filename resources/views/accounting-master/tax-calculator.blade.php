@@ -6,7 +6,7 @@
         <div class="row main">
             <div class="col-md-10">
                 <div class="header-text" style="margin-top: 150px">
-                    <p>Income Tax - Calculator, 2023</p></div>
+                    <p>Income Tax - Calculator, 2024</p></div>
                 <div class="header-tax">Check how your refund could be like
                     <span id="refresh"> <i style="color: orange; float: right; cursor: pointer; margin-right:40px;"
                                            class="fa fa-refresh" onclick="refresh()"></i>

@@ -2,17 +2,17 @@
 
 @section('content_box')
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+   {{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" >
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end">
                 <div class="col-md-9 ftco-animate pb-5">
-                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact Us <i class="ion-ios-arrow-forward"></i></span></p>
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact Us <i class="ion-ios-arrow-forward"></i></span></p>
                     <h1 class="mb-0 bread">Contact Us</h1>
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <section class="ftco-section bg-light">
         <div id="hero" class="container">
@@ -22,7 +22,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                                 <div class="contact-wrap w-100 p-md-5 p-4">
-                                    <h3 class="mb-4">Get in touch</h3>
+                                    {{--<h3 class="mb-4">Get in touch</h3>--}}
                                     <div id="form-message-warning" class="mb-4"></div>
                                     <form method="POST" id="contactForm"  action="{{route('basic_email')}}">
                                         @csrf
@@ -72,7 +72,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <input style="background: #ffa500; color: white" type="submit" value="Send Message" class="btn ">
                                                     <div class="submitting"></div>
                                                 </div>
                                             </div>
@@ -83,7 +83,7 @@
                             <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4">
                                     <h3>Let's get in touch</h3>
-                                    <p class="mb-4">We're open for any suggestion or just to have a chat</p>
+                                    <p class="mb-4"><br></p>
                                     <div class="dbox w-100 d-flex align-items-start">
                                         <div class="icon d-flex align-items-center justify-content-center">
                                             <span class="fa fa-map-marker"></span>

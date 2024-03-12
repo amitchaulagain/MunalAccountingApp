@@ -11625,8 +11625,8 @@ h1, h2, h3, h4, h5,
 }
 
 .hero-wrap.hero-wrap-2 .overlay {
-    opacity: .6;
-    background: #1ba12d;
+    /*opacity: .6;*/
+   /* background: #ffa500;*/
 }
 
 .hero-wrap.hero-wrap-2 .slider-text {
@@ -12041,7 +12041,7 @@ h1, h2, h3, h4, h5,
 }
 
 .bg-primary {
-    background: #1ba12d !important;
+    background: #ffa500 !important;
 }
 
 .btn {
