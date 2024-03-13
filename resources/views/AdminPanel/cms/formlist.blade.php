@@ -898,7 +898,7 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-2">
                                             <label for="" class="form-label">Header 1</label>
-                                            <input type="text" class="form-control" name="lodge_in_person_header1"
+                                            <input type="text" class="form-control" name="online_header1"
                                                    value="{{ $cms['online_header1'] ?? '' }}">
                                             <div class="text-danger">
                                                 @error('online_header1')

@@ -41,42 +41,11 @@
 
     </section>
     <section class="ftco-section ftco-no-pt bg-light">
-        <div class="container">
-            <div class="row justify-content-center pb-5 mb-3">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="header">
-                        {!! $CMS['lodge_in_person_header2'] !!}
-                        </span>
-                </div>
-            </div>
-        </div>
         <div class="row main">
             <div class="col-lg-6">
                 <div class="row">
-                    <div class="col-lg-2" style="float: left">
-                        <div class="circle-box">1</div>
-                    </div>
-                    <div class="col-lg-10" style="float: left">
-                        <span class="bolder-text"> {!! $CMS['lodge_in_person_header3'] !!}</span>
-                        <p> {!! $CMS['lodge_in_person_content3'] !!}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2" style="float: left">
-                        <div class="circle-box">2</div>
-                    </div>
-                    <div class="col-lg-10" style="float: left">
-                        <span class="bolder-text">{!! $CMS['lodge_in_person_header4'] !!}</span>
-                        <p> {!! $CMS['lodge_in_person_content4'] !!}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2" style="float: left">
-                        <div class="circle-box">3</div>
-                    </div>
-                    <div class="col-lg-10" style="float: left">
-                        <span class="bolder-text"> {!! $CMS['lodge_in_person_header5'] !!}</span>
-                        <p> {!! $CMS['lodge_in_person_content5'] !!}</p>
+                    <div class="col-lg-10 header-text" style="float: left">
+                        <p> {!! $CMS['lodge_in_person_content2'] !!}</p>
                     </div>
                 </div>
 
