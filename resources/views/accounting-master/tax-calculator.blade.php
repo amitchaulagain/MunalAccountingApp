@@ -208,11 +208,13 @@
         }
 
         function refresh() {
-            alert("hero");
             document.getElementById("result").classList.remove("show");
             document.getElementById("result").classList.add("hide");
-        }
+            document.getElementById("income").value = 0; // Clear the value of the input field with the id "income"
+            document.getElementById("extraIncome").value = 0; // Clear the value of the input field with the id "income"
 
+
+        }
 
     </script>
 

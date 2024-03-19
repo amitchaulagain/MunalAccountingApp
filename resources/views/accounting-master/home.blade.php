@@ -35,7 +35,7 @@
                      height="400px">
             </div>
             <div class="col-md-6">
-                <div class="header-text">
+                <div class="header-text" >
                     <p>Income Tax - Calculator, 2024</p></div>
                 <div class="header-tax">Check how your refund could be like
                     <span id="refresh"> <i style="color: orange; float: right; cursor: pointer; margin-right:40px;"
@@ -44,27 +44,25 @@
 
                 </div>
                 <form class="form-inline" id="taxForm">
-                    <div class="row">
 
-                        <div class="col-md-6">
-                            <label for="income">Income:</label>
-                            <div class="input-group ">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
-                                </div>
-                                <input id="income" type="number" class="form-control" placeholder="Income" value="0"
-                                       aria-label="Username" aria-describedby="basic-addon1" required>
+                    <div class="col-md-6">
+                        <label for="income">Income:</label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
                             </div>
+                            <input id="income" type="number" class="form-control" placeholder="Income"
+                                   aria-label="Username" aria-describedby="basic-addon1" value="0" required>
                         </div>
-                        <div class="col-md-6">
-                            <label for="extraincome">Extra Income:</label>
-                            <div class="input-group ">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
-                                </div>
-                                <input id="extraIncome" type="number" class="form-control" placeholder="Extra Income"
-                                       aria-label="Username" aria-describedby="basic-addon1" value="0" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="extraincome">Extra Income:</label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
                             </div>
+                            <input id="extraIncome" type="number" class="form-control" placeholder="Extra Income"
+                                   aria-label="Username" aria-describedby="basic-addon1" value="0" required>
                         </div>
                     </div>
 
@@ -110,54 +108,7 @@
 
 
 
-    <section class="ftco-section bg-light">
-        <div class="container">
-            <div class="row justify-content-center pb-5 mb-3">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="header"> {{$CMS['home_header2']}} </span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <span class="excerpt d-block"> {{$CMS['home_header3']}}</span>
 
-                            <ul class="pricing-text mb-5">
-                                <li><span class="fa fa-check mr-2"></span>{!! $CMS['home_content3'] !!}</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <span class="excerpt d-block"> {{$CMS['home_header4']}}</span>
-
-                            <ul class="pricing-text mb-5">
-                                <li><span class="fa fa-check mr-2"></span>{!!$CMS['home_content4']  !!}</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <span class="excerpt d-block"> {{$CMS['home_header5']}}</span>
-
-                            <ul class="pricing-text mb-5">
-                                <li><span class="fa fa-check mr-2"></span> {!! $CMS['home_content5'] !!}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
     <script>
         function calculateTax() {
             document.getElementById("result").classList.add("show");
@@ -183,25 +134,51 @@
             }
 
             let taxDue = 0;
+            let taxBreakdown = []; // Array to store tax breakdown in each range
 
             if (totalIncome <= 18200) {
                 taxDue = 0;
+                taxBreakdown.push({ range: '$1 - $18,200', rate: '0%', amount: 0 });
             } else if (totalIncome <= 45000) {
                 taxDue = 0.19 * (totalIncome - 18200);
+                taxBreakdown.push({ range: '$1 - $18,200', rate: '0%', amount: 0 });
+                taxBreakdown.push({ range: '$18,201 - $45,000', rate: '19%', amount: 0.19 * (totalIncome - 18200) });
             } else if (totalIncome <= 120000) {
                 taxDue = 5092 + 0.325 * (totalIncome - 45000);
+                taxBreakdown.push({ range: '$1 - $18,200', rate: '0%', amount: 0 });
+                taxBreakdown.push({ range: '$18,201 - $45,000', rate: '19%', amount: 0.19 * (45000 - 18200) });
+                taxBreakdown.push({ range: '$45,001 - $120,000', rate: '32.5%', amount: 0.325 * (totalIncome - 45000) });
             } else if (totalIncome <= 180000) {
                 taxDue = 29467 + 0.37 * (totalIncome - 120000);
+                taxBreakdown.push({ range: '$1 - $18,200', rate: '0%', amount: 0 });
+                taxBreakdown.push({ range: '$18,201 - $45,000', rate: '19%', amount: 0.19 * (45000 - 18200) });
+                taxBreakdown.push({ range: '$45,001 - $120,000', rate: '32.5%', amount: 0.325 * (120000 - 45000) });
+                taxBreakdown.push({ range: '$120,001 - $180,000', rate: '37%', amount: 0.37 * (totalIncome - 120000) });
             } else {
                 taxDue = 51667 + 0.45 * (totalIncome - 180000);
+                taxBreakdown.push({ range: '$1 - $18,200', rate: '0%', amount: 0 });
+                taxBreakdown.push({ range: '$18,201 - $45,000', rate: '19%', amount: 0.19 * (45000 - 18200) });
+                taxBreakdown.push({ range: '$45,001 - $120,000', rate: '32.5%', amount: 0.325 * (120000 - 45000) });
+                taxBreakdown.push({ range: '$120,001 - $180,000', rate: '37%', amount: 0.37 * (180000 - 120000) });
+                taxBreakdown.push({ range: 'Over $180,000', rate: '45%', amount: 0.45 * (totalIncome - 180000) });
             }
 
             const medicareLevy = 0.02 * totalIncome; // Assuming the Medicare Levy is 2% for simplicity
             const afterTaxIncome = totalIncome - taxDue - medicareLevy;
             const marginalTaxRate = getMarginalTaxRate(totalIncome);
 
+            let taxBreakdownHTML = '';
+            taxBreakdown.forEach(item => {
+                taxBreakdownHTML += `
+        <tr>
+            <td>${item.range}</td>
+            <td class="right-align">${item.rate}</td>
+            <td class="right-align">$${item.amount.toFixed(2)}</td>
+        </tr>`;
+            });
+
             const result = `
-<table >
+<table>
     <tr>
         <th>Your taxable income:</th>
         <td class="right-align">$<span class="currency">${totalIncome.toFixed(2)}</span></td>
@@ -224,43 +201,28 @@
     </tr>
 </table>
 
-<p>This means for an annual income of $<span class="currency">${totalIncome.toFixed(2)}</span> you pay:</p>
-
+<p>This means for an annual income of $<span class="currency" style="color: orange; font-weight: bold;">${totalIncome.toFixed(2)}</span> you pay:</p>
 <table>
     <tr>
         <th>Income Range</th>
         <th>Tax Rate</th>
-        <th>Amount</th>
+        <th>Amount</th> <!-- Added column for amount -->
     </tr>
-    <tr>
-        <td>No tax on income between $1 - $18,200</td>
-        <td class="right-align">0%</td>
-        <td class="right-align">$<span class="currency">0</span></td>
-    </tr>
-    <tr>
-        <td>19c for every dollar between $18,201 - $45,000</td>
-        <td class="right-align">19%</td>
-        <td class="right-align">$<span class="currency">${(0.19 * (45000 - 18200)).toFixed(2)}</span></td>
-    </tr>
-    <tr>
-        <td>32.5c for every dollar between $45,001 - $120,000</td>
-        <td class="right-align">32.5%</td>
-        <td class="right-align">$<span class="currency">${(0.325 * (120000 - 45000)).toFixed(2)}</span></td>
-    </tr>
+    ${taxBreakdownHTML}
 </table>
-
 <p class="right-align"><b>Total Income tax payable:</b> $<span class="currency">${taxDue.toFixed(2)}</span></p>
+`;
 
-
-
-
-
-
-    `;
-
-            document.getElementById("result").innerHTML = result;
+            // CSS for the highlighting
+            const style = `
+<style>
+    .highlight {
+        background-color: yellow; /* You can change the highlighting color here */
+    }
+</style>
+`;
+            document.getElementById("result").innerHTML = style + result;
         }
-
         function getMarginalTaxRate(income) {
             if (income <= 18200) {
                 return 0;
@@ -276,9 +238,12 @@
         }
 
         function refresh() {
-            alert("hero");
             document.getElementById("result").classList.remove("show");
             document.getElementById("result").classList.add("hide");
+            document.getElementById("income").value = 0; // Clear the value of the input field with the id "income"
+            document.getElementById("extraIncome").value = 0; // Clear the value of the input field with the id "income"
+
+
         }
 
 
