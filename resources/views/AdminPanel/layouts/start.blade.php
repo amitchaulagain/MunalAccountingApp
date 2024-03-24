@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+src="{{ asset('/public/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
 
 <head>
     @if (!empty($logo_image->value))
-        <link rel="icon" type="image/x-icon" href="{{ asset('/storage/siteSettings/' . $logo_image->value) }}">
+        <link rel="icon" type="image/x-icon"   href="{{ asset('/public/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
+
     @else
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     @endif

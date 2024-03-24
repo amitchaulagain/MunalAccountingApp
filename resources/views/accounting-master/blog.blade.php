@@ -9,7 +9,7 @@
                     <p>
                         <img src="/uploads/images/posts/{{$post->post_image}}" alt="" class="img-fluid">
                     </p>
-                    <h2 class="mb-3" style="color: green">{{$post->title}}</h2>
+                    <h2 class="mb-3" style="color: orange">{{$post->title}}</h2>
                     <p>
                         {!! $post->body !!}
                     </p>
@@ -25,14 +25,12 @@
                                    style="background-image: url('/images/uploads/posts/{{$item->post_image}}');">
                                 </a>
                                 <div class="text">
-                                    <h3 class="heading"><a href="/blog?id={{$item->id}}">{{$item->title}}</a></h3>
+                                    <h3 class="heading"><a style="color: orange" href="/blog?id={{$item->id}}">{{$item->title}}</a></h3>
                                     <div class="meta">
                                         <div><a href="/blog?id={{$item->id}}"><span
                                                     class="icon-calendar"></span> {{$post->created_at}}</a></div>
                                         <div><a href="/blog?id={{$item->id}}"><span class="icon-person"></span>
                                                 Admin</a></div>
-                                        <div><a href="/blog?id={{$item->id}}"><span class="icon-chat"></span> 19</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

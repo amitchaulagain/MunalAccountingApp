@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" type="image/x-icon"   href="{{ asset('/public/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
           rel="stylesheet">
@@ -135,7 +136,8 @@
                 style="color: orange" class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['site_email'] ?? '' }}</a>
     </div>
 
-    <div id="overlay1">
+    <div id="overlay1" style=" overflow:scroll;
+    height:420px;">
         <div class="overlay-item-box">
             <div class="row">
                 <div class="col-md-1">
@@ -212,7 +214,7 @@
 
     </div>
     <div style=" overflow:scroll;
-    height:fit-content;" id="overlay2">
+    height:420px;" id="overlay2">
         <div class="overlay-item-box">
             <div class="row">
                 <div style="top:-2px;" class="col-md-7 hovered-text">

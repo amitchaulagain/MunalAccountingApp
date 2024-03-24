@@ -24,7 +24,7 @@
                                         <div><a href="/blog?id={{$post->id}}">Admin</a></div>
                                     </div>
                                 </div>
-                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a
+                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a style="color: orange"
                                         href="/blog?id={{$post->id}}">{{$post->title}}</a></h6>
                             </div>
                         </div>
@@ -40,9 +40,11 @@
 
 
         <div class="container">
+            @if(count($posts_investments)>0)
             <span class="bolder-blog-category">
                 Investment & Planning
             </span>
+            @endif
             <br>
             <br>
 
@@ -61,7 +63,7 @@
                                         <div><a href="/blog?id={{$post->id}}">Admin</a></div>
                                     </div>
                                 </div>
-                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a
+                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a style="color: orange"
                                         href="/blog?id={{$post->id}}">{{$post->title}}</a></h6>
                             </div>
                         </div>
@@ -75,9 +77,11 @@
         <br> <br>
 
         <div class="container">
-            <span class="bolder-blog-category">
+            @if(count($posts_insights)>0)
+                <span class="bolder-blog-category">
                 Insights & Advice
             </span>
+            @endif
             <br>
             <br>
             <div class="row ">
@@ -94,7 +98,7 @@
                                         <div><a href="/blog?id={{$post->id}}">Admin</a></div>
                                     </div>
                                 </div>
-                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a
+                                <h6 class="header-text" style="margin: 20px; padding-bottom: 20px;margin-top: -20px"><a style="color: orange"
                                         href="/blog?id={{$post->id}}">{{$post->title}}</a></h6>
                             </div>
                         </div>
