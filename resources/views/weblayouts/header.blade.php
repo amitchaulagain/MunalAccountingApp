@@ -38,8 +38,8 @@
                             <p class="mb-0 phone pl-md-2">
                                 <a href="#" class="mr-2"><span
                                         class="fa fa-map-marker"></span> {{ $siteSetting['office_address'] ?? '' }}</a>
-                                <a href="tel://{{ $siteSetting['phone'] ?? '' }}" class="mr-2"> <span
-                                        class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a>
+                                <a href="tel://{{ $siteSetting['site_contact'] ?? '' }}" class="mr-2"> <span
+                                        class="fa fa-phone mr-1"></span> {{ $siteSetting['site_contact'] ?? '' }}</a>
                                 <a href="mailto:{{ $siteSetting['email'] ?? '' }}"><span
                                         class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['email'] ?? '' }}</a>
                             </p>
@@ -84,9 +84,9 @@
                 <a class="navbar-brand" href="/"> <img
                         src="{{ asset('/public/images/uploads/logo').'/'. $siteSetting['logo_image'] ?? '' }}">
                 </a>
-                <li class="nav-item active"><a href="/tax-return" class="nav-link">Individual Tax</a></li>
-                <li class="nav-item"><a href="/business-services" class="nav-link">Business Services</a></li>
-                <li class="nav-item"><a href="/financial-services" class="nav-link">Financial Services</a></li>
+                <li class="nav-item active"><a href="/#" class="nav-link">Individual Tax</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Business Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Financial Services</a></li>
                 <li class="nav-item"><a href="/tax-calculator" class="nav-link"><span
                             style="color: orange">Calculator</span>
                         <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -115,7 +115,7 @@
 
                       </ul>
                   </li>--}}
-                <li class="nav-item"><a href="/contactus" class="nav-link"><span style="color: orange">Talk Now</span>
+                <li class="nav-item"><a href="/contactus" class="nav-link"><span style="color: orange">Talk To Us</span>
 
                         <svg color="orange" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                              fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -128,8 +128,8 @@
         </div>
     </div>
     <div class="col-md-3">
-        <a style="float: right; margin-right: 20px; color: black" href="tel://{{ $siteSetting['phone'] ?? '' }}"> <span
-                style="color: orange" class="fa fa-phone mr-1"></span> {{ $siteSetting['phone'] ?? '' }}</a> <br>
+        <a style="float: right; margin-right: 20px; color: black" href="tel://{{ $siteSetting['site_contact'] ?? '' }}"> <span
+                style="color: orange" class="fa fa-phone mr-1"></span> {{ $siteSetting['site_contact'] ?? '' }}</a> <br>
         <a style="float: right; margin-right: 20px; color: black"
            href="mailto:{{ $siteSetting['site_email'] ?? '' }}"><span
                 style="color: orange" class="fa fa-paper-plane mr-1"></span> {{ $siteSetting['site_email'] ?? '' }}</a>
@@ -153,8 +153,7 @@
 
 
                     <p>
-                        Let a tax professional help you take care of everything, guiding you through the entire
-                        process.</p>
+                        Attention all share and cryptocurrency traders! Say goodbye to tax headaches and let Munal Tax handle your capital gains tax and associated tax matters with ease.</p>
                 </div>
 
 
@@ -175,8 +174,7 @@
                     <a href="/online"><h4>Property Investors</h4></a>
 
                     <p>
-                        Let a tax professional help you of completing your tax return online,allowing you to
-                        conveniently handle the process from the comfort of your home.</p>
+                        Calling all property investors! Say goodbye to tax worries and let Munal Tax handle all your tax matters with precision and expertise. Our dedicated team understands the unique challenges and opportunities in property investment taxation.</p>
                 </div>
 
 
@@ -203,7 +201,7 @@
                     <a href="/tax-review">
                         <h4>Tax Review</h4>
                     </a>
-                    <p>We will review your tax return and check that you have received the maximum refund.</p>
+                    <p>If you're not satisfied with your current tax outcome, our team will conduct a thorough reassessment to uncover missed opportunities and potential savings.</p>
                 </div>
 
 
@@ -213,10 +211,11 @@
 
 
     </div>
-    <div id="overlay2">
+    <div style=" overflow:scroll;
+    height:fit-content;" id="overlay2">
         <div class="overlay-item-box">
             <div class="row">
-                <div style="top:-14px;" class="col-md-7 hovered-text">
+                <div style="top:-2px;" class="col-md-7 hovered-text">
 
                     <a href="/small-business">
                         <h4>
@@ -225,8 +224,8 @@
                     </a>
 
                     <p>
-                        If you're running a business as a sole trader or in partnership, we've got the expertise to
-                        support you.
+                        If you're running a business as a sole trader or Uber driver, we've got the expertise to support you.
+
 
                     </p>
                 </div>
@@ -244,8 +243,8 @@
                         </h4>
                     </a>
 
-                    <p> Allow us to guide you through the accounting and tax responsibilities that come with managing a
-                        business.
+                    <p> Allow us to guide you through the accounting and tax responsibilities that come with managing your business.
+
                     </p>
                 </div>
 
@@ -261,7 +260,7 @@
                         </h4>
                     </a>
                     <p>
-                        We help you in preparing Business Activity Statement. We've got that expertise to assist you.
+                        We help you in preparing Business Activity Statement and lodgment of Payroll. We've got that expertise to assist you.
                     </p>
                 </div>
 
@@ -281,8 +280,7 @@
                         </h4>
                     </a>
 
-                    <p>Let our experts handle the setup and provide ongoing support, making bookkeeping a seamless and
-                        hassle-free experience for you.
+                    <p>Our team of experienced professionals will handle all aspects of bookkeeping, allowing you to focus on growing your business with confidence.
                     </p>
                 </div>
 
